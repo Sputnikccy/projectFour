@@ -42,7 +42,7 @@ const TestComponent = () => {
                     <li className="eventCard" key={eventObject.id}>
                         <h4>{eventObject.name}</h4>
                         <img className="testImg" src={eventObject.images[4].url} alt={eventObject.name} />
-                        {/* <p>{eventObject.info}</p> */}
+                        <p>{eventObject.info}</p>
                     </li>
                 )
             })
