@@ -1,11 +1,15 @@
-
 import './App.css';
+import Header from './components/Header';
+import { Link, Routes, Route } from 'react-router-dom'
+import TestComponent from './components/TestComponent';
 
 function App() {
+
+
   return (
     <div className="App">
-      <h1>Flock of friends!</h1>
-      <p>Plan an event with your friends!</p>
+      <Header />
+      <TestComponent />
     </div>
   );
 }
