@@ -32,7 +32,7 @@ const TestComponent = () => {
 
     return(
         <>
-        <h3>Hello, this is a test component!!!</h3>
+        <h3>Hello, this is a test component!!! !!!</h3>
         <ul className="eventCatalogue">
           {
             allEvents.map((eventObject) => {
