@@ -1,5 +1,13 @@
+form label {
+  color: #FFF;
+}
+
 .App {
   text-align: center;
+}
+
+body {
+  background: #000;
 }
 
 .eventCatalogue {

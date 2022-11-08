@@ -1,8 +1,13 @@
 @use "./partials/variables" as *;
 @use "./partials/boredForm";
+@use "./partials/landingPage";
 
 .App {
   text-align: center;
+}
+body{
+  background: $blackColor;
+  // columns: $whiteColor;
 }
 
 .eventCatalogue {
