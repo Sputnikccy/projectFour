@@ -1,4 +1,4 @@
-import './BoredForm.scss';
+// import './BoredForm.scss';
 
 const BoredForm = () => {
     return(
