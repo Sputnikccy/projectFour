@@ -1,0 +1,9 @@
+@use "./partials/_baseStyles.scss";
+
+h1{
+    color:red;
+}
+
+.eventCard{
+    box-shadow: 2rem 2rem 5rem rgba(232, 187, 187, 0.3);
+}
