@@ -1,0 +1,9 @@
+@import '../../scss/variables.scss';
+
+.createEvent{
+    background: $primaryColor;
+    padding: 100px;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+}
