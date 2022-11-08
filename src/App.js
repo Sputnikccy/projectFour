@@ -1,10 +1,14 @@
-import './App.scss';
-import Header from './components/Header';
+// import sass styling
+import './sass/App.scss';
+
 import { Link, Routes, Route } from 'react-router-dom'
 // components
+import Header from './components/Header';
 import TestComponent from './components/TestComponent';
-import BoredForm from './components/Forms/BoredForm';
+// import BoredForm from './components/Forms/BoredForm';
 import LandingPage from './components/LandingPage'
+
+
 function App() {
 
 
