@@ -1,5 +1,18 @@
+.landing-container {
+  display: flex;
+  flex-direction: column;
+}
+.landing-container form label {
+  font-family: "Judson";
+  color: #000;
+}
+
 .App {
   text-align: center;
+}
+
+body {
+  background: #FFF;
 }
 
 .eventCatalogue {

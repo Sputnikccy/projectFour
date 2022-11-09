@@ -3,18 +3,21 @@ import { Link } from 'react-router-dom'
 
 const LandingPage = () =>{
     return(
-       <>
-       <form action="">
-        <label>Are you willing to spend money?</label>
-        <Link to="/testComponent">
-            <button>Yes</button>
-        </Link>
-        <Link to="/testComponent">
-            <button>No</button>
-        </Link>
-       </form>
-       
-       </>
+       <div className='landing-container'>
+            <form action="">
+                <label>Are you willing to spend money?</label>
+
+                <div className='button-container'>
+                    <Link to="/testComponent">
+                        <button>Yes</button>
+                    </Link>
+                    
+                    <Link to="/boredComponent">
+                        <button>No</button>
+                    </Link>
+                </div>
+            </form>     
+       </div>
     )
 }
 
