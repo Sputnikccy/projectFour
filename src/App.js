@@ -1,8 +1,6 @@
 // import sass styling
 import './sass/App.scss';
-// Config details
-import firebaseConfig from './components/firebase';
-
+// utilities
 import { Link, Routes, Route } from 'react-router-dom'
 // components
 import Header from './components/Header';
