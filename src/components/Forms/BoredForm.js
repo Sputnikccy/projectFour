@@ -1,7 +1,23 @@
-// import './BoredForm.scss';
+// NPM Modules
+import { useState, useEffect } from 'react';
+import {getDatabase, ref, push, onValue} from 'firebase/database'
+// Config details
+import firebaseConfig from '../firebase';
 
 const BoredForm = () => {
+
+    const [events, setEvents] = useState([])
+
+    useEffect(() =>{
+        const database = getDatabase(firebaseConfig)
+        const dbRef = ref(database)
+        onValue(dbRef, (response) => {
+            console.log(response.val)
+        })
+    },[])
+  
     return(
+        <>
         <div className="eventFormContainer">
             <form className='createEvent'>
                 <label>Event name</label>
@@ -38,8 +54,21 @@ const BoredForm = () => {
                 required>
                 Enter your event description here.
                 </textarea>
+                {/* <button onClick={""}>Create event</button> */}
             </form>
         </div>
+
+        <div className="eventCardTest">
+            <p>this is a test</p>
+            <ul>
+                {events.map((event)=> {
+                    return(
+                        <li>{event}</li>
+                    )
+                })}
+            </ul>
+        </div>
+        </>
     )
 }
 
