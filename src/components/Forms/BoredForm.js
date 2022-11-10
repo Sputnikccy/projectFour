@@ -1,4 +1,5 @@
 // NPM Modules
+import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import {getDatabase, ref, push, onValue} from 'firebase/database'
 // Config details
@@ -6,91 +7,121 @@ import app from '../../firebase';
 
 const BoredForm = () => {
 
-    const [events, setEvents] = useState([])
-    const [eventName, setEventName] = useState("")
-    const [hostName, setHostName] = useState("")
+    // const [events, setEvents] = useState([])
+    const [eventNameInput, setEventNameInput] = useState("")
+    const [hostNameInput, setHostNameInput] = useState("")
+    const [descriptionInput, setDescriptionInput]=useState('')
+    const [eventTimeInput, setEventTimeInput] = useState('')
+    const [locationInput, setLocationInput] = useState('')
 
     useEffect(() =>{
         const database = getDatabase(app)
-        const dbRef = ref(database)
+        const dbRef = ref(database, "/bored")
         onValue(dbRef, (response) => {
+            // console.log(response.val());
+            // create variable to hold new state.
             const newState = []
             const data = response.val();
-            for (let key in data) {
-                newState.push(data[key]);
-            }
-            setEvents(newState)
+            // console.log(data)
+            // setEvents(newState)
         })
     },[])
 
-    const handleInputChange = (event) =>{
-        setEventName(event.target.value);
-        setHostName(event.target.value)
+    // const handleInputChange = (e) =>{
+    //     setEventNameInput(e.target.value);
+    //     setHostNameInput(e.target.value);
+    //     setEventTimeInput(e.target.value);
+    //     setLocationInput(e.target.value);
+    //     setDescriptionInput(e.target.value);
+    // }
+
+    const handleEventNameInputChange = (e) =>{
+        setEventNameInput(e.target.value);
+    }
+    const handleHostInputChange = (e) =>{
+        setHostNameInput(e.target.value);
+    }
+    const handlEventTimeInputChange = (e) =>{
+        setEventTimeInput(e.target.value);
+    }
+    const handleLocationInputChange = (e) =>{
+        setLocationInput(e.target.value);
+    }
+    const handleDescriptionInputChange = (e) =>{
+        setDescriptionInput(e.target.value);
     }
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
+    const savedInputData = {
+        eventName:eventNameInput,
+        hostName:hostNameInput,
+        eventDescription: descriptionInput,
+        eventLocation:locationInput,
+        eventTime: eventTimeInput,
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
         const database = getDatabase(app)
-        const dbRef = ref(database)
-        push(dbRef, eventName);
-        setEventName('')
+        const dbRef = ref(database, "/bored")
+        // push info to firebase
+        push(dbRef, savedInputData);
+        // clear inputs
+        setEventNameInput('')
+        setHostNameInput('')
+        setEventTimeInput('')
+        setLocationInput('')
+        setDescriptionInput('')
+        
+
     }
   
     return(
         <>
-        <div className="eventFormContainer">
+        <div className="eventFormContainer" onSubmit={handleSubmit}>
             <form className='createEvent' action='submit'>
-                <label htmlFor='newEvent'>Name your event</label>
+                <label htmlFor='event'>Name your event</label>
                 <input 
                 type="text"
-                onChange={handleInputChange}
-                value={eventName}
+                onChange={handleEventNameInputChange}
+                value={eventNameInput}
                 required 
                 />
-                <label>Host name</label>
+                <label htmlFor='host'>Host name</label>
                 <input 
                 type="text"
-                value={hostName}
-                onChange={handleInputChange}
+                id='host'
+                value={hostNameInput}
+                onChange={handleHostInputChange}
                 required 
                 />
-                {/* <label>Start time</label>
+                <label>Start time</label>
                 <input 
                 type="text"
+                value={eventTimeInput}
+                onChange={handlEventTimeInputChange}
                 required 
                 />
                 <label>Location</label>
                 <input 
                 type="text"
+                value={locationInput}
+                onChange={handleLocationInputChange}
                 required 
-                /> */}
+                />
                 {/* <label>Enter Emails</label>
                 <input 
                 type="text"
                 required 
                 /> */}
-                {/* <label>Description of event</label>
-                <textarea 
-                name="" 
-                id="" 
-                cols="30" 
-                rows="05"
-                required>
-                Enter your event description here.
-                </textarea> */}
-                <button onClick={handleSubmit}>Create event</button>
+                <label>Description of event</label>
+                <input 
+                type="text"
+                id='event'
+                value={descriptionInput}
+                onChange={handleDescriptionInputChange}
+                />
+                <button>Create event</button>
             </form>
-        </div>
-
-        <div className="eventCardTest">
-            <p>this is a test</p>
-            <ul>
-                {events.map((event)=> {
-                    return(
-                        <li>{event}</li>
-                    )
-                })}
-            </ul>
         </div>
         </>
     )
