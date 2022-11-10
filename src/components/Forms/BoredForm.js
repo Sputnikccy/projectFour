@@ -27,13 +27,7 @@ const BoredForm = () => {
         })
     },[])
 
-    // const handleInputChange = (e) =>{
-    //     setEventNameInput(e.target.value);
-    //     setHostNameInput(e.target.value);
-    //     setEventTimeInput(e.target.value);
-    //     setLocationInput(e.target.value);
-    //     setDescriptionInput(e.target.value);
-    // }
+
 
     const handleEventNameInputChange = (e) =>{
         setEventNameInput(e.target.value);
@@ -119,8 +113,11 @@ const BoredForm = () => {
                 id='event'
                 value={descriptionInput}
                 onChange={handleDescriptionInputChange}
+                required
                 />
+                <Link to={`/boredComponent/boredEventCard`}>
                 <button>Create event</button>
+                </Link>
             </form>
         </div>
         </>
