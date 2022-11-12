@@ -1,13 +1,18 @@
-@use "./partials/variables" as *;
-@use "./partials/boredForm";
-@use "./partials/landingPage";
+.landing-container {
+  display: flex;
+  flex-direction: column;
+}
+.landing-container form label {
+  font-family: "Judson";
+  color: #000;
+}
 
 .App {
   text-align: center;
 }
-body{
-  background: $whiteColor;
-  // columns: $whiteColor;
+
+body {
+  background: #FFF;
 }
 
 .eventCatalogue {
@@ -25,7 +30,8 @@ body{
 li {
   list-style: none;
 }
+
 .testImg {
   max-width: 90%;
   height: auto;
-}
+}/*# sourceMappingURL=App.css.map */

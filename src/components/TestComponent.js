@@ -15,18 +15,21 @@ const TestComponent = () => {
             params: {
                 apikey: 'oEVr2fMeIekRnZZO4wERgOHqw8QY7vQA',
                 //city name
-                // city:'Toronto',
+                city:'Toronto',
                 //sorting order of the search result. Allowable values : 'name,asc', 'name,desc', 'date,asc', 'date,desc', 'relevance,asc', 'relevance,desc', 'distance,asc', 'name,date,asc', 'name,date,desc', 'date,name,asc', 'date,name,desc', 'distance,date,asc', 'onSaleStartDate,asc', 'id,asc', 'venueName,asc', 'venueName,desc', 'random'
-                // sort:'date,asc',
+                // sort:'random',
                 //page number
                 page:'10',
                 // returned array size
-                size:'30',
-                countryCode:'CA'
+                size:'99',
+                // countryCode:'CA'
             }
-        }).then((eventArray) => {
-            // console.log(eventArray.data._embedded.events)
-            setAllEvents(eventArray.data._embedded.events)
+        }).then((response) => {
+            const eventArray = response.data._embedded.events
+            const randomSelection = Math.floor(Math.random() * eventArray.length)
+            const filteredEvent = eventArray[randomSelection]
+            console.log(filteredEvent)
+            setAllEvents(eventArray)
         })
     },[])
 
@@ -42,7 +45,10 @@ const TestComponent = () => {
                     <li className="eventCard" key={eventObject.id}>
                         <h4>{eventObject.name}</h4>
                         <img className="testImg" src={eventObject.images[4].url} alt={eventObject.name} />
-                        <p>{eventObject.info}</p>
+                        {/* <p>{eventObject.info}</p> */}
+                        <ul>
+                            {/* <li>{eventObject.priceRanges[0]}</li> */}
+                        </ul>
                     </li>
                 )
             })

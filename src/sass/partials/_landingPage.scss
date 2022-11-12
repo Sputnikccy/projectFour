@@ -1,0 +1,12 @@
+@use "variables" as *;
+
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    form {
+        label {
+            font-family: $headingFont;
+            color: $blackColor;
+        }
+    }
+}
