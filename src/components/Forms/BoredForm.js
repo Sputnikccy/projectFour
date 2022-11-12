@@ -1,11 +1,15 @@
 // NPM Modules
-import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 import {getDatabase, ref, push, onValue} from 'firebase/database'
+import { useNavigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 // Config details
 import app from '../../firebase';
 
 const BoredForm = () => {
+
+    const urlParamsValue = useParams();
+    console.log(urlParamsValue);
 
     // const [events, setEvents] = useState([])
     const [eventNameInput, setEventNameInput] = useState("")
@@ -13,17 +17,25 @@ const BoredForm = () => {
     const [descriptionInput, setDescriptionInput]=useState('')
     const [eventTimeInput, setEventTimeInput] = useState('')
     const [locationInput, setLocationInput] = useState('')
+    let navigate = useNavigate();
+
+      // this state will track data from db
+      const [invites, setInvites] = useState([]);
+    //   console.log(invites[0].key)
 
     useEffect(() =>{
         const database = getDatabase(app)
         const dbRef = ref(database, "/bored")
+
         onValue(dbRef, (response) => {
             // console.log(response.val());
             // create variable to hold new state.
             const newState = []
             const data = response.val();
-            // console.log(data)
-            // setEvents(newState)
+            for (let key in data) {
+                newState.unshift({ key: key, name: data[key] })
+            }
+            setInvites(newState)
         })
     },[])
 
@@ -51,6 +63,7 @@ const BoredForm = () => {
         eventDescription: descriptionInput,
         eventLocation:locationInput,
         eventTime: eventTimeInput,
+        // activityId: urlParamsValue.invites
     }
 
     const handleSubmit = (e) => {
@@ -65,14 +78,16 @@ const BoredForm = () => {
         setEventTimeInput('')
         setLocationInput('')
         setDescriptionInput('')
-        
-
+        navigate(`/boredinvite/${invites[0].key}`)
     }
   
     return(
         <>
-        <div className="eventFormContainer" onSubmit={handleSubmit}>
-            <form className='createEvent' action='submit'>
+        <div className="eventFormContainer" >
+            <form 
+            className='createEvent' 
+            onSubmit={handleSubmit} 
+            action='submit'>
                 <label htmlFor='event'>Name your event</label>
                 <input 
                 type="text"
@@ -115,9 +130,7 @@ const BoredForm = () => {
                 onChange={handleDescriptionInputChange}
                 required
                 />
-                <Link to={`/boredComponent/boredEventCard`}>
                 <button>Create event</button>
-                </Link>
             </form>
         </div>
         </>
