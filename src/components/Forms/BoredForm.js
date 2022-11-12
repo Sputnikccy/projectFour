@@ -65,7 +65,7 @@ const BoredForm = () => {
         // activityId: urlParamsValue.invites
     }
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         const database = getDatabase(app)
         const dbRef = ref(database, "/bored")
@@ -76,7 +76,8 @@ const BoredForm = () => {
         setEventTimeInput('')
         setLocationInput('')
         setDescriptionInput('')
-       await navigate(`/boredinvite/${invites[0].key}`)
+        
+        navigate(`/boredinvite/${invites[0].key}`)
         // console.log(push(dbRef, savedInputData))
         // clear inputs
         
