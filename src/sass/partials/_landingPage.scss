@@ -1,7 +1,12 @@
 @use "variables" as *;
 
-form{
-    label{
-        color: $whiteColor;
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    form {
+        label {
+            font-family: $headingFont;
+            color: $blackColor;
+        }
     }
 }
