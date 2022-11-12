@@ -6,11 +6,13 @@ import {getDatabase, ref, get} from 'firebase/database'
 import app from '../../firebase';
 import { act } from "react-dom/test-utils";
 
+
+
 const BoredInvite =() =>{
 
     //track data from database
     const [activity, setActivity] = useState({});
-    // console.log(activity)
+    console.log(activity)
     //track data from API call
     const [event, setEvent] = useState({});
     // console.log(event)
@@ -20,16 +22,15 @@ const BoredInvite =() =>{
 
    //get params AKA firebase node key
    const urlParamsValue = useParams();
-   console.log(urlParamsValue);
+//    console.log(urlParamsValue);
    const userId = urlParamsValue.invites;
 //    console.log(userId)
 
    useEffect(() => {
     const database = getDatabase(app);
     const userRef = ref(database, `bored/${userId}`);
-
     get(userRef).then((data) => {
-        // console.log(data.val())
+        console.log(data.val())
         setActivity(data.val())
     }).catch((error)=>{
         alert('error')

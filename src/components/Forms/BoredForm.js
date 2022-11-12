@@ -9,7 +9,7 @@ import app from '../../firebase';
 const BoredForm = () => {
 
     const urlParamsValue = useParams();
-    console.log(urlParamsValue);
+    // console.log(urlParamsValue);
 
     // const [events, setEvents] = useState([])
     const [eventNameInput, setEventNameInput] = useState("")
@@ -26,7 +26,6 @@ const BoredForm = () => {
     useEffect(() =>{
         const database = getDatabase(app)
         const dbRef = ref(database, "/bored")
-
         onValue(dbRef, (response) => {
             // console.log(response.val());
             // create variable to hold new state.
@@ -66,19 +65,21 @@ const BoredForm = () => {
         // activityId: urlParamsValue.invites
     }
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         const database = getDatabase(app)
         const dbRef = ref(database, "/bored")
         // push info to firebase
-        push(dbRef, savedInputData);
-        // clear inputs
+        push(dbRef, savedInputData)
         setEventNameInput('')
         setHostNameInput('')
         setEventTimeInput('')
         setLocationInput('')
         setDescriptionInput('')
-        navigate(`/boredinvite/${invites[0].key}`)
+       await navigate(`/boredinvite/${invites[0].key}`)
+        // console.log(push(dbRef, savedInputData))
+        // clear inputs
+        
     }
   
     return(
@@ -86,7 +87,7 @@ const BoredForm = () => {
         <div className="eventFormContainer" >
             <form 
             className='createEvent' 
-            onSubmit={handleSubmit} 
+             
             action='submit'>
                 <label htmlFor='event'>Name your event</label>
                 <input 
@@ -130,7 +131,7 @@ const BoredForm = () => {
                 onChange={handleDescriptionInputChange}
                 required
                 />
-                <button>Create event</button>
+                <button onClick={handleSubmit}>Create event</button>
             </form>
         </div>
         </>
