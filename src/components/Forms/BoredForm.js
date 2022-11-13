@@ -31,8 +31,6 @@ const BoredForm = () => {
         onValue(dbRef, (response) => {
             console.log(response);
             // create variable to hold new state.
-            
-            
             const data = response.val();
             // console.log(data)
             // for (let key in data) {
