@@ -104,7 +104,6 @@ const Ticketmaster = () => {
                 {
                     events.map((eventObject) => {
                         return (
-
                             <li className="eventCard" key={eventObject.id}>
                                 <h4>{eventObject.name}</h4>
                                 <img 
