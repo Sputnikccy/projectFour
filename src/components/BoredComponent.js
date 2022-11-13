@@ -12,45 +12,39 @@ const BoredComponent = () => {
     //             setIsLoading(false)
     //         });
     // }
-    // useEffect(() => {
-    //     axios({
-    //         url: `http://www.boredapi.com/api/activity?type=${userChoice}`,
-    //         method: 'GET',
-    //         dataResponse: 'json'
+    useEffect((i) => {
+        let tempArray = []
 
-    //     })
-    //         .then((response) => {
-    //             console.log(response.data)
-    //             setActivities(response.data);
-    //         })
-    // }, [])
-    const getActivity = () => {
-        const options = {
-            url: `http://www.boredapi.com/api/activity?type=${userChoice}`,
-            method: 'GET',
-            dataResponse: 'json'
-        };
-        axios.request(options)
-            .then((response) => {
-                console.log(response.data)
-                setActivities(response.data);
+        for (i = 0; i <= 5; i++){
+            axios({
+                url: `http://www.boredapi.com/api/activity`,
+                method: 'GET',
+                dataResponse: 'json'
+    
             })
-    }
-// &participants=3
+        
+            .then((response) => {
+                tempArray.push(response.data)
+                console.log(tempArray)
+                setActivities(tempArray);
+            })
+        }
+    }, [])
+    
 
 
     const [activities, setActivities] = useState("");
-    const [userChoice, setUserChoice] = useState('')
-    const [participants, setParticipants] = useState("");
+    // const [userChoice, setUserChoice] = useState('')
+    // const [participants, setParticipants] = useState("");
     console.log(activities)
 
-    const handleUserChoice = (e) => {
-        setUserChoice(e.target.value);
-    }
+    // const handleUserChoice = (e) => {
+    //     setUserChoice(e.target.value);
+    // }
 
-    const handleParticipants = (e) => {
-        setParticipants(e.target.value);
-    }
+    // const handleParticipants = (e) => {
+    //     setParticipants(e.target.value);
+    // }
     // useEffect(() => {
     //     loadActivity();
     // }, []);
@@ -61,7 +55,7 @@ const BoredComponent = () => {
 
     return (
         <div>
-            <select
+            {/* <select
                 onChange={handleUserChoice}
                 value={userChoice} >
                 <option value="education">education</option>
@@ -69,13 +63,28 @@ const BoredComponent = () => {
                 <option value="social">social</option>
                 <option value="diy">diy</option>
                 <option value="charity">charity</option>
-            </select>
+            </select> */}
             
-            <button onClick={getActivity}>Click for activities</button>
             <div>
-                <h3>{activities.activity}</h3>
+            {
+                activities.map((choice) => {
+                    return (
+                        <li id={choice.id} key={choice.key}>
+                            <h3>{choice.activity}</h3>
+                            {/* <Link to={`/boredForm/${choice.key}`}>
+                                <button>Create event</button>
+                            </Link> */}
+                        </li>
+                        
+                    )
+                })
+            }
+
+
+
+                {/* <h3>{activities.activity}</h3>
                 <h4>{activities.type}</h4>
-                <h5>{activities.participants}</h5>
+                <h5>{activities.participants}</h5> */}
 
                 <Link to={`/boredForm/${activities.key}`}>
                     <button>Create event</button>
