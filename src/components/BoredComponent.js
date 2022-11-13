@@ -23,9 +23,11 @@ const BoredComponent = () => {
     //             setActivities(response.data);
     //         })
     // }, [])
+
+    // &participants=3
     const getActivity = () => {
         const options = {
-            url: `http://www.boredapi.com/api/activity?type=${userChoice}&participants=3`,
+            url: `http://www.boredapi.com/api/activity?type=${userChoice}`,
             method: 'GET',
             dataResponse: 'json'
         };
@@ -40,15 +42,15 @@ const BoredComponent = () => {
 
     const [activities, setActivities] = useState("");
     const [userChoice, setUserChoice] = useState('')
-    const [participants, setParticipants] = useState("");
+    // const [participants, setParticipants] = useState("");
 
     const handleUserChoice = (e) => {
         setUserChoice(e.target.value);
     }
 
-    const handleParticipants = (e) => {
-        setParticipants(e.target.value);
-    }
+    // const handleParticipants = (e) => {
+    //     setParticipants(e.target.value);
+    // }
     // useEffect(() => {
     //     loadActivity();
     // }, []);
@@ -68,15 +70,15 @@ const BoredComponent = () => {
                 <option value="diy">diy</option>
                 <option value="charity">charity</option>
             </select>
-            <select
-                onChange={handleParticipants}
-                value={participants} >
+            {/* <select
+                onChange={handleUserChoice}
+                value={userChoice} >
                 <option value="education">1</option>
                 <option value="recreational">2</option>
                 <option value="social">3</option>
                 <option value="diy">4</option>
                 <option value="charity">5</option>
-            </select>
+            </select> */}
             <button onClick={getActivity}>Click for activities</button>
             <div>
                 <h3>{activities.activity}</h3>
