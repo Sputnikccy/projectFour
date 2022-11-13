@@ -9,31 +9,40 @@ import app from '../../firebase';
 const BoredForm = () => {
 
     const urlParamsValue = useParams();
-    // console.log(urlParamsValue);
+    // console.log(urlParamsValue.key);
 
-    // const [events, setEvents] = useState([])
+    // these states track user input within the form.
     const [eventNameInput, setEventNameInput] = useState("")
     const [hostNameInput, setHostNameInput] = useState("")
-    const [descriptionInput, setDescriptionInput]=useState('')
-    const [eventTimeInput, setEventTimeInput] = useState('')
-    const [locationInput, setLocationInput] = useState('')
+    const [descriptionInput, setDescriptionInput]=useState("")
+    const [eventTimeInput, setEventTimeInput] = useState("")
+    const [locationInput, setLocationInput] = useState("")
     let navigate = useNavigate();
 
-      // this state will track data from db
+      // This state tracks data from firebase DB
       const [invites, setInvites] = useState([]);
     //   console.log(invites[0].key)
 
     useEffect(() =>{
         const database = getDatabase(app)
         const dbRef = ref(database, "/bored")
+        // new state was in the onValue call.
+        const newState = []
         onValue(dbRef, (response) => {
-            // console.log(response.val());
+            console.log(response);
             // create variable to hold new state.
-            const newState = []
+            
+            
             const data = response.val();
+            // console.log(data)
+            // for (let key in data) {
+            //     /**unshift adds element to the beginning of the array of the "/bored" section.**/ 
+            //     newState.unshift({ key: key, name: data[key] })
+            // }
             for (let key in data) {
                 newState.unshift({ key: key, name: data[key] })
             }
+            // update state with new array.
             setInvites(newState)
         })
     },[])
@@ -62,10 +71,11 @@ const BoredForm = () => {
         eventDescription: descriptionInput,
         eventLocation:locationInput,
         eventTime: eventTimeInput,
-        // activityId: urlParamsValue.invites
+        activityId: urlParamsValue.key
     }
+    // console.log(savedInputData)
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = (e) => {
         e.preventDefault();
         const database = getDatabase(app)
         const dbRef = ref(database, "/bored")
@@ -76,8 +86,7 @@ const BoredForm = () => {
         setEventTimeInput('')
         setLocationInput('')
         setDescriptionInput('')
-       await navigate(`/boredinvite/${invites[0].key}`)
-        // console.log(push(dbRef, savedInputData))
+        navigate(`/boredinvite/${invites[0].key}`)
         // clear inputs
         
     }
@@ -87,7 +96,7 @@ const BoredForm = () => {
         <div className="eventFormContainer" >
             <form 
             className='createEvent' 
-             
+            onSubmit={handleSubmit}
             action='submit'>
                 <label htmlFor='event'>Name your event</label>
                 <input 
@@ -131,7 +140,7 @@ const BoredForm = () => {
                 onChange={handleDescriptionInputChange}
                 required
                 />
-                <button onClick={handleSubmit}>Create event</button>
+                <button>Create event</button>
             </form>
         </div>
         </>
