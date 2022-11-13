@@ -117,7 +117,6 @@ const Ticketmaster = () => {
 
                                 {/* This link will go to Caiyi's component. Not sure yet if the correct element would be a link or a router/route */}
                                 <Link to={`/tmform/${eventObject.id}`}>
-                                       
                                         <button>
                                             Create event
                                         </button>
