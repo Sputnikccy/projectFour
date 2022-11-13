@@ -1,5 +1,32 @@
-form label {
-  color: #FFF;
+.createEvent {
+  background: #41AAF0;
+  padding: 100px;
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.eventCardTest {
+  background: #F23D37;
+}
+
+.landing-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.landing-container form label {
+  font-family: "Judson";
+  color: #000;
 }
 
 .App {
@@ -7,7 +34,7 @@ form label {
 }
 
 body {
-  background: #000;
+  background: #FFF;
 }
 
 .eventCatalogue {
