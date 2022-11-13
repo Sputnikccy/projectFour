@@ -1,5 +1,15 @@
-form label {
-  color: #FFF;
+.landing-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.landing-container form label {
+  font-family: "Judson";
+  color: rgb(0, 0, 0);
 }
 
 .App {
@@ -7,7 +17,7 @@ form label {
 }
 
 body {
-  background: #000;
+  background: rgb(255, 255, 255);
 }
 
 .eventCatalogue {
@@ -29,4 +39,16 @@ li {
 .testImg {
   max-width: 90%;
   height: auto;
+}
+
+form {
+  border: 2px solid rgb(208, 202, 46);
+  border-radius: 5px;
+  background-color: rgb(208, 202, 46);
+}
+form input,
+form select {
+  border-radius: 5px;
+  border-color: rgb(208, 202, 46);
+  background-color: rgb(247, 245, 192);
 }

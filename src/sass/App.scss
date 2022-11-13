@@ -29,3 +29,16 @@ li {
   max-width: 90%;
   height: auto;
 }
+
+// Can be deleted, bring up to team
+form {
+  border: 2px solid $yellowColor;
+   border-radius: 5px;
+   background-color: $yellowColor;
+   input, 
+   select {
+    border-radius: 5px;
+    border-color: $yellowColor;
+    background-color: rgb(247, 245, 192);
+   }
+}
