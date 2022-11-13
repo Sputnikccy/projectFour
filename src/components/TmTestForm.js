@@ -11,7 +11,7 @@ import { useParams } from "react-router-dom";
 const TmTestForm = () => {
 
     const urlParamsValue = useParams();
-    console.log(urlParamsValue.idd);
+    // console.log(urlParamsValue.idd);
    
 
     // this state will track user inputs from the form

@@ -11,6 +11,7 @@ const BoredForm = () => {
     const urlParamsValue = useParams();
     // console.log(urlParamsValue.key);
 
+    // these states track user input within the form.
     const [eventNameInput, setEventNameInput] = useState("")
     const [hostNameInput, setHostNameInput] = useState("")
     const [descriptionInput, setDescriptionInput]=useState("")
@@ -18,17 +19,19 @@ const BoredForm = () => {
     const [locationInput, setLocationInput] = useState("")
     let navigate = useNavigate();
 
-      // this state will track data from db
+      // This state tracks data from firebase DB
       const [invites, setInvites] = useState([]);
     //   console.log(invites[0].key)
 
     useEffect(() =>{
         const database = getDatabase(app)
         const dbRef = ref(database, "/bored")
+        // new state was in the onValue call.
+        const newState = []
         onValue(dbRef, (response) => {
             console.log(response);
             // create variable to hold new state.
-            const newState = []
+            
             
             const data = response.val();
             // console.log(data)
