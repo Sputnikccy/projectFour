@@ -1,0 +1,17 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "-ms-text-size-adjust",
+          "-webkit-text-decoration-skip",
+          "scroll-behavior"
+        ]
+      }
+    ]
+  }
+}

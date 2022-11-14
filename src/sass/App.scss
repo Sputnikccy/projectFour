@@ -1,6 +1,10 @@
 @use "./partials/variables" as *;
 @use "./partials/boredForm";
 @use "./partials/landingPage";
+@use "./partials/header";
+@use "./partials/setup";
+@use "./partials/baseStyle";
+
 
 .App {
   text-align: center;

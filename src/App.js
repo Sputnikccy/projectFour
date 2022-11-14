@@ -1,7 +1,9 @@
 // import sass styling
 import './sass/App.scss';
-import { getDatabase, ref, push, onValue } from 'firebase/database';
-import { useState, useEffect } from 'react';
+
+import backgroundImg from './assets/bgi.jpg'
+
+
 import { Link, Routes, Route } from 'react-router-dom'
 // components
 import Header from './components/Header';
@@ -33,6 +35,8 @@ function App() {
        
         <Route path='/tmcard/:idd' element={<TmTestCard/>}/>
       </Routes>
+
+      
       
     </div>
   )

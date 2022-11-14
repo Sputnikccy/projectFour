@@ -23,11 +23,6 @@ const TmTestForm = () => {
     // this state will track data from db
     const [invitations, setInvitations] = useState([]);
 
-    // const copyOfInvitations = [...invitations];
-    // console.log(copyOfInvitations)
-
-   
-
     useEffect(() => {
         const database = getDatabase(app);
         const dbRef = ref(database, "/tm");
