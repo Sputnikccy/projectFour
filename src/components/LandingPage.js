@@ -8,7 +8,7 @@ const LandingPage = () =>{
                 <label>Are you willing to spend money?</label>
 
                 <div className='button-container'>
-                    <Link to="/ticketmaster">
+                    <Link to="/ticketMaster">
                         <button>Yes</button>
                     </Link>
                     

@@ -1,3 +1,20 @@
+.createEvent {
+  background: #41AAF0;
+  padding: 100px;
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.eventCardTest {
+  background: #F23D37;
+}
+
 .landing-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9,7 +26,7 @@
 }
 .landing-container form label {
   font-family: "Judson";
-  color: rgb(0, 0, 0);
+  color: #000;
 }
 
 .App {
@@ -17,7 +34,7 @@
 }
 
 body {
-  background: rgb(255, 255, 255);
+  background: #FFF;
 }
 
 .eventCatalogue {
@@ -39,15 +56,4 @@ li {
 .testImg {
   max-width: 90%;
   height: auto;
-}
-
-form {
-  border: 2px solid rgb(208, 202, 46);
-  border-radius: 5px;
-}
-form input,
-form select {
-  border-radius: 5px;
-  border-color: rgb(208, 202, 46);
-  background-color: rgb(247, 245, 192);
 }
