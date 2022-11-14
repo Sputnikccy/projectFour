@@ -44,7 +44,6 @@ li {
 form {
   border: 2px solid rgb(208, 202, 46);
   border-radius: 5px;
-  background-color: rgb(208, 202, 46);
 }
 form input,
 form select {

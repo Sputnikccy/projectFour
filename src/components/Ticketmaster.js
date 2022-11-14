@@ -4,8 +4,13 @@ import { Link } from 'react-router-dom';
 
 const Ticketmaster = () => {
     const [events, setEvents] = useState([]);
+    const [categoryChoice, setCategoryChoice] = useState('');
+    const [sortChoice, setSortChoice] = useState('');
+    const [cityChoice, setCityChoice] = useState('');
 
-    useEffect( () => {
+    function handleSubmit(e) {
+        e.preventDefault();
+
         axios({
             url: 'https://app.ticketmaster.com/discovery/v2/events.json?',
             method: 'GET',
@@ -14,40 +19,71 @@ const Ticketmaster = () => {
                 apikey: 'lmR81Nl9SRgC4fNvck5rb6rx61K4hy3b',
                 secretkey: 'hZM0EAuYZBwv25Gt',
                 size: '30',
-                countryCode: 'CA',
-                // city: '',
+                // countryCode: 'CA',
+                classificationName: `${categoryChoice}`,
+                sort: `${sortChoice}`,
+                city: `${cityChoice}`,
                 // keyword:'',
-                // category: '',
-                // sort:''
                 // categories: concert, club, sports, art, family, 
                 // subcategories: rock, pop, comedy, religion, hip hop, rap, alternative, 
             }
-        }).then( (eventArray) => {
+        }).then((eventArray) => {
             setEvents(eventArray.data._embedded.events)
             console.log(eventArray)
+        }).catch((error) => {
+            alert('Please change your selection and try again!')
+            console.log('Error')
         })
-    }, [])
 
-    function handleSubmit(e) {
-        e.preventDefault();
-        console.log('submitted!')
+
+        console.log('submitted!');
+    }
+
+    const handleOnChange = (e) => {
+        setCategoryChoice(e.target.value)
+    }
+
+    const handleOthOnChange = (e) => {
+        setSortChoice(e.target.value)
+    }
+
+    const handleThirdOnChange = (e) => {
+        setCityChoice(e.target.value)
     }
 
     return (
         <>
             <form onSubmit={handleSubmit}>
                 {/* form will have country, city, keyword options, categories */}
-                <label htmlFor="keywords">Keywords</label>
-                <input name="keywords" placeholder="Search for artists, venues or events" type="text" />
+                {/* <label htmlFor="keywords">Keywords</label>
+                <input 
+                name="keywords" 
+                placeholder="Search for artists, venues or events" type="text"
+                onChange={(event) => handleSubmit(event)}
+                  /> */}
 
-                <label>country code</label>
-                <input placeholder="ie, CA / US / GB" type="text" />
+                {/* <label>country code</label>
+                <input 
+                placeholder="ie, CA / US / GB" 
+                type="text"
+                onChange={(event) => handleSubmit(event)}
+                 /> */}
 
-                <label htmlFor="">city</label>
-                <input type="text" />
+                <label htmlFor="city">city</label>
+                <input 
+                type="text"
+                id="city"
+                value={cityChoice}
+                onChange={handleThirdOnChange}
+                 />
 
-                <label htmlFor="">category</label>
-                <select name="category" id="">
+                <label htmlFor="category">category</label>
+                <select 
+                name="category" 
+                id="category"
+                value={categoryChoice}
+                onChange={handleOnChange}
+                >
                     <option value="none">event category</option>
                     <option value="concert">concert</option>
                     <option value="sports">sports</option>
@@ -56,7 +92,12 @@ const Ticketmaster = () => {
                 </select>
 
                 <label htmlFor="sort">sort</label>
-                <select name="sort" id="">
+                <select 
+                name="sort" 
+                id="sort"
+                value={sortChoice}
+                onChange={handleOthOnChange}
+                >
                     <option value="none">sort results</option>
                     <option value="date,asc">coming soon</option>
                     <option value="date,desc">coming later</option>
@@ -64,7 +105,15 @@ const Ticketmaster = () => {
                     <option value="name,desc">alphabetical z-a</option>
                 </select>
 
-                <button type="submit">filter results</button>
+                <button type="submit">
+                    filter results
+                </button> 
+
+                {/* <button 
+                type="submit"
+                onClick={this.eventFilter}>
+                filter results
+                </button> */}
 
             </form>
 
@@ -77,9 +126,13 @@ const Ticketmaster = () => {
 
                             <li className="eventCard" key={eventObject.id}>
                                 <h4>{eventObject.name}</h4>
-                                <img className="testImg" src={eventObject.images[4].url} alt={eventObject.name} />
+                                <img 
+                                className="testImg" 
+                                src={eventObject.images[4].url} 
+                                alt={eventObject.name} />
                                 <p>{eventObject.info}</p>
-                                <a href={eventObject.url} target="_blank">buy tickets</a>
+                                <a 
+                                href={eventObject.url} target="_blank">buy tickets</a>
 
                                 {/* This link will go to Caiyi's component. Not sure yet if the correct element would be a link or a router/route */}
                                 <Link>create event</Link>
