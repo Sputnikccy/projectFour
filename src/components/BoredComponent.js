@@ -4,25 +4,46 @@ import { useState, useEffect } from 'react'
 
 const BoredComponent = () => {
 
+    // useEffect((i) => {
+    //     let tempArray = []
+
+    //     for (i = 0; i <= 7; i++){
+    //         axios({
+    //             url: `http://www.boredapi.com/api/activity`,
+    //             method: 'GET',
+    //             dataResponse: 'json'
+    
+    //         })
+        
+    //         .then((response) => {
+    //             tempArray.push(response.data)
+    //             console.log(tempArray)
+    //             setActivities(tempArray);
+    //         })
+    //     }
+    // }, [])
+    
     useEffect((i) => {
         let tempArray = []
 
-        for (i = 0; i <= 7; i++){
+        for (i = 0; i <= 10; i++){
             axios({
                 url: `http://www.boredapi.com/api/activity`,
                 method: 'GET',
                 dataResponse: 'json'
-    
             })
-        
             .then((response) => {
-                tempArray.push(response.data)
-                console.log(tempArray)
-                setActivities(tempArray);
-            })
-        }
+                //checks array to see if there is already an activity
+                if (!tempArray.includes(response.data)){
+                    //pushes if there isnt
+                    tempArray.push(response.data)
+                }  
+                //.then once the 10 api calls are finished to set activities 
+            }).then (()=>{
+                
+                setActivities(tempArray)
+        })}
     }, [])
-    
 
 
     const [activities, setActivities] = useState("");
