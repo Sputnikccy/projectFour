@@ -1,12 +1,63 @@
 @use "variables" as *;
 
+
+html{
+    background: url('../../assets/bgi.jpg') no-repeat fixed top /100vw;
+}
+
 .landing-container {
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    bottom:20% ;
+    left:10%;
+    right: 10%;
+    background-color:rgb(255, 255, 255);
+    
+
+    border:2px solid green;
+    border-radius: 1rem;
+
     display: flex;
     flex-direction: column;
-    form {
-        label {
-            font-family: $headingFont;
-            color: $blackColor;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        font: 3rem $headingFont;
+        color:yellowgreen;
+        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+    }
+
+    .subtitle {
+        p {
+            margin: 0;
+            padding: 0;
+            font: 1.2rem $bodyFont;
+        }
+        margin-bottom: 1rem;
+    }
+
+    .linkContainer {
+        display: flex;
+        flex-direction: column;
+        font: 1.2rem $bodyFont;
+        margin-bottom: 1.5rem;
+
+
+        button {
+            margin: .5rem;
+            border: none;
+            font: 1.3rem $bodyFont;
+            cursor: pointer;
+            text-align: center;
+            transition: .3s;
+            border-radius: 2rem;
+            padding: .6rem .9rem;
+            width: 14rem;
+
         }
     }
+
 }

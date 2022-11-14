@@ -1,17 +1,18 @@
-import app from "../firebase";
+
 import { getDatabase, ref, push, onValue, get } from 'firebase/database';
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
 import TmTestCard from "./TmTestCard";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import app from '../firebase';
 
 
 
 const TmTestForm = () => {
 
     const urlParamsValue = useParams();
-    // console.log(urlParamsValue.idd);
+    console.log(urlParamsValue.idd);
    
 
     // this state will track user inputs from the form
@@ -22,11 +23,6 @@ const TmTestForm = () => {
 
     // this state will track data from db
     const [invitations, setInvitations] = useState([]);
-
-    // const copyOfInvitations = [...invitations];
-    // console.log(copyOfInvitations)
-
-   
 
     useEffect(() => {
         const database = getDatabase(app);
