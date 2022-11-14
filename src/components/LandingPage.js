@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import backgroundImg from '../assets/bgi.jpg'
 
 
+
 const LandingPage = () => {
     return (
         <div className='landing-container '>
@@ -14,7 +15,7 @@ const LandingPage = () => {
             </div>
 
             <div className='linkContainer'>
-                <Link to="/testComponent" >
+                <Link to="/ticketMaster" >
                    <button> have fun with 💰</button>
                 </Link>
 

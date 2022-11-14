@@ -51,9 +51,7 @@ const TmTestCard = () => {
         }).then((response) => {
             console.log(response.data)
            setEvent(response.data)
-           setTimeout(()=>{
-
-           },1000)
+           
         })
     }
 

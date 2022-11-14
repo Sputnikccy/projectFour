@@ -49,7 +49,7 @@ const TestComponent = () => {
 
     return (
         <>
-            <h3>Hello, this is a test component!!! !!! !!!</h3>
+            <h3>Hello, this is a test component</h3>
             <ul className="eventCatalogue">
                 {
                     allEvents.map((eventObject) => {
@@ -60,7 +60,7 @@ const TestComponent = () => {
                                 <li className="eventCard "  id={eventObject.id}  key={eventObject.id}>
                                     <h4>{eventObject.name}</h4>
                                     <img className="testImg" src={eventObject.images[4].url} alt={eventObject.name} />
-                                    <p>{eventObject.info}</p>
+                                    {/* <p>{eventObject.info}</p> */}
                                     
 
                                     <Link to={`/tmform/${eventObject.id}`}>
