@@ -1,7 +1,4 @@
 import { Link } from 'react-router-dom';
-import backgroundImg from '../assets/bgi.jpg'
-
-
 
 const LandingPage = () => {
     return (
