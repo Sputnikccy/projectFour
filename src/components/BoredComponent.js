@@ -1,11 +1,19 @@
 import { Link } from 'react-router-dom';
 import axios from "axios"
 import { useState, useEffect } from 'react'
-import renderImage from '../Assets/lion.jpg'
+// import renderImage from '../Assets/lion.jpg'
 
 const BoredComponent = () => {
 
 
+    const getActivity = (e) => {
+        e.preventDefault()
+        const options = {
+            url: `http://www.boredapi.com/api/activity?type=${userChoice}`,
+            method: 'GET',
+            dataResponse: 'json'
+        };
+        axios.request(options)
     const getActivity = (e) => {
         e.preventDefault()
         const options = {
