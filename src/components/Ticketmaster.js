@@ -10,7 +10,6 @@ const Ticketmaster = () => {
 
     function handleSubmit(e) {
         e.preventDefault();
-
         axios({
             url: 'https://app.ticketmaster.com/discovery/v2/events.json?',
             method: 'GET',
@@ -133,9 +132,11 @@ const Ticketmaster = () => {
                                 <p>{eventObject.info}</p>
                                 <a 
                                 href={eventObject.url} target="_blank">buy tickets</a>
-
-                                {/* This link will go to Caiyi's component. Not sure yet if the correct element would be a link or a router/route */}
-                                <Link>create event</Link>
+                                    <Link to={`/tmform/${eventObject.id}`}>
+                                        <button>
+                                            Create event
+                                        </button>
+                                    </Link>
                             </li>
                         )
                     })
