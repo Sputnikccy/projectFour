@@ -2,8 +2,8 @@
 import './sass/App.scss';
 // utilities
 import { Link, Routes, Route } from 'react-router-dom'
-import { useState, useEffect } from 'react';
-import { getDatabase, ref, push, onValue } from 'firebase/database';
+// import { useState, useEffect } from 'react';
+// import { getDatabase, ref, push, onValue } from 'firebase/database';
 // components
 import Header from './components/Header';
 // import TestComponent from './components/TestComponent';
@@ -14,8 +14,8 @@ import Ticketmaster from './components/TicketMaster'
 import TmTestForm from './components/TmTestForm';
 import TmTestCard from './components/TmTestCard';
 import BoredInvite from './components/Forms/BoredInvite';
-import app from './firebase';
-import { useNavigate } from "react-router-dom";
+// import app from './firebase';
+// import { useNavigate } from "react-router-dom";
 
 
 function App() {
