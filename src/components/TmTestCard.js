@@ -22,11 +22,6 @@ const TmTestCard = () => {
 
 
     useEffect(() => {
-        // const fetchData= async()=>{
-
-        // }
-        // fetchData()
-        
         const database = getDatabase(app);
 
         const userRef = ref(database, `tm/${userId}`);
@@ -56,6 +51,7 @@ const TmTestCard = () => {
         }).then((response) => {
             console.log(response.data)
            setEvent(response.data)
+           
         })
     }
 

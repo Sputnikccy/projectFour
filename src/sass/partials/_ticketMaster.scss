@@ -1,0 +1,156 @@
+@use "variables" as *;
+
+.tmHeading {
+    background-image: url('../../assets/180.jpg');
+    background-size: cover;
+    padding: 50px 0px 20px 0px;
+
+    h1 {
+        font-family: $headingFont;
+        color: $blackColor;
+        width: 20%;
+        font-size: 1.4rem;
+        margin: 30px;
+    }
+
+    label {
+        display: none;
+    }
+
+    input,
+    select,
+    button {
+        border: 5px solid #b1eb4c;
+        background-color: $whiteColor;
+        border-radius: 50px;
+        margin: 0 15px;
+        font-size: 0.8rem;
+    }
+
+    input,
+    .sortTM,
+    .categoryTM {
+        padding: 5px 30px;
+    }
+
+    input::placeholder {
+        color: $blackColor;
+    }
+
+    .tmButton {
+        padding: 5px 50px;
+        &:hover{
+            border: 5px solid #324314;
+            background-color: #b1eb4c;
+            
+        }
+    }
+}
+
+
+h3 {
+    padding-top: 20px;
+    font-family: $bodyFont;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.tmContent {
+    // background-image: url('../../assets/Picture3.jpg');
+    background-color: #71982f;
+    li {
+        margin: 50px;
+        
+    }
+}
+
+.eventCatalogue {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0px 100px;
+    // padding: 50px 0px;
+}
+
+.eventCard {
+    background: #f8bd01;
+    border:  10px double $whiteColor;
+    border-radius: 1rem;
+    // box-shadow: (1rem 1rem 0rem #006eb7);
+    margin: 0 auto;
+    width: calc(70% / 3);
+    transition: box-shadow 0.6s;
+
+    h4 {
+        font-size: 0.9rem;
+    }
+
+    &:hover {
+        // border: 0.8rem solid #ce0e3c;
+        // border-radius: 50px;
+        // box-shadow: (1rem 1rem 0rem #f8bd01);
+        width: calc(70% / 3);
+        height: auto;
+    }
+
+    img {
+        max-width: 90%;
+        height: 150px;
+        object-fit: contain;
+    }
+    
+    p {
+        font-family: $bodyFont;
+        font-size: 0.7rem;
+        margin: 15px 20px;
+        text-align: left;
+
+        span {
+            text-transform: uppercase;
+            border-bottom: 4px solid $blueColor;
+        }
+    }
+
+    a {
+        padding: 5px 5px;
+        border: 2px solid $blackColor;
+        border-radius: 1rem;
+        margin: 10px 5px;
+        &:hover {
+            background-color: rgb(183, 183, 183);
+        }
+    }
+
+    a,
+    .eventButton {
+        font-family: $bodyFont;
+        background-color: white;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        color: $blackColor;
+    }
+
+    .eventButton {
+        border: none;
+        padding: 0px;
+        &:hover,
+            {
+            background-color: rgb(183, 183, 183);
+        }
+
+    }
+
+}
+
+.cardFlex{
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+}
+
+.testImg {
+    max-width: 90%;
+    height: auto;
+}
