@@ -7,14 +7,7 @@ const BoredComponent = () => {
 
 
     const getActivity = (e) => {
-        e.preventDefault()
-        const options = {
-            url: `http://www.boredapi.com/api/activity?type=${userChoice}`,
-            method: 'GET',
-            dataResponse: 'json'
-        };
-        axios.request(options)
-    const getActivity = (e) => {
+        
         e.preventDefault()
         const options = {
             url: `http://www.boredapi.com/api/activity?type=${userChoice}`,
@@ -61,7 +54,7 @@ const BoredComponent = () => {
     
     const [activityImage, setActivityImage] = useState({})
 
-    const placeHolderImage = renderImage
+    // const placeHolderImage = renderImage
 
     
     const handleUserChoice = (e) => {
@@ -72,46 +65,46 @@ const BoredComponent = () => {
    
     
     return (
-        <>
-            <h3>Testing</h3>
-            <form action="submit" onSubmit={getActivity}>
-                {/* sr-only not working here, need to be figured out later */}
-                <select
-                    id='choice'
-                    onChange={handleUserChoice}
-                    value={userChoice}
-                >
-                    <option value="title" selected>Select Type</option>
-                    <option value="education">education</option>
-                    <option value="recreational">recreational</option>
-                    <option value="social">social</option>
-                    <option value="diy">diy</option>
-                    <option value="charity">charity</option>
-                </select>
-                {/* sr-only not working here, need to be figured out later */}
-                
-
-                <button >Click for activities</button>
-            </form>
-
             <div>
-                {activityImage?
-                // <img src={placeHolderImage}/>
-                <img src={activityImage}  />
-                :
-                "no picture"}
-                
-                
+                <h3>Testing</h3>
+                <form action="submit" onSubmit={getActivity}>
+                    {/* sr-only not working here, need to be figured out later */}
+                    <select
+                        id='choice'
+                        onChange={handleUserChoice}
+                        value={userChoice}
+                    >
+                        <option value="title" selected>Select Type</option>
+                        <option value="education">education</option>
+                        <option value="recreational">recreational</option>
+                        <option value="social">social</option>
+                        <option value="diy">diy</option>
+                        <option value="charity">charity</option>
+                    </select>
+                    {/* sr-only not working here, need to be figured out later */}
                     
-                    <h3>{activities.activity}</h3>
-                    <h4>{activities.type}</h4>
-                    <h5>{activities.participants}</h5>
-                    <Link to={`/boredForm/${activities.key}`}>
-                        <button>Create event</button>
-                    </Link>
-                
+
+                    <button >Click for activities</button>
+                </form>
+
+                <div>
+                    {activityImage?
+                    // <img src={placeHolderImage}/>
+                    <img src={activityImage}  />
+                    :
+                    "no picture"}
+                    
+                    
+                        
+                        <h3>{activities.activity}</h3>
+                        <h4>{activities.type}</h4>
+                        <h5>{activities.participants}</h5>
+                        <Link to={`/boredForm/${activities.key}`}>
+                            <button>Create event</button>
+                        </Link>
+                    
+                </div>
             </div>
-        </>
     );
 
 }
