@@ -15,18 +15,18 @@ const BoredInvite =() =>{
     const [event, setEvent] = useState();
 
 
+
    //get params AKA firebase node key
    const urlParamsValue = useParams();
-//    console.log(urlParamsValue.invites)
+
    const userId = urlParamsValue.invites;
-// console.log(userId)
+
 
 
    useEffect(() => {
     const database = getDatabase(app);
     const userRef = ref(database, `bored/${userId}`);
     get(userRef).then((data) => {
-        // console.log(data.val())
         setEvent(data.val())
         // this feeds apiCheck the stored activityID key from Firebase to fetch from boredAPI.
         apiCheck(data.val().activityId)
@@ -42,10 +42,29 @@ const apiCheck = (key) => {
         dataResponse: 'json'
     })
         .then((response) => {
-            // console.log(response.data)
             setActivity(response.data);
         })
+        axios({
+            url: 'https://api.unsplash.com/search/photos',
+            method: 'GET',
+            dataResponse: 'json',
+            params: {
+                client_id: 'xMApnHMvGsHXF8WNkU53mf3KirR2oQ8ZS6YYr-M-NAU',
+                query: `${activity}`,
+                per_page: 1
+            }
+        }).then((response) =>{
+            console.log(response.data.results)
+            const apiImage = response.data.results[0].urls.thumb;
+            setActivityImage(apiImage)
+            console.log(apiImage)
+        })
 }
+const [activityImage, setActivityImage] = useState({})
+
+
+
+
 if(!activity||!event){
     return null
 }
@@ -55,9 +74,10 @@ if(!activity||!event){
     return(
         <div className="inviteCard">
             <h2>{event.eventName}</h2>
-            <h3>{event.hostName}</h3>
-            <h4>{event.eventLocation}</h4>
-            <p>{event.eventTime}</p>
+            <img className="inviteImage" src={activityImage}  />
+            <p>{event.hostName}</p>
+            {/* <p>{event.eventLocation}</p>
+            <p>{event.eventTime}</p> */}
             <p>{event.eventDescription}</p>
             <p>{activity.activity}</p>
         </div>

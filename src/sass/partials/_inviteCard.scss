@@ -1,6 +1,6 @@
 @use "variables" as *;
 
-.createEvent{
+.inviteCard{
     text-align: center;
     position: absolute;
     top: 20%;
@@ -22,37 +22,17 @@
         text-shadow: 1px 1px $blackColor;
         text-transform: capitalize;
     }
-    label{
-            border-bottom: 1px solid black;
+    p{
             color: $blackColor;
             text-transform: capitalize;
-            margin: 0.5rem 0;
-            padding: 0;
+            // margin: 0.5rem 0;
+            padding: 10px;
+            // background-color: rgba(64, 3, 168, 0.4);
+            border-radius: 1rem;
             font: 1.2rem $bodyFont;
-    }
-    input{
-        border-style: none;
-        border-radius: 10px;
-        padding: 5px;
-        width: 75%;
-    }
-    .createButton{
-        margin: .5rem;
-        border: none;
-        font: 1.3rem $bodyFont;
-        text-transform: capitalize;
-        cursor: pointer;
-        text-align: center;
-        transition: .3s;
-        border-radius: 2rem;
-        padding: .6rem .9rem;
-        width: 14rem;
-        color: $blackColor;
-        background-color: #f8bd01;
-        transition: 0.250s;
     }
 }
 
-
-
-
+.inviteImage{
+    border-radius: 1rem;
+}
