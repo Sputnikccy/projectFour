@@ -32,11 +32,6 @@ const BoredForm = () => {
             console.log(response);
             // create variable to hold new state.
             const data = response.val();
-            // console.log(data)
-            // for (let key in data) {
-            //     /**unshift adds element to the beginning of the array of the "/bored" section.**/ 
-            //     newState.unshift({ key: key, name: data[key] })
-            // }
             for (let key in data) {
                 newState.unshift({ key: key, name: data[key] })
             }
@@ -71,7 +66,6 @@ const BoredForm = () => {
         eventTime: eventTimeInput,
         activityId: urlParamsValue.key
     }
-    // console.log(savedInputData)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -86,7 +80,6 @@ const BoredForm = () => {
         setDescriptionInput('')
         navigate(`/boredinvite/${invites[0].key}`)
         // clear inputs
-        
     }
   
     return(
@@ -96,7 +89,8 @@ const BoredForm = () => {
             className='createEvent' 
             onSubmit={handleSubmit}
             action='submit'>
-                <label htmlFor='event'>Name your event</label>
+                <h2>Let's have fun!</h2>
+                <label htmlFor='event'>Event Name</label>
                 <input 
                 type="text"
                 onChange={handleEventNameInputChange}
@@ -111,7 +105,7 @@ const BoredForm = () => {
                 onChange={handleHostInputChange}
                 required 
                 />
-                <label>Start time</label>
+                {/* <label>Start time</label>
                 <input 
                 type="text"
                 value={eventTimeInput}
@@ -124,7 +118,7 @@ const BoredForm = () => {
                 value={locationInput}
                 onChange={handleLocationInputChange}
                 required 
-                />
+                /> */}
                 {/* <label>Enter Emails</label>
                 <input 
                 type="text"
@@ -138,7 +132,7 @@ const BoredForm = () => {
                 onChange={handleDescriptionInputChange}
                 required
                 />
-                <button>Create event</button>
+                <button className='createButton'>Create event</button>
             </form>
         </div>
         </>

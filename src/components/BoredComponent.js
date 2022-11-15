@@ -25,6 +25,7 @@ const BoredComponent = () => {
     }
 
     const getPicture = (info) => {
+        console.log(info)
         axios({
             url: 'https://api.unsplash.com/search/photos',
             method: 'GET',
