@@ -1,4 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Josefin+Sans:wght@300;400;500&display=swap");
+.createEvent {
+  background: #41AAF0;
+  padding: 100px;
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.eventCardTest {
+  background: #F23D37;
+}
+
 html {
   background: url("../../assets/Picture3.jpg") no-repeat fixed top/100vw;
 }
@@ -331,7 +348,8 @@ ul,
 li,
 a,
 input,
-h1 {
+h1,
+h2 {
   padding: 0;
   margin: 0;
 }
@@ -345,6 +363,85 @@ a {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+}
+
+html {
+  background: url("../../assets/Picture3.jpg") fixed top/100vw;
+}
+
+.tmForm {
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  left: 10%;
+  right: 10%;
+  background-color: rgb(69, 144, 69);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+.tmForm h2 {
+  margin: 0;
+  font: 3rem "Cabin Sketch";
+  color: white;
+}
+.tmForm .formContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2rem auto;
+}
+.tmForm .formContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tmForm .formContainer form label {
+  font: 1.3rem "Josefin Sans";
+}
+.tmForm .formContainer form input {
+  border: none;
+  padding: 0.2rem;
+  border-radius: 2rem;
+  width: 40%;
+  margin-bottom: 0.8rem;
+}
+.tmForm .formContainer form textarea {
+  resize: none;
+  border: none;
+  outline: none;
+  border-radius: 0.8rem;
+}
+
+.tmCard {
+  height: 100vh;
+}
+.tmCard h2 {
+  margin: 0;
 }
 
 .App {

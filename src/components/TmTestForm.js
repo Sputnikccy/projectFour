@@ -13,7 +13,7 @@ const TmTestForm = () => {
 
     const urlParamsValue = useParams();
     console.log(urlParamsValue.idd);
-   
+
 
     // this state will track user inputs from the form
     const [eventInput, setEventInput] = useState('');
@@ -42,10 +42,10 @@ const TmTestForm = () => {
             }
 
             console.log(newState)
-          
+
 
             //update state with the new array
-            setInvitations(newState)  
+            setInvitations(newState)
         })
     }, [])
 
@@ -97,35 +97,41 @@ const TmTestForm = () => {
 
 
     return (
-       
-        <div className="tmForm" >
+
+        <div className="tmForm wrapper" >
+
             <h2>Let's have fun!</h2>
-        
-            <form action='submit' onSubmit={handleOnSubmit}>
-                <label htmlFor="event">Event Name</label>
-                <input type="text"
-                    id='event'
-                    onChange={handleEventInputChange}
-                    value={eventInput}
-                />
 
-                <label htmlFor="host">Host Name</label>
-                <input type="text"
-                    id='host'
-                    onChange={handleHostInputChange}
-                    value={hostInput}
-                />
+            <div className='formContainer'>
 
-                <label htmlFor="event">Description</label>
-                <input type="text"
-                    id='event'
-                    onChange={handleDescriptionInputChange}
-                    value={descriptionInput}
-                />
 
-                <button>submit</button>
-            </form>
+                <form action='submit' onSubmit={handleOnSubmit}>
+                    <label htmlFor="event">Event Name</label>
+                    <input type="text"
+                        id='event'
+                        onChange={handleEventInputChange}
+                        value={eventInput}
+                    />
 
+                    <label htmlFor="host">Host Name</label>
+                    <input type="text"
+                        id='host'
+                        onChange={handleHostInputChange}
+                        value={hostInput}
+                    />
+
+                    <label htmlFor="event">Description</label>
+                    <textarea type="text"
+                        id='event'
+                        onChange={handleDescriptionInputChange}
+                        value={descriptionInput}
+                        row='30'
+                        cols='30'
+                    > </textarea>
+
+                    <button>submit</button>
+                </form>
+            </div>
 
         </div >
     )
