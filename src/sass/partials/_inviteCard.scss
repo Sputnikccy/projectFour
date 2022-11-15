@@ -1,38 +1,85 @@
 @use "variables" as *;
 
 .inviteCard{
-    text-align: center;
     position: absolute;
-    top: 20%;
-    bottom:20% ;
-    left:10%;
-    right: 10%;
-    background-color:#71982f;
-    border:10px double $whiteColor;
-    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    h2{
-        font: 3rem $headingFont;
-        color:$whiteColor;
-        margin-bottom: 1rem;
-        margin-top: 1.5rem;
-        text-shadow: 1px 1px $blackColor;
-        text-transform: capitalize;
-    }
-    p{
-            color: $blackColor;
-            text-transform: capitalize;
-            // margin: 0.5rem 0;
-            padding: 10px;
-            // background-color: rgba(64, 3, 168, 0.4);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    .imgContainer {
+        margin-top: 2rem;
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        img {
+            max-width: 100%;
+            border: 10px double #71982f;
             border-radius: 1rem;
-            font: 1.2rem $bodyFont;
+            background: white;
+        }
     }
 }
+.cardContent{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border: 10px double #f7f5f1;
+        border-radius: 1rem;
+        background-color: #71982f;
+        width: 80%;
+        margin: 2rem 4rem;
+        .activityInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            img {
+                max-width: 70%;
+                border:1px solid  $whiteColor;
+                border-radius: 1rem;
+                margin-bottom: .8rem;
+            }
+            .activityTitle{
+                text-transform: capitalize;
+                font:italic 1.5rem $bodyFont;
+                color: rgb(68, 70, 67);
+                margin-bottom: .8rem;
+            }
+            p{
+                font: 1.2rem $bodyFont;
+                color: rgb(68, 70, 67);
+                margin-bottom: .8rem;
+            }
+        }
 
-.inviteImage{
-    border-radius: 1rem;
+        .eventTheme{
+            text-transform: capitalize;
+            font: 3rem $headingFont;
+            color: $whiteColor;
+            margin: 1.5rem;
+        }
+        .host {
+            font: 1.2rem $bodyFont;
+            margin-bottom: 1rem;
+            color: rgb(68, 70, 67);
+            span{
+                font:1.5rem;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
+}
+.description{
+    max-width: 80%;
+    height: 100px;
+    overflow-wrap: break-word;
+        margin-bottom: 1rem;
+
+        p {
+            font: 1.2rem $bodyFont;
+            color: rgb(68, 70, 67);
+            display: inline;
+            border-bottom: solid 1px #000;
+            padding-bottom: 0.02rem;
+        }
 }
