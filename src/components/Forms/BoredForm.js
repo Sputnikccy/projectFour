@@ -105,7 +105,7 @@ const BoredForm = () => {
                 onChange={handleHostInputChange}
                 required 
                 />
-                {/* <label>Start time</label>
+                <label>Start time</label>
                 <input 
                 type="text"
                 value={eventTimeInput}
@@ -118,7 +118,7 @@ const BoredForm = () => {
                 value={locationInput}
                 onChange={handleLocationInputChange}
                 required 
-                /> */}
+                />
                 {/* <label>Enter Emails</label>
                 <input 
                 type="text"

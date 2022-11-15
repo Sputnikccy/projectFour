@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import axios from "axios";
 import { Link } from 'react-router-dom'
 import {getDatabase, ref, get} from 'firebase/database'
+import bannerPicture from "../../assets/havingFun.jpg"
 // Config details
 import app from '../../firebase';
 
@@ -31,7 +32,7 @@ const BoredInvite =() =>{
         // this feeds apiCheck the stored activityID key from Firebase to fetch from boredAPI.
         apiCheck(data.val().activityId)
     }).catch((error)=>{
-        alert('error')
+        alert('Error.')
     })
 }, [])
 
@@ -50,11 +51,10 @@ const apiCheck = (key) => {
             dataResponse: 'json',
             params: {
                 client_id: 'xMApnHMvGsHXF8WNkU53mf3KirR2oQ8ZS6YYr-M-NAU',
-                query: `${activity}`,
+                query: `${activity.activity}`,
                 per_page: 1
             }
         }).then((response) =>{
-            console.log(response.data.results)
             const apiImage = response.data.results[0].urls.thumb;
             setActivityImage(apiImage)
             console.log(apiImage)
@@ -72,15 +72,45 @@ if(!activity||!event){
     
 
     return(
-        <div className="inviteCard">
-            <h2>{event.eventName}</h2>
-            <img className="inviteImage" src={activityImage}  />
-            <p>{event.hostName}</p>
-            {/* <p>{event.eventLocation}</p>
-            <p>{event.eventTime}</p> */}
-            <p>{event.eventDescription}</p>
-            <p>{activity.activity}</p>
-        </div>
+
+        <section className="inviteCard">
+            <div className="imgContainer">
+                <img src={bannerPicture} alt="A line of people holding hands" />
+            </div>
+            <div className="cardContent">
+                <h2 className="eventTheme">{event.eventName}</h2>
+                <div className="descriptionText">
+                    <p>{event.eventDescription}</p>
+                </div>
+                <p className="host">From <span>{event.hostName}</span></p>
+                <div className="activityInfo">
+                <p className="activityTitle">{activity.activity}</p>
+                    <img className="inviteImage" src={activityImage}  />
+                    <p>🗺 {event.eventLocation}</p>
+                    <p>🕰 {event.eventTime}</p>
+                </div>
+                
+                
+            </div>
+            
+
+        </section>
+
+
+        // <>
+        // <div className="imgContainer">
+        // <img src={bannerPicture} alt="" />
+        // </div>
+        // <div className="inviteCard">
+        //     <h2>{event.eventName}</h2>
+        //     <img className="inviteImage" src={activityImage}  />
+        //     <p>{event.hostName}</p>
+        //     {/* <p>{event.eventLocation}</p>
+        //     <p>{event.eventTime}</p> */}
+        //     <p>{event.eventDescription}</p>
+        //     <p>{activity.activity}</p>
+        // </div>
+        // </>
     )
 }
 
