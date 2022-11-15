@@ -64,7 +64,7 @@ const BoredComponent = () => {
    
     
     return (
-        <>
+        <div className='boredForm'>
             <h3>Testing</h3>
             <form action="submit" onSubmit={getActivity}>
                 {/* sr-only not working here, need to be figured out later */}
@@ -102,7 +102,7 @@ const BoredComponent = () => {
                         <button>Create event</button>
                     </Link>
             </div>
-        </>
+        </div>
     );
 
 }

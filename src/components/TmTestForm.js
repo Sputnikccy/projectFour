@@ -19,6 +19,7 @@ const TmTestForm = () => {
     const [eventInput, setEventInput] = useState('');
     const [hostInput, setHostInput] = useState('');
     const [descriptionInput, setDescriptionInput] = useState('');
+    const [inviteeInput, setInviteeInput] = useState('');
     let navigate = useNavigate();
 
     // this state will track data from db
@@ -63,12 +64,17 @@ const TmTestForm = () => {
         setDescriptionInput(e.target.value)
     }
 
+    const handleHostInviteeChange = (e) => {
+        setInviteeInput(e.target.value)
+    }
+
     //gather user's inputs and activity id
     const savedInputData = {
         event: eventInput,
         host: hostInput,
         description: descriptionInput,
-        activityId: urlParamsValue.idd
+        activityId: urlParamsValue.idd,
+        email: inviteeInput
     }
 
     console.log(savedInputData)
@@ -94,23 +100,31 @@ const TmTestForm = () => {
 
 
     }
-
+    const email = `https://formsubmit.co/${inviteeInput}`;
+    console.log(email)
 
     return (
 
         <div className="tmForm wrapper" >
 
-            <h2>Let's have fun!</h2>
+            <h2 >
+                <span class="letter">let's </span>&nbsp; 
+                <span class="letter"> have</span>&nbsp;
+                <span class="letter"> fun</span> 
+                <span class="letter"> ! </span>
+                
+            </h2>
 
             <div className='formContainer'>
 
 
-                <form action='submit' onSubmit={handleOnSubmit}>
+                <form action={email} method="POST" onSubmit={handleOnSubmit} >
                     <label htmlFor="event">Event Name</label>
                     <input type="text"
                         id='event'
                         onChange={handleEventInputChange}
                         value={eventInput}
+                        name="email"
                     />
 
                     <label htmlFor="host">Host Name</label>
@@ -118,7 +132,15 @@ const TmTestForm = () => {
                         id='host'
                         onChange={handleHostInputChange}
                         value={hostInput}
+                        name="email"
                     />
+
+                    {/* <label htmlFor="invitee">Invitee's Email</label>
+                    <input type="text"
+                        id='invitee'
+                        onChange={handleHostInviteeChange}
+                        value={inviteeInput}
+                    /> */}
 
                     <label htmlFor="event">Description</label>
                     <textarea type="text"
@@ -127,9 +149,10 @@ const TmTestForm = () => {
                         value={descriptionInput}
                         row='30'
                         cols='30'
+                        name="email"
                     > </textarea>
 
-                    <button>submit</button>
+                    <button >submit</button>
                 </form>
             </div>
 

@@ -1,8 +1,119 @@
 @use "variables" as *;
-.tmCard{
-    height: 100vh;
 
-    h2{
-        margin: 0;
+.tmCard {
+    // position: absolute;
+    // top: 10%;
+    // bottom:20% ;
+    // left:10%;
+    // right: 10%;
+    // background-color:white;
+    // max-width: 1024px;
+    // max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background: url('../../assets/Picture3.jpg') fixed top;
+
+
+    .imgContainer {
+        margin-top: 2rem;
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+
+        img {
+            max-width: 100%;
+            border: 8px solid #71982f;
+            border-radius: 2rem;
+
+        }
     }
+
+    .description {
+        width: 80%;
+        height: 100px;
+        overflow-wrap: break-word;
+        margin-bottom: 1rem;
+
+        p {
+            font: 1.2rem $bodyFont;
+            color: rgb(68, 70, 67);
+            display: inline;
+            border-bottom: solid 1px #000;
+            padding-bottom: 0.02rem;
+
+
+        }
+    }
+
+    .cardContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // height: 100vh;
+
+        border: 15px double #f7f5f1;
+        border-radius: 1rem;
+
+
+
+        // background: radial-gradient(circle at 50% 50%, #fdfcfa 0, #ffffff 50%, transparent 0), radial-gradient(circle at 50% 50%,#fcfcfb 0, #fcfcfc 50%, transparent 0);
+        // background-repeat: repeat-y;
+        // // background-color: white;
+        // background-size: 12px 12px;
+        // background-position: -12px calc(100% - 5px), calc(100% + 12px) 5px;
+
+
+        background-color: #71982f;
+
+        width: 80%;
+        margin: 2rem 4rem;
+
+        .activityInfo {
+            img {
+                max-width: 70%;
+                border:1px solid  $whiteColor;
+                border-radius: 2rem;
+                margin-bottom: .8rem;
+            }
+        }
+
+        h2 {
+            font: 3rem $headingFont;
+            color: $whiteColor;
+            margin: 1.5rem;
+        }
+
+        .host {
+            font: 1.2rem $bodyFont;
+            margin-bottom: 1rem;
+            color: rgb(68, 70, 67);
+            span{
+                font:1.5rem $headingFont;
+            }
+        }
+
+        .activityInfo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h3{
+                font:italic 1.5rem $headingFont;
+                color: rgb(68, 70, 67);
+                margin-bottom: .8rem;
+            }
+
+            p{
+                font: 1.2rem $bodyFont;
+                color: rgb(68, 70, 67);
+                margin-bottom: .8rem;
+            }
+        }
+
+
+    }
+
+
 }

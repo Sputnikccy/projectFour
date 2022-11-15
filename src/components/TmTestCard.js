@@ -2,7 +2,8 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from 'react';
 import { getDatabase, ref, push, onValue, get } from 'firebase/database';
-import app from '../firebase'
+import app from '../firebase';
+import flag from '../assets/havingFun.jpg'
 
 const TmTestCard = () => {
     //track data from database
@@ -11,7 +12,7 @@ const TmTestCard = () => {
     //track data from API call
     const [event, setEvent] = useState(null);
 
-   console.log('change')
+    console.log('change')
 
 
     //get params AKA firebase node key
@@ -32,8 +33,8 @@ const TmTestCard = () => {
 
             apiDada(data.val().activityId)
             console.log(data.val().activityId)
-           
-        }).catch((error)=>{
+
+        }).catch((error) => {
             alert(error)
         })
 
@@ -50,41 +51,49 @@ const TmTestCard = () => {
             }
         }).then((response) => {
             console.log(response.data)
-           setEvent(response.data)
-           
+            setEvent(response.data)
+
         })
     }
 
-        if(!activity||!event){
-            return null
-        }
+    if (!activity || !event) {
+        return null
+    }
 
     return (
 
         <div className="tmCard">
 
-            <h2 className="eventTheme">
+            <div className="imgContainer">
+                <img src={flag} alt="colorful flags" />
+                {/* <img src={flag} alt="colorful flags" /> */}
+            </div>
 
-                {activity.event}
+            <div className="cardContent">
+
+                <h2 className="eventTheme">
+
+                    {activity.event}
+                </h2>
+
+                <div className="description">
+                    <p >
+                        {activity.description}
+                    </p>
+                </div>
+
+                <p className="host">
+                —— from <span>{activity.host}</span>
+                </p>
 
 
-            </h2>
-            <p className="description">
-
-                {activity.description}
-            </p>
-            <p className="host">
-                from {activity.host} 
-              
-            </p>
-            
-             
-            <div className="activityInfo">
-                <h3 className="activityTitle">{event.name}</h3>
-                <img src={event.images[4].url} alt="" />
-                <p>start time: {event.dates.start.localDate} {event.dates.start.localTime}</p>
-                <p>venue: {event._embedded.venues[0].name}</p>
-            </div> 
+                <div className="activityInfo">
+                    <h3 className="activityTitle">{event.name}</h3>
+                    <img src={event.images[4].url} alt="" />
+                    <p> 🕰 start time: {event.dates.start.localDate} {event.dates.start.localTime}</p>
+                    <p> 🗺 venue: {event._embedded.venues[0].name}</p>
+                </div>
+            </div>
 
         </div>
     )
