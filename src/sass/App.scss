@@ -1,6 +1,11 @@
 @use "./partials/variables" as *;
 @use "./partials/boredForm";
 @use "./partials/landingPage";
+@use "./partials/header";
+@use "./partials/setup";
+@use "./partials/baseStyle";
+@use "./partials/ticketMaster";
+
 
 .App {
   text-align: center;
