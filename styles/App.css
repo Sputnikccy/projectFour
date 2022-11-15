@@ -17,7 +17,7 @@
 }
 
 html {
-  background: url("../../assets/Picture3.jpg") no-repeat fixed top/100vw;
+  background: url("../../assets/Picture3.jpg") fixed top/100vw;
 }
 
 .landing-container {
@@ -27,8 +27,8 @@ html {
   bottom: 20%;
   left: 10%;
   right: 10%;
-  background-color: rgb(255, 255, 255);
-  border: 2px solid green;
+  background-color: #71982f;
+  border: 10px double #FFF;
   border-radius: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -46,17 +46,21 @@ html {
 }
 .landing-container h1 {
   font: 3rem "Cabin Sketch";
-  color: yellowgreen;
+  color: #FFF;
   margin-bottom: 1rem;
   margin-top: 1.5rem;
+  text-shadow: 1px 1px #000;
+  text-transform: uppercase;
 }
 .landing-container .subtitle {
+  padding: 0 1.5rem;
   margin-bottom: 1rem;
 }
 .landing-container .subtitle p {
+  color: #000;
   margin: 0;
   padding: 0;
-  font: 1.2rem "Josefin Sans";
+  font: italic 1.2rem "Josefin Sans";
 }
 .landing-container .linkContainer {
   display: -webkit-box;
@@ -73,6 +77,7 @@ html {
   margin: 0.5rem;
   border: none;
   font: 1.3rem "Josefin Sans";
+  text-transform: capitalize;
   cursor: pointer;
   text-align: center;
   -webkit-transition: 0.3s;
@@ -80,6 +85,32 @@ html {
   border-radius: 2rem;
   padding: 0.6rem 0.9rem;
   width: 14rem;
+  color: #000;
+  background-color: #f8bd01;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  -webkit-animation: glow 2s infinite;
+          animation: glow 2s infinite;
+}
+@-webkit-keyframes glow {
+  from {
+    -webkit-box-shadow: 0 0 10px -10px #5e498e;
+            box-shadow: 0 0 10px -10px #5e498e;
+  }
+  to {
+    -webkit-box-shadow: 0 0 10px 10px #5e498e;
+            box-shadow: 0 0 10px 10px #5e498e;
+  }
+}
+@keyframes glow {
+  from {
+    -webkit-box-shadow: 0 0 10px -10px #5e498e;
+            box-shadow: 0 0 10px -10px #5e498e;
+  }
+  to {
+    -webkit-box-shadow: 0 0 10px 10px #5e498e;
+            box-shadow: 0 0 10px 10px #5e498e;
+  }
 }
 
 html {

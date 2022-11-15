@@ -53,21 +53,6 @@ const Ticketmaster = () => {
     return (
         <>
             <form onSubmit={handleSubmit}>
-                {/* form will have country, city, keyword options, categories */}
-                {/* <label htmlFor="keywords">Keywords</label>
-                <input 
-                name="keywords" 
-                placeholder="Search for artists, venues or events" type="text"
-                onChange={(event) => handleSubmit(event)}
-                  /> */}
-
-                {/* <label>country code</label>
-                <input 
-                placeholder="ie, CA / US / GB" 
-                type="text"
-                onChange={(event) => handleSubmit(event)}
-                 /> */}
-
                 <label htmlFor="city">city</label>
                 <input 
                 type="text"
@@ -75,7 +60,6 @@ const Ticketmaster = () => {
                 value={cityChoice}
                 onChange={handleThirdOnChange}
                  />
-
                 <label htmlFor="category">category</label>
                 <select 
                 name="category" 
@@ -89,7 +73,6 @@ const Ticketmaster = () => {
                     <option value="art">art</option>
                     <option value="family">family</option>
                 </select>
-
                 <label htmlFor="sort">sort</label>
                 <select 
                 name="sort" 
