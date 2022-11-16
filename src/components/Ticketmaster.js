@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import LandingPage from './LandingPage';
 
-const Ticketmaster = () => {
+const TicketMaster = () => {
     const [events, setEvents] = useState([]);
     const [categoryChoice, setCategoryChoice] = useState('');
     const [sortChoice, setSortChoice] = useState('');
@@ -166,4 +166,4 @@ const Ticketmaster = () => {
 
 };
 
-export default Ticketmaster;
+export default TicketMaster;
