@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Josefin+Sans:wght@300;400;500&display=swap");
 .createEvent {
+<<<<<<< HEAD
   background: rgb(65, 170, 240);
+  padding: 100px;
+  width: 75%;
+=======
+  background: #41AAF0;
   padding: 100px;
   width: 75%;
   display: flex;
@@ -8,7 +13,444 @@
 }
 
 .eventCardTest {
+  background: #F23D37;
+}
+
+html {
+  background: url("../../assets/Picture3.jpg") fixed top/100vw;
+}
+
+.landing-container {
+  text-align: center;
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  left: 10%;
+  right: 10%;
+  background-color: #71982f;
+  border: 10px double #FFF;
+  border-radius: 1rem;
+>>>>>>> main
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+<<<<<<< HEAD
+
+.eventCardTest {
   background: rgb(242, 61, 55);
+=======
+.landing-container h1 {
+  font: 3rem "Cabin Sketch";
+  color: #FFF;
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  text-shadow: 1px 1px #000;
+  text-transform: uppercase;
+}
+.landing-container .subtitle {
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+}
+.landing-container .subtitle p {
+  color: #000;
+  margin: 0;
+  padding: 0;
+  font: italic 1.2rem "Josefin Sans";
+}
+.landing-container .linkContainer {
+  display: flex;
+  flex-direction: column;
+  font: 1.2rem "Josefin Sans";
+  margin-bottom: 1.5rem;
+}
+.landing-container .linkContainer button {
+  margin: 0.5rem;
+  border: none;
+  font: 1.3rem "Josefin Sans";
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 2rem;
+  padding: 0.6rem 0.9rem;
+  width: 14rem;
+  color: #000;
+  background-color: #f8bd01;
+  transition: 0.25s;
+  -webkit-animation: glow 2s infinite;
+          animation: glow 2s infinite;
+}
+@-webkit-keyframes glow {
+  from {
+    box-shadow: 0 0 10px -10px #5e498e;
+  }
+  to {
+    box-shadow: 0 0 10px 10px #5e498e;
+  }
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px -10px #5e498e;
+  }
+  to {
+    box-shadow: 0 0 10px 10px #5e498e;
+  }
+}
+
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+figcaption,
+figure,
+main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details,
+menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  font-size: 125%;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  max-width: 1260px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+ul,
+li,
+a,
+input,
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.boredCatalogue {
+  background-image: url("../../assets/180.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+.boredCatalogue form {
+  background-image: url("../../assets/180.jpg");
+  background-size: cover;
+  padding: 80px 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+.boredCatalogue select,
+.boredCatalogue .activitiesBtn {
+  border: 5px solid #71982f;
+  background-color: #FFF;
+  border-radius: 50px;
+  margin: 0 15px;
+  font-size: 1rem;
+  padding: 10px 30px;
+  text-transform: uppercase;
+}
+.boredCatalogue .activitiesBtn:hover {
+  border: 5px solid #324314;
+  background-color: #71982f;
+  color: white;
+}
+.boredCatalogue select {
+  text-transform: uppercase;
+}
+.boredCatalogue .boredImg {
+  background-color: #71982F;
+  height: auto;
+  width: 50%;
+  margin: 0 auto;
+  padding: 50px;
+  border: double 10px #FFF;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  color: #FFF;
+  font-family: "Cabin Sketch";
+}
+.boredCatalogue .boredImg .activity {
+  font-size: 3rem;
+  width: 80%;
+  margin: 0 auto;
+}
+.boredCatalogue .boredImg .participants {
+  font-family: "Josefin Sans";
+}
+.boredCatalogue .boredImg .eventBtn,
+.boredCatalogue .boredImg button {
+  font-family: "Josefin Sans";
+  background-color: #f8bd01;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: #000;
+}
+.boredCatalogue .boredImg .eventBtn {
+  padding: 15px;
+  border-radius: 1rem;
+}
+.boredCatalogue .boredImg .eventBtn button {
+  border: none;
+}
+.boredCatalogue .boredImg img {
+  height: 300px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 15px;
+  border: solid 5px #FFF;
+  border-radius: 1rem;
+>>>>>>> main
 }
 
 html {
