@@ -139,6 +139,11 @@
   }
 }
 
+@media (max-width: 1300px) {
+  .eventFormContainer {
+    width: 80%;
+  }
+}
 html {
   background: url("../../assets/Picture3.jpg") fixed top/100vw;
 }
@@ -1036,12 +1041,15 @@ li {
   }
 }
 .boredCatalogue {
-  background-image: url("../../assets/180.jpg");
-  background-size: cover;
-  height: 100vh;
+  position: absolute;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  bottom: 20%;
+  left: 10%;
+  right: 10%;
 }
 .boredCatalogue form {
-  background-image: url("../../assets/180.jpg");
   background-size: cover;
   padding: 80px 0px;
   display: -webkit-box;
@@ -1076,7 +1084,6 @@ li {
 .boredCatalogue .boredImg {
   background-color: #71982F;
   height: auto;
-  width: 50%;
   margin: 0 auto;
   padding: 50px;
   border: double 10px rgb(255, 255, 255);
@@ -1084,6 +1091,7 @@ li {
   text-transform: uppercase;
   color: rgb(255, 255, 255);
   font-family: "Cabin Sketch";
+  width: clamp(500px, 75%, 600px);
 }
 .boredCatalogue .boredImg .activity {
   font-size: 3rem;
@@ -1117,6 +1125,67 @@ li {
   border: solid 5px rgb(255, 255, 255);
   border-radius: 1rem;
 }
+@media (max-width: 1300px) {
+  .boredCatalogue .boredImg {
+    width: 80%;
+    margin-top: 3.5rem;
+  }
+  .boredCatalogue .boredImg .activity {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 810px) {
+  .boredCatalogue .boredImg {
+    width: 80%;
+    margin-top: 3rem;
+  }
+  .boredCatalogue .boredImg .activity {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 375px) {
+  .boredCatalogue .boredCatalogue,
+.boredCatalogue form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+  }
+  .boredCatalogue .boredCatalogue select,
+.boredCatalogue .boredCatalogue .activitiesBtn,
+.boredCatalogue form select,
+.boredCatalogue form .activitiesBtn {
+    width: 70%;
+    font-size: 0.8rem;
+    margin: 10px auto;
+  }
+  .boredCatalogue .boredCatalogue select,
+.boredCatalogue form select {
+    text-align: center;
+  }
+  .boredCatalogue select,
+.boredCatalogue .activitiesBtn {
+    margin: 10px;
+  }
+  .boredCatalogue .boredImg {
+    width: 100%;
+  }
+  .boredCatalogue .boredImg .activity {
+    font-size: 1.1rem;
+  }
+  .boredCatalogue .boredImg img {
+    height: 200px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}
 
 .inviteCard {
   position: absolute;
@@ -1130,7 +1199,8 @@ li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 3rem auto;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 .inviteCard .imgContainer {
   margin-top: 2rem;
@@ -1191,40 +1261,60 @@ li {
   text-transform: capitalize;
   font: italic 1.5rem "Josefin Sans";
   color: rgb(68, 70, 67);
+  margin-bottom: 0.8rem;
 }
 .cardContent .activityInfo p {
   font: 1.2rem "Josefin Sans";
   color: rgb(68, 70, 67);
+  margin-bottom: 0.8rem;
 }
 .cardContent .eventTheme {
-  padding: 0;
-  font-size: clamp(2rem, 0.95rem + 0.25vw, 1rem);
   text-transform: capitalize;
-  font: "Cabin Sketch";
+  font: 3rem "Cabin Sketch";
   color: rgb(255, 255, 255);
   margin: 1.5rem;
+}
+.cardContent .host {
+  font: 1.2rem "Josefin Sans";
+  margin-bottom: 1rem;
+  color: rgb(68, 70, 67);
+}
+.cardContent .host span {
+  font: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.inviteButton {
+  border: none;
+  font: 1.3rem "Josefin Sans";
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 2rem;
+  padding: 0.4rem 0.9rem;
+  width: 8.2rem;
+  color: rgb(0, 0, 0);
+  background-color: #f8bd01;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  margin: 0.5rem auto;
 }
 
 .descriptionText {
   max-width: 80%;
-  background: #f8bd01;
-  border-radius: 1rem;
-  border: 10px double rgb(255, 255, 255);
-  padding: 2%;
-  margin: 0.5rem auto;
-}
-.descriptionText .host {
-  font: 1.2rem "Josefin Sans";
-  color: rgb(68, 70, 67);
-  margin: 0.8rem auto 0.3rem;
-}
-.descriptionText .host span {
-  font: 1.5rem;
-  text-transform: capitalize;
+  height: 100px;
+  overflow-wrap: break-word;
+  margin: 1rem;
 }
 .descriptionText p {
   font: 1.2rem "Josefin Sans";
   color: rgb(68, 70, 67);
+  display: inline;
+  border-bottom: solid 1px #000;
+  padding-bottom: 0.02rem;
 }
 
 .tmCard {

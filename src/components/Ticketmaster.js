@@ -115,39 +115,30 @@ const TicketMaster = () => {
                         <option value="name,asc">ALPHABETICAL A-Z</option>
                         <option value="name,desc">ALPHABETICAL Z-A</option>
                     </select>
-
                     <button 
                     type="submit"
                     className='tmButton'>
                         FILTER
                     </button> 
-
                 </form>
-
                 <h2>recommended events for you & your friends</h2>
             </div>
-
             <div className='tmContent'>
                 <ul className="eventCatalogue">
                     {
                         events.map((eventObject) => {
                             return (
-
                                 <li className="eventCard" key={eventObject.id}>
                                     <h3>{eventObject.name}</h3>
-
                                     <img 
                                     className="testImg" 
                                     src={eventObject.images[4].url} 
                                     alt={eventObject.name} />
-
                                     <p> <span>when:</span> {eventObject.dates.start.localDate} at {eventObject.dates.start.localTime}</p>
                                     <p><span>where:</span> {eventObject._embedded.venues[0].name}</p>
-
                                 <div className='cardFlex'>
                                     <a 
                                     href={eventObject.url} target="_blank">buy tickets</a>
-
                                         <Link to={`/tmform/${eventObject.id}`}>
                                             <button className='eventButton'>
                                                 Create event
@@ -158,7 +149,6 @@ const TicketMaster = () => {
                             )
                         })
                     }
-
                 </ul>
             </div>
         </>

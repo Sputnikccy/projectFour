@@ -9,10 +9,6 @@
     margin-bottom: 3rem;
     .imgContainer {
         margin-top: 2rem;
-        width: 80%;
-    margin: 3rem auto;
-    .imgContainer {
-        margin-top: 2rem;
         width: clamp(375px, 75%, 750px);
         display: flex;
         justify-content: space-around;
@@ -80,18 +76,32 @@
             }
         }
 }
+.inviteButton{
+    border: none;
+    font: 1.3rem "Josefin Sans";
+    text-transform: capitalize;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+    border-radius: 2rem;
+    padding: 0.4rem 0.9rem;
+    width: 8.2rem;
+    color: rgb(0, 0, 0);
+    background-color: #f8bd01;
+    transition: 0.25s;
+    margin: 0.5rem auto;
+}
+
 .descriptionText{
     max-width: 80%;
     height: 100px;
     overflow-wrap: break-word;
-        margin-bottom: 1rem;
-
+    margin: 1rem;
         p {
             font: 1.2rem $bodyFont;
             color: rgb(68, 70, 67);
             display: inline;
             border-bottom: solid 1px #000;
             padding-bottom: 0.02rem;
-
         }
 }

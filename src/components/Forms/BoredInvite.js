@@ -91,10 +91,9 @@ if(!activity||!event){
                     <img className="inviteImage" src={activityImage}  />
                     <p>🗺 {event.eventLocation}</p>
                     <p>🕰 {event.eventTime}</p>
-                    <button onClick={copyText}>Copy Link</button>
                 </div>
                 
-                
+                <button className="inviteButton" onClick={copyText}>Copy Link</button>
             </div>
             
 

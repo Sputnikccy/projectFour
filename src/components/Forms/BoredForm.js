@@ -85,7 +85,6 @@ const BoredForm = () => {
     return(
 
     <section className="eventFormContainer wrapper" >
-<
             <h2 className='boredFormH2'>
                 <span class="letter">let's </span>&nbsp; 
                 <span class="letter"> have</span>&nbsp;
