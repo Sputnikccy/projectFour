@@ -62,7 +62,8 @@
     }    
 }
 
-h2{
+// Sorry COLM, had to add a class name to your h2 since it was targetting the whole app instead of by itself and changing the color on my H2 (-Pat)
+.boredFormH2{
     margin: 0;
     font: 3rem $headingFont;
     color: $whiteColor;

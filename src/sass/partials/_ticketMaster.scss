@@ -1,8 +1,8 @@
 @use "variables" as *;
 
 .tmHeading {
-    background-image: url('../../assets/180.jpg');
-    background-size: cover;
+    background-image: url('../../Assets/180.jpg');
+    background-size: auto;
     padding: 50px 0px 20px 0px;
 
     h1 {
@@ -12,6 +12,7 @@
         font-size: 1.4rem;
         color: $whiteColor;
         text-shadow: 0.7px 0.7px 1px $whiteColor;
+        margin: 10px 25px;
     }
 
     label {
@@ -55,7 +56,6 @@ h2 {
     font-family: $bodyFont;
     font-size: 1.5rem;
     text-transform: uppercase;
-    text-shadow: 2px 2px 1px $whiteColor;
 }
 
 .tmContent {
@@ -81,15 +81,9 @@ h2 {
     // box-shadow: (1rem 1rem 0rem #006eb7);
     margin: 0 auto;
     width: calc(70% / 3);
-    transition: box-shadow 0.6s;
 
-    h4 {
+    h3 {
         font-size: 0.9rem;
-    }
-
-    &:hover {
-        width: calc(70% / 3);
-        height: auto;
     }
 
     img {
@@ -153,4 +147,154 @@ li {
 .testImg {
     max-width: 90%;
     height: auto;
+}
+
+@media (max-width: 1200px) {
+    .tmHeading {
+        h1 {
+            margin: 0 0 30px 50px;
+            font-size: 1.2rem;
+            color: #cf0e3d;
+        }
+    }
+
+    .eventCatalogue {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .eventCard {
+        width: calc( 60% / 2);
+        margin: 0 auto;
+
+        h3 {
+            font-size: 0.8rem;
+        }
+
+        p {
+            margin: 10px 30px;
+        }
+
+        a,
+        .eventButton {
+            font-size: 0.6rem;
+        }
+        
+        a {
+            padding: 5px 4px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .tmHeading {
+        background-size: auto;
+
+        h1 {
+            width: 25%;
+            color: black;
+        }
+
+        .tmButton {
+            margin: 10px;
+            width: 10%;
+            padding: 5px;
+        }
+
+        input,
+        select {
+            width: calc( 70% / 3);
+            margin: 0 5px;
+        }
+
+        input,
+        select,
+        .tmButton {
+            font-size: 0.7rem;
+        }
+
+        h2 {
+            width: 70%;
+            margin: 0 auto;
+            text-shadow: 1px 1px 1px #f8bd01;
+        }
+    }
+
+    .eventCatalogue {
+        margin: 0;
+    }
+
+    .eventCard {
+        width: calc(70% / 2);
+        
+        h3 {
+            font-size: 0.7rem;
+        }
+
+        p {
+            margin: 5px 20px;
+        }
+
+        a,
+        .eventButton {
+            font-size: 0.6rem;
+        }
+
+        a {
+            padding: 5px 4px;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .tmHeading {
+        h1 {
+            font-size: 1.4rem;
+            width: 100%;
+            margin: auto;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            input,
+            select,
+            .tmButton {
+                width: 80%;
+                margin: 10px auto;
+            }
+        }
+
+        h2 {
+            font-size: 0.6rem;
+        }
+    }
+
+    .eventCatalogue {
+        .eventCard {
+            width: 85%;
+            margin: 20px auto;
+
+            .cardFlex {
+                display: flex;
+                flex-direction: column;
+            }
+
+            p {
+                display: flex;
+                flex-direction: column;
+                span {
+                    width: 35%;
+                    border-bottom: 3px solid $blueColor;
+                    margin-bottom: 4px;
+                }
+            }
+
+            a {
+                margin: 5px auto;
+                width: 70%;
+            }
+        }
+    }
 }

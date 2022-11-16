@@ -79,7 +79,7 @@ const Ticketmaster = () => {
                     <h1>Flock of Friends</h1>
                 </Link>
 
-                <form className='tmForm' onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit}>
                     <label htmlFor="city">city</label>
                     <input 
                     type="text"

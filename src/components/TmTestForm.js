@@ -119,6 +119,7 @@ const TmTestForm = () => {
                 <label htmlFor="event">Description</label>
                 <input type="text"
                     id='event'
+                    className='tmFormDesc'
                     onChange={handleDescriptionInputChange}
                     value={descriptionInput}
                 />
