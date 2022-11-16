@@ -3,7 +3,9 @@ import axios from "axios";
 import { useState, useEffect } from 'react';
 import { getDatabase, ref, push, onValue, get } from 'firebase/database';
 import app from '../firebase';
-import flag from '../assets/havingFun.jpg';
+
+import flag from '../Assets/havingFun.jpg';
+
 
 
 
@@ -54,10 +56,10 @@ const TmTestCard = () => {
     }
 
 
-    const copyText = ()=>{
+    const copyText = () => {
         navigator.clipboard.writeText(text)
     }
-  
+
     if (!activity || !event) {
         return null
     }
@@ -65,10 +67,8 @@ const TmTestCard = () => {
     return (
 
         <div className="tmCard">
-
             <div className="imgContainer">
                 <img src={flag} alt="colorful flags" />
-             
             </div>
 
             <div className="cardContent">
@@ -88,7 +88,6 @@ const TmTestCard = () => {
                     —— from <span>{activity.host}</span>
                 </p>
 
-
                 <div className="activityInfo">
                     <h3 className="activityTitle">{event.name}</h3>
                     <div className="activitImgContainer">
@@ -100,7 +99,8 @@ const TmTestCard = () => {
                 <div className="buttons">
                     <button onClick={copyText}>Copy Link</button>
                     <a href={event.url}><button>Event Link</button></a>
-                    
+
+
                 </div>
             </div>
 

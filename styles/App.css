@@ -10,7 +10,7 @@
       -ms-flex-align: center;
           align-items: center;
   border-radius: 1rem;
-  border: 10px double #FFF;
+  border: 10px double rgb(255, 255, 255);
 }
 
 .formContainer {
@@ -67,7 +67,7 @@
   border-radius: 2rem;
   padding: 0.4rem 0.9rem;
   width: 8rem;
-  color: #000;
+  color: rgb(0, 0, 0);
   background-color: #f8bd01;
   -webkit-transition: 0.25s;
   transition: 0.25s;
@@ -77,35 +77,35 @@
   color: white;
 }
 
-h2 {
+.boredFormH2 {
   margin: 0;
   font: 3rem "Cabin Sketch";
-  color: #FFF;
+  color: rgb(255, 255, 255);
   text-shadow: 1px 1px rgb(120, 121, 119);
   text-transform: uppercase;
   color: white;
   padding: 0.5rem 0;
   white-space: nowrap;
 }
-h2 .letter {
+.boredFormH2 .letter {
   -webkit-animation: fly-up-twist 0.8s ease-in-out;
           animation: fly-up-twist 0.8s ease-in-out;
   display: inline-block;
   margin-top: 0.5em;
 }
-h2 .letter:nth-child(1) {
+.boredFormH2 .letter:nth-child(1) {
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
 }
-h2 .letter:nth-child(2) {
+.boredFormH2 .letter:nth-child(2) {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
-h2 .letter:nth-child(3) {
+.boredFormH2 .letter:nth-child(3) {
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
 }
-h2 .letter:nth-child(4) {
+.boredFormH2 .letter:nth-child(4) {
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
 }
@@ -150,7 +150,7 @@ html {
   left: 10%;
   right: 10%;
   background-color: #71982f;
-  border: 10px double #FFF;
+  border: 10px double rgb(255, 255, 255);
   border-radius: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -168,10 +168,10 @@ html {
 }
 .landing-container h1 {
   font: 3rem "Cabin Sketch";
-  color: #FFF;
+  color: rgb(255, 255, 255);
   margin-bottom: 1rem;
   margin-top: 1.5rem;
-  text-shadow: 1px 1px #000;
+  text-shadow: 1px 1px rgb(0, 0, 0);
   text-transform: uppercase;
 }
 .landing-container .subtitle {
@@ -179,7 +179,7 @@ html {
   margin-bottom: 1rem;
 }
 .landing-container .subtitle p {
-  color: #000;
+  color: rgb(0, 0, 0);
   margin: 0;
   padding: 0;
   font: italic 1.2rem "Josefin Sans";
@@ -207,7 +207,7 @@ html {
   border-radius: 2rem;
   padding: 0.6rem 0.9rem;
   width: 14rem;
-  color: #000;
+  color: rgb(0, 0, 0);
   background-color: #f8bd01;
   -webkit-transition: 0.25s;
   transition: 0.25s;
@@ -216,25 +216,119 @@ html {
 }
 @-webkit-keyframes glow {
   from {
-    -webkit-box-shadow: 0 0 10px -10px white;
-            box-shadow: 0 0 10px -10px white;
+
+    -webkit-box-shadow: 0 0 10px -10px rgb(255, 255, 255);
+            box-shadow: 0 0 10px -10px rgb(255, 255, 255);
   }
   to {
-    -webkit-box-shadow: 0 0 10px 10px white;
-            box-shadow: 0 0 10px 10px white;
+    -webkit-box-shadow: 0 0 10px 10px rgb(255, 255, 255);
+            box-shadow: 0 0 10px 10px rgb(255, 255, 255);
+
   }
 }
 @keyframes glow {
   from {
-    -webkit-box-shadow: 0 0 10px -10px white;
-            box-shadow: 0 0 10px -10px white;
+
+    -webkit-box-shadow: 0 0 10px -10px rgb(255, 255, 255);
+            box-shadow: 0 0 10px -10px rgb(255, 255, 255);
   }
   to {
-    -webkit-box-shadow: 0 0 10px 10px white;
-            box-shadow: 0 0 10px 10px white;
+    -webkit-box-shadow: 0 0 10px 10px rgb(255, 255, 255);
+            box-shadow: 0 0 10px 10px rgb(255, 255, 255);
+
   }
 }
 
+@media (max-width: 768px) {
+  .landing-container h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .landing-container .subtitle p {
+    font-size: 1rem;
+  }
+  .landing-container .linkContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 1.5rem;
+  }
+  .landing-container .linkContainer button {
+    width: 10rem;
+    font-size: 0.8rem;
+  }
+  @-webkit-keyframes glow {
+    from {
+      -webkit-box-shadow: 0 0 6.5px 6.5px rgb(255, 255, 255);
+              box-shadow: 0 0 6.5px 6.5px rgb(255, 255, 255);
+    }
+    to {
+      -webkit-box-shadow: 0 0 6.5px 6.5px rgb(255, 255, 255);
+              box-shadow: 0 0 6.5px 6.5px rgb(255, 255, 255);
+    }
+  }
+  @keyframes glow {
+    from {
+      -webkit-box-shadow: 0 0 6.5px 6.5px rgb(255, 255, 255);
+              box-shadow: 0 0 6.5px 6.5px rgb(255, 255, 255);
+    }
+    to {
+      -webkit-box-shadow: 0 0 6.5px 6.5px rgb(255, 255, 255);
+              box-shadow: 0 0 6.5px 6.5px rgb(255, 255, 255);
+    }
+  }
+}
+@media (max-width: 320px) {
+  .landing-container h1 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+  }
+  .landing-container .subtitle p {
+    font-size: 0.5rem;
+  }
+  .landing-container .linkContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font: 1.2rem "Josefin Sans";
+    margin-bottom: 1.5rem;
+  }
+  .landing-container .linkContainer button {
+    font: 0.4rem "Josefin Sans";
+    padding: 0.2rem 0.5rem;
+    width: 7rem;
+  }
+  @-webkit-keyframes glow {
+    from {
+      -webkit-box-shadow: 0 0 5px -5px rgb(255, 255, 255);
+              box-shadow: 0 0 5px -5px rgb(255, 255, 255);
+    }
+    to {
+      -webkit-box-shadow: 0 0 5px 5px rgb(255, 255, 255);
+              box-shadow: 0 0 5px 5px rgb(255, 255, 255);
+    }
+  }
+  @keyframes glow {
+    from {
+      -webkit-box-shadow: 0 0 5px -5px rgb(255, 255, 255);
+              box-shadow: 0 0 5px -5px rgb(255, 255, 255);
+    }
+    to {
+      -webkit-box-shadow: 0 0 5px 5px rgb(255, 255, 255);
+              box-shadow: 0 0 5px 5px rgb(255, 255, 255);
+    }
+  }
+}
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -518,269 +612,296 @@ a {
   transition: 0.3s;
 }
 
-html {
-  background: url("../../assets/Picture3.jpg") fixed top;
+
+.tmHeading {
+  background-image: url("../../Assets/180.jpg");
+  background-size: auto;
+  padding: 50px 0px 20px 0px;
+}
+.tmHeading h1 {
+  font-family: "Cabin Sketch";
+  color: rgb(0, 0, 0);
+  width: 15%;
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 0.7px 0.7px 1px rgb(255, 255, 255);
+  margin: 10px 25px;
+}
+.tmHeading label {
+  display: none;
+}
+.tmHeading input,
+.tmHeading select,
+.tmHeading button {
+  border: 5px solid #71982f;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  margin: 0 15px;
+  font-size: 0.8rem;
+}
+.tmHeading input,
+.tmHeading .sortTM,
+.tmHeading .categoryTM {
+  padding: 5px 30px;
+}
+.tmHeading input::-webkit-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+.tmHeading input::-moz-placeholder {
+  color: rgb(0, 0, 0);
+}
+.tmHeading input:-ms-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+.tmHeading input::-ms-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+.tmHeading input::placeholder {
+  color: rgb(0, 0, 0);
+}
+.tmHeading .tmButton {
+  padding: 5px 50px;
+}
+.tmHeading .tmButton:hover {
+  border: 5px solid #324314;
+  background-color: #71982f;
+  color: rgb(255, 255, 255);
 }
 
-.tmForm {
-  position: absolute;
-  top: 10%;
-  bottom: 5%;
-  left: 10%;
-  right: 10%;
-  background-color: #71982f;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 1rem;
-  border: 10px double #FFF;
-}
-.tmForm h2 {
-  margin: 0;
-  font: 3rem "Cabin Sketch";
-  color: #FFF;
-  text-shadow: 1px 1px rgb(120, 121, 119);
+h2 {
+  padding-top: 20px;
+  font-family: "Josefin Sans";
+  font-size: 1.5rem;
   text-transform: uppercase;
-  color: white;
-  padding: 0.5rem 0;
-  white-space: nowrap;
-}
-.tmForm h2 .letter {
-  -webkit-animation: fly-up-twist 0.8s ease-in-out;
-          animation: fly-up-twist 0.8s ease-in-out;
-  display: inline-block;
-  margin-top: 0.5em;
-}
-.tmForm h2 .letter:nth-child(1) {
-  -webkit-animation-delay: 0s;
-          animation-delay: 0s;
-}
-.tmForm h2 .letter:nth-child(2) {
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
-}
-.tmForm h2 .letter:nth-child(3) {
-  -webkit-animation-delay: 0.4s;
-          animation-delay: 0.4s;
-}
-.tmForm h2 .letter:nth-child(4) {
-  -webkit-animation-delay: 0.6s;
-          animation-delay: 0.6s;
-}
-@keyframes fly-up-twist {
-  0% {
-    -webkit-transform: translateX(-5rem);
-            transform: translateX(-5rem);
-  }
-  50% {
-    -webkit-transform: translateX(-2rem);
-            transform: translateX(-2rem);
-  }
-  100% {
-    -webkit-transform: translateX(0) rotate(3deg);
-            transform: translateX(0) rotate(3deg);
-  }
-}
-.tmForm .formContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 2rem auto;
-}
-.tmForm .formContainer form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.tmForm .formContainer form label {
-  font: 1.3rem "Josefin Sans";
-  color: rgb(66, 63, 38);
-  margin-bottom: 0.2rem;
-}
-.tmForm .formContainer form input {
-  border: none;
-  padding: 0.2rem;
-  border-radius: 2rem;
-  width: 40%;
-  margin-bottom: 0.8rem;
-}
-.tmForm .formContainer form textarea {
-  resize: none;
-  border: none;
-  outline: none;
-  border-radius: 1rem;
-  height: 5rem;
-  margin-bottom: 2rem;
-}
-.tmForm .formContainer form button {
-  border: none;
-  font: 1.3rem "Josefin Sans";
-  text-transform: capitalize;
-  cursor: pointer;
-  text-align: center;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  border-radius: 2rem;
-  padding: 0.4rem 0.9rem;
-  width: 8rem;
-  color: #000;
-  background-color: #f8bd01;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-  margin: 0.5rem auto;
-}
-.tmForm .formContainer form button:hover, .tmForm .formContainer form button:focus {
-  color: white;
 }
 
-.tmCard {
-  position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-.tmCard .imgContainer {
-  margin-top: 2rem;
-  width: 80%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-.tmCard .imgContainer img {
-  max-width: 100%;
-  border: 10px double #71982f;
-  border-radius: 1rem;
-  background: white;
-}
-.tmCard .description {
-  width: 80%;
-  height: 100px;
-  overflow-wrap: break-word;
-  margin-bottom: 1rem;
-}
-.tmCard .description p {
-  font: 1.2rem "Josefin Sans";
-  color: rgb(68, 70, 67);
-  display: inline;
-  border-bottom: solid 1px #000;
-  padding-bottom: 0.02rem;
-}
-.tmCard .cardContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border: 15px double #f7f5f1;
-  border-radius: 1rem;
+.tmContent {
   background-color: #71982f;
-  width: 80%;
-  margin: 2rem 4rem;
 }
-.tmCard .cardContent h2 {
-  font: 3rem "Cabin Sketch";
-  color: #FFF;
-  margin: 1.5rem;
+.tmContent li {
+  margin: 50px;
 }
-.tmCard .cardContent .host {
-  font: 1.2rem "Josefin Sans";
-  margin-bottom: 2rem;
-  color: rgb(68, 70, 67);
-}
-.tmCard .cardContent .host span {
-  font: 1.5rem "Cabin Sketch";
-}
-.tmCard .cardContent .activityInfo {
+
+.eventCatalogue {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.tmCard .cardContent .activityInfo h3 {
-  font: italic 1.5rem "Cabin Sketch";
-  color: rgb(68, 70, 67);
-  margin-bottom: 0.8rem;
-}
-.tmCard .cardContent .activityInfo p {
-  font: 1.2rem "Josefin Sans";
-  color: rgb(68, 70, 67);
-  margin-bottom: 0.8rem;
-}
-.tmCard .cardContent .activityInfo .activitImgContainer {
-  width: 100%;
-}
-.tmCard .cardContent .activityInfo .activitImgContainer img {
-  max-width: 80%;
-  border: 1px solid #FFF;
-  border-radius: 2rem;
-  margin-bottom: 0.8rem;
-}
-.tmCard .cardContent .buttons {
-  padding-bottom: 2rem;
-  margin-top: 1rem;
-}
-.tmCard .cardContent .buttons button {
-  border: none;
-  font: 1.3rem "Josefin Sans";
-  text-transform: capitalize;
-  cursor: pointer;
-  text-align: center;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  border-radius: 2rem;
-  padding: 0.4rem 0.9rem;
-  width: 8.2rem;
-  color: #000;
-  background-color: #f8bd01;
-  -webkit-transition: 0.25s;
-  transition: 0.25s;
-  margin: 0.5rem auto;
-}
-.tmCard .cardContent .buttons button:hover, .tmCard .cardContent .buttons button:focus {
-  color: white;
-}
-.tmCard .cardContent .buttons button:first-child {
-  margin-right: 0.5rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0px 100px;
 }
 
+.eventCard {
+  background: #f8bd01;
+  border: 10px double rgb(255, 255, 255);
+  border-radius: 1rem;
+  margin: 0 auto;
+  width: 23.3333333333%;
+}
+.eventCard h3 {
+  font-size: 0.9rem;
+}
+.eventCard img {
+  max-width: 90%;
+  height: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.eventCard p {
+  font-family: "Josefin Sans";
+  font-size: 0.7rem;
+  margin: 15px 40px;
+  text-align: left;
+}
+.eventCard p span {
+  text-transform: uppercase;
+  border-bottom: 4px solid rgb(65, 170, 240);
+}
+.eventCard a {
+  padding: 5px 5px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 1rem;
+  margin: 10px 5px;
+}
+.eventCard a:hover {
+  background-color: rgb(183, 183, 183);
+}
+.eventCard a,
+.eventCard .eventButton {
+  font-family: "Josefin Sans";
+  background-color: white;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+.eventCard .eventButton {
+  border: none;
+  padding: 0px;
+}
+.eventCard .eventButton:hover {
+  background-color: rgb(183, 183, 183);
+}
+
+.cardFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+li {
+  list-style: none;
+}
+
+.testImg {
+  max-width: 90%;
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  .tmHeading h1 {
+    margin: 0 0 30px 50px;
+    font-size: 1.2rem;
+    color: #cf0e3d;
+  }
+  .eventCatalogue {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .eventCard {
+    width: 30%;
+    margin: 0 auto;
+  }
+  .eventCard h3 {
+    font-size: 0.8rem;
+  }
+  .eventCard p {
+    margin: 10px 30px;
+  }
+  .eventCard a,
+.eventCard .eventButton {
+    font-size: 0.6rem;
+  }
+  .eventCard a {
+    padding: 5px 4px;
+  }
+}
+@media (max-width: 768px) {
+  .tmHeading {
+    background-size: auto;
+  }
+  .tmHeading h1 {
+    width: 25%;
+    color: black;
+  }
+  .tmHeading .tmButton {
+    margin: 10px;
+    width: 10%;
+    padding: 5px;
+  }
+  .tmHeading input,
+.tmHeading select {
+    width: 23.3333333333%;
+    margin: 0 5px;
+  }
+  .tmHeading input,
+.tmHeading select,
+.tmHeading .tmButton {
+    font-size: 0.7rem;
+  }
+  .tmHeading h2 {
+    width: 70%;
+    margin: 0 auto;
+    text-shadow: 1px 1px 1px #f8bd01;
+  }
+  .eventCatalogue {
+    margin: 0;
+  }
+  .eventCard {
+    width: 35%;
+  }
+  .eventCard h3 {
+    font-size: 0.7rem;
+  }
+  .eventCard p {
+    margin: 5px 20px;
+  }
+  .eventCard a,
+.eventCard .eventButton {
+    font-size: 0.6rem;
+  }
+  .eventCard a {
+    padding: 5px 4px;
+  }
+}
+@media (max-width: 320px) {
+  .tmHeading h1 {
+    font-size: 1.4rem;
+    width: 100%;
+    margin: auto;
+  }
+  .tmHeading form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .tmHeading form input,
+.tmHeading form select,
+.tmHeading form .tmButton {
+    width: 80%;
+    margin: 10px auto;
+  }
+  .tmHeading h2 {
+    font-size: 0.6rem;
+  }
+  .eventCatalogue .eventCard {
+    width: 85%;
+    margin: 20px auto;
+  }
+  .eventCatalogue .eventCard .cardFlex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .eventCatalogue .eventCard p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .eventCatalogue .eventCard p span {
+    width: 35%;
+    border-bottom: 3px solid rgb(65, 170, 240);
+    margin-bottom: 4px;
+  }
+  .eventCatalogue .eventCard a {
+    margin: 5px auto;
+    width: 70%;
+  }
+}
 .boredCatalogue {
+  
   background-image: url("../../assets/180.jpg");
+
   background-size: cover;
   height: 100vh;
 }
@@ -802,7 +923,7 @@ html {
 .boredCatalogue select,
 .boredCatalogue .activitiesBtn {
   border: 5px solid #71982f;
-  background-color: #FFF;
+  background-color: rgb(255, 255, 255);
   border-radius: 50px;
   margin: 0 15px;
   font-size: 1rem;
@@ -823,10 +944,10 @@ html {
   width: 50%;
   margin: 0 auto;
   padding: 50px;
-  border: double 10px #FFF;
+  border: double 10px rgb(255, 255, 255);
   border-radius: 1rem;
   text-transform: uppercase;
-  color: #FFF;
+  color: rgb(255, 255, 255);
   font-family: "Cabin Sketch";
 }
 .boredCatalogue .boredImg .activity {
@@ -843,7 +964,7 @@ html {
   background-color: #f8bd01;
   font-size: 0.7rem;
   text-transform: uppercase;
-  color: #000;
+  color: rgb(0, 0, 0);
 }
 .boredCatalogue .boredImg .eventBtn {
   padding: 15px;
@@ -858,7 +979,7 @@ html {
   -o-object-fit: cover;
      object-fit: cover;
   margin: 15px;
-  border: solid 5px #FFF;
+  border: solid 5px rgb(255, 255, 255);
   border-radius: 1rem;
 }
 
@@ -924,7 +1045,7 @@ html {
 }
 .cardContent .activityInfo img {
   max-width: 70%;
-  border: 1px solid #FFF;
+  border: 1px solid rgb(255, 255, 255);
   border-radius: 1rem;
   margin-bottom: 0.8rem;
 }
@@ -942,7 +1063,7 @@ html {
 .cardContent .eventTheme {
   text-transform: capitalize;
   font: 3rem "Cabin Sketch";
-  color: #FFF;
+  color: rgb(255, 255, 255);
   margin: 1.5rem;
 }
 .cardContent .host {
@@ -970,6 +1091,121 @@ html {
   padding-bottom: 0.02rem;
 }
 
+
+.tmCard {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.tmCard .imgContainer {
+  margin-top: 2rem;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.tmCard .imgContainer img {
+  max-width: 100%;
+  border: 10px double #71982f;
+  border-radius: 1rem;
+  background: white;
+}
+.tmCard .description {
+  width: 80%;
+  height: 100px;
+  overflow-wrap: break-word;
+  margin-bottom: 1rem;
+}
+.tmCard .description p {
+  font: 1.2rem "Josefin Sans";
+  color: rgb(68, 70, 67);
+  display: inline;
+  border-bottom: solid 1px #000;
+  padding-bottom: 0.02rem;
+}
+.tmCard .cardContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 15px double #f7f5f1;
+  border-radius: 1rem;
+  background-color: #71982f;
+  width: 80%;
+  margin: 2rem 4rem;
+}
+.tmCard .cardContent h2 {
+  font: 3rem "Cabin Sketch";
+  color: rgb(255, 255, 255);
+  margin: 1.5rem;
+}
+.tmCard .cardContent .host {
+  font: 1.2rem "Josefin Sans";
+  margin-bottom: 2rem;
+  color: rgb(68, 70, 67);
+}
+.tmCard .cardContent .host span {
+  font: 1.5rem "Cabin Sketch";
+}
+.tmCard .cardContent .activityInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tmCard .cardContent .activityInfo h3 {
+  font: italic 1.5rem "Cabin Sketch";
+  color: rgb(68, 70, 67);
+  margin-bottom: 0.8rem;
+}
+.tmCard .cardContent .activityInfo p {
+  font: 1.2rem "Josefin Sans";
+  color: rgb(68, 70, 67);
+  margin-bottom: 0.8rem;
+}
+.tmCard .cardContent .activityInfo .activitImgContainer {
+  width: 100%;
+}
+.tmCard .cardContent .activityInfo .activitImgContainer img {
+  max-width: 80%;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 2rem;
+  margin-bottom: 0.8rem;
+}
+.tmCard .cardContent .buttons {
+  padding-bottom: 2rem;
+  margin-top: 1rem;
+}
+.tmCard .cardContent .buttons button {
+  border: none;
+  font: 1.3rem "Josefin Sans";
+  text-transform: capitalize;
+  cursor: pointer;
+
 .allEventsSection {
   position: absolute;
   top: 10%;
@@ -993,30 +1229,279 @@ html {
 }
 
 .App {
+
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 2rem;
+  padding: 0.4rem 0.9rem;
+  width: 8.2rem;
+  color: rgb(0, 0, 0);
+  background-color: #f8bd01;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  margin: 0.5rem auto;
+}
+.tmCard .cardContent .buttons button:hover, .tmCard .cardContent .buttons button:focus {
+  color: white;
+}
+.tmCard .cardContent .buttons button:first-child {
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .tmCard {
+    margin-top: 0;
+  }
+  .tmCard .imgContainer {
+    width: 80%;
+  }
+  .tmCard .cardContent {
+    height: 600px;
+  }
+  .tmCard .cardContent h2 {
+    font-size: 2rem;
+    padding: 0;
+    margin: 0.2rem 1rem;
+  }
+  .tmCard .cardContent .description p,
+.tmCard .cardContent .host {
+    font-size: 0.8rem;
+  }
+  .tmCard .cardContent .description p span,
+.tmCard .cardContent .host span {
+    font-size: 0.8rem;
+  }
+  .tmCard .cardContent .description,
+.tmCard .cardContent .host {
+    margin-bottom: 0.5rem;
+  }
+  .tmCard .cardContent .activityInfo h3 {
+    font-size: 1rem;
+    margin: 0.5rem;
+  }
+  .tmCard .cardContent .activityInfo .activitImgContainer {
+    max-width: 70%;
+  }
+  .tmCard .cardContent .activityInfo p {
+    font-size: 0.8rem;
+  }
+  .tmCard .cardContent .buttons button {
+    font-size: 0.8rem;
+  }
+}
+@media (max-width: 320px) {
+  .tmCard {
+    margin: 0;
+    width: 320px;
+    height: 100vh;
+  }
+  .tmCard .imgContainer {
+    width: 70%;
+    margin: 1rem auto;
+  }
+  .tmCard .cardContent {
+    margin: 0 auto;
+    height: 400px;
+  }
+  .tmCard .cardContent h2 {
+    font-size: 0.9rem;
+    padding: 0;
+    margin: 0.2rem 1rem;
+    text-shadow: none;
+  }
+  .tmCard .cardContent .description p,
+.tmCard .cardContent .host {
+    font-size: 0.6rem;
+    width: 80%;
+  }
+  .tmCard .cardContent .description p span,
+.tmCard .cardContent .host span {
+    font-size: 0.7rem;
+  }
+  .tmCard .cardContent .description {
+    height: 50px;
+  }
+  .tmCard .cardContent .description,
+.tmCard .cardContent .host {
+    margin-bottom: 0;
+  }
+  .tmCard .cardContent .activityInfo h3 {
+    font-size: 0.8rem;
+    margin: 0.2rem;
+  }
+  .tmCard .cardContent .activityInfo .activitImgContainer {
+    max-width: 100%;
+  }
+  .tmCard .cardContent .activityInfo .activitImgContainer img {
+    border-radius: 15px;
+  }
+  .tmCard .cardContent .activityInfo p {
+    font-size: 0.6rem;
+    margin: 0;
+  }
+  .tmCard .cardContent .buttons {
+    padding: 0;
+    margin: 0;
+  }
+  .tmCard .cardContent .buttons button {
+    font-size: 0.6rem;
+    margin: 0.1rem;
+    padding: 0.2rem;
+  }
+}
+html {
+  background: url("../../Assets/Picture3.jpg") fixed top;
+}
+
+.tmForm {
+  position: absolute;
+  top: 10%;
+  bottom: 5%;
+  left: 10%;
+  right: 10%;
+  background-color: #71982f;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1rem;
+  border: 10px double rgb(255, 255, 255);
+}
+.tmForm h2 {
+  margin: 0;
+  font: 3rem "Cabin Sketch";
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px rgb(120, 121, 119);
+  text-transform: uppercase;
+  color: white;
+  padding: 0.5rem 0;
+  white-space: nowrap;
+}
+.tmForm h2 .letter {
+  -webkit-animation: fly-up-twist 0.8s ease-in-out;
+          animation: fly-up-twist 0.8s ease-in-out;
+  display: inline-block;
+  margin-top: 0.5em;
+}
+.tmForm h2 .letter:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.tmForm h2 .letter:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.tmForm h2 .letter:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.tmForm h2 .letter:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+@keyframes fly-up-twist {
+  0% {
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+  }
+  50% {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(3deg);
+            transform: translateX(0) rotate(3deg);
+  }
+}
+.tmForm form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.tmForm form label {
+  font: 1.3rem "Josefin Sans";
+  color: rgb(66, 63, 38);
+  margin-bottom: 0.2rem;
+}
+.tmForm form input {
+  border: none;
+  padding: 0.2rem;
+  border-radius: 2rem;
+  width: 40%;
+  margin-bottom: 0.8rem;
+}
+.tmForm form .tmFormDesc {
+  resize: none;
+  border: none;
+  outline: none;
+  border-radius: 1rem;
+  height: 5rem;
+  margin-bottom: 2rem;
+}
+.tmForm form button {
+  border: none;
+  font: 1.3rem "Josefin Sans";
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 2rem;
+  padding: 0.4rem 0.9rem;
+  width: 8rem;
+  color: rgb(0, 0, 0);
+  background-color: #f8bd01;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  margin: 0.5rem auto;
+}
+.tmForm form button:hover, .tmForm form button:focus {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .tmForm {
+    height: 600px;
+  }
+  .tmForm form input {
+    width: 80%;
+  }
+}
+@media (max-width: 320px) {
+  .tmForm {
+    height: 400px;
+  }
+  .tmForm h2 {
+    font-size: 1.3rem;
+  }
+  .tmForm form label {
+    font-size: 0.7rem;
+  }
+  .tmForm form .tmFormDesc {
+    margin-bottom: 10px;
+  }
+  .tmForm form button {
+    font-size: 0.7rem;
+    width: 80%;
+  }
+}
+.App {
   text-align: center;
 }
 
 body {
-  background: #FFF;
-}
-
-.eventCatalogue {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem;
-}
-
-.eventCard {
-  background: #d3cfe6;
-  border: 1px solid #871a3e;
-  border-radius: 5px;
-}
-
-li {
-  list-style: none;
-}
-
-.testImg {
-  max-width: 90%;
-  height: auto;
+  background: rgb(255, 255, 255);
+  -webkit-columns: rgb(255, 255, 255);
+     -moz-columns: rgb(255, 255, 255);
+          columns: rgb(255, 255, 255);
 }

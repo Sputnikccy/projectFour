@@ -9,7 +9,7 @@ import Header from './components/Header';
 import BoredForm from './components/Forms/BoredForm';
 import LandingPage from './components/LandingPage'
 import BoredComponent from './components/BoredComponent';
-import TicketMaster from './components/TicketMaster'
+import Ticketmaster from './components/Ticketmaster'
 import TmTestForm from './components/TmTestForm';
 import TmTestCard from './components/TmTestCard';
 import BoredInvite from './components/Forms/BoredInvite';
@@ -26,11 +26,14 @@ function App() {
       </Link>
       <Routes>
         <Route path='/' element={<LandingPage />}/>
+
+        {/* TicketMaster component will replace the below component, this was just for testing routing. */}
+        {/* <Route path='/testComponent' element={<TestComponent/>}/> */}
+        <Route path='/ticketmaster' element={<Ticketmaster/>} />
         <Route path='/displayAllEvents' element={<DisplayAllEvents />}>
           <Route path='/displayAllEvents/displayAllTmEvents' element={<DisplayAllTmEvents/>}/>
           <Route path='/displayAllEvents/displayAllBoredEvents' element={<DisplayAllBoredEvents />}/>
         </Route>
-        
         <Route path='/ticketMaster' element={<TicketMaster/>} />
         <Route path='/tmform/:idd' element={<TmTestForm/>}/>
         <Route path='/tmcard/:idd' element={<TmTestCard/>}/>

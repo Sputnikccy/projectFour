@@ -3,7 +3,7 @@ import { useState, useEffect } from "react"
 import axios from "axios";
 import { Link } from 'react-router-dom'
 import {getDatabase, ref, get} from 'firebase/database'
-import bannerPicture from "../../assets/havingFun.jpg"
+import bannerPicture from "../../Assets/havingFun.jpg"
 // Config details
 import app from '../../firebase';
 

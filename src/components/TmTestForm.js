@@ -116,6 +116,37 @@ const TmTestForm = () => {
 
     return (
 
+       
+        <div className="tmForm" >
+            <h2>Let's have fun!</h2>
+        
+            <form action='submit' onSubmit={handleOnSubmit}>
+                <label htmlFor="event">Event Name</label>
+                <input type="text"
+                    id='event'
+                    onChange={handleEventInputChange}
+                    value={eventInput}
+                />
+
+                <label htmlFor="host">Host Name</label>
+                <input type="text"
+                    id='host'
+                    onChange={handleHostInputChange}
+                    value={hostInput}
+                />
+
+                <label htmlFor="event">Description</label>
+                <input type="text"
+                    id='event'
+                    className='tmFormDesc'
+                    onChange={handleDescriptionInputChange}
+                    value={descriptionInput}
+                />
+
+                <button>submit</button>
+            </form>
+
+
         <div className="tmForm wrapper" >
 
             <h2 >
