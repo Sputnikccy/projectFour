@@ -78,7 +78,6 @@ const Ticketmaster = () => {
                 <Link to={`/`}>
                     <h1>Flock of Friends</h1>
                 </Link>
-
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="city">city</label>
                     <input 
