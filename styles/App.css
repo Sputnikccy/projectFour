@@ -1,14 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Josefin+Sans:wght@300;400;500&display=swap");
-.createEvent {
-  text-align: center;
+.eventFormContainer {
   position: absolute;
-  top: 20%;
-  bottom: 20%;
+  top: 10%;
+  bottom: 5%;
   left: 10%;
   right: 10%;
   background-color: #71982f;
-  border: 10px double #FFF;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 1rem;
+  border: 10px double #FFF;
+}
+
+.formContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,37 +21,42 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 2rem auto;
+}
+.formContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
-.createEvent h2 {
-  font: 3rem "Cabin Sketch";
-  color: #FFF;
-  margin-bottom: 1rem;
-  margin-top: 1.5rem;
-  text-shadow: 1px 1px #000;
-  text-transform: capitalize;
+.formContainer label {
+  font: 1.3rem "Josefin Sans";
+  color: rgb(66, 63, 38);
+  margin-bottom: 0.2rem;
 }
-.createEvent label {
-  border-bottom: 1px solid black;
-  color: #000;
-  text-transform: capitalize;
-  margin: 0.5rem 0;
-  padding: 0;
-  font: 1.2rem "Josefin Sans";
-}
-.createEvent input {
-  border-style: none;
-  border-radius: 10px;
-  padding: 5px;
+.formContainer input {
+  border: none;
+  padding: 0.2rem;
+  border-radius: 1rem;
   width: 75%;
+  margin-bottom: 0.8rem;
 }
-.createEvent .createButton {
-  margin: 0.5rem;
+.formContainer textarea {
+  width: 75%;
+  border-radius: 1rem;
+  height: 5rem;
+  border-style: none;
+}
+.formContainer button {
   border: none;
   font: 1.3rem "Josefin Sans";
   text-transform: capitalize;
@@ -55,12 +65,77 @@
   -webkit-transition: 0.3s;
   transition: 0.3s;
   border-radius: 2rem;
-  padding: 0.6rem 0.9rem;
-  width: 14rem;
+  padding: 0.4rem 0.9rem;
+  width: 8rem;
   color: #000;
   background-color: #f8bd01;
   -webkit-transition: 0.25s;
   transition: 0.25s;
+  margin: 0.5rem auto;
+}
+.formContainer button:hover, .formContainer button:focus {
+  color: white;
+}
+
+h2 {
+  margin: 0;
+  font: 3rem "Cabin Sketch";
+  color: #FFF;
+  text-shadow: 1px 1px rgb(120, 121, 119);
+  text-transform: uppercase;
+  color: white;
+  padding: 0.5rem 0;
+  white-space: nowrap;
+}
+h2 .letter {
+  -webkit-animation: fly-up-twist 0.8s ease-in-out;
+          animation: fly-up-twist 0.8s ease-in-out;
+  display: inline-block;
+  margin-top: 0.5em;
+}
+h2 .letter:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+h2 .letter:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+h2 .letter:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+h2 .letter:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+@-webkit-keyframes fly-up-twist {
+  0% {
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+  }
+  50% {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(3deg);
+            transform: translateX(0) rotate(3deg);
+  }
+}
+@keyframes fly-up-twist {
+  0% {
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+  }
+  50% {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(3deg);
+            transform: translateX(0) rotate(3deg);
+  }
 }
 
 html {

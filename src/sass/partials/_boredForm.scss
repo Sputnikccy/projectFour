@@ -1,43 +1,47 @@
 @use "variables" as *;
 
-.createEvent{
-    text-align: center;
+
+.eventFormContainer{
     position: absolute;
-    top: 20%;
-    bottom:20% ;
-    left:10%;
+    top: 10%;
+    bottom: 5%;
+    left: 10%;
     right: 10%;
-    background-color:#71982f;
-    border:10px double $whiteColor;
+    background-color: #71982f;
+    align-items: center;
     border-radius: 1rem;
+    border: 10px double $whiteColor;
+}
+
+.formContainer{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    h2{
-        font: 3rem $headingFont;
-        color:$whiteColor;
-        margin-bottom: 1rem;
-        margin-top: 1.5rem;
-        text-shadow: 1px 1px $blackColor;
-        text-transform: capitalize;
+    padding: 2rem auto;
+    form {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
-    label{
-            border-bottom: 1px solid black;
-            color: $blackColor;
-            text-transform: capitalize;
-            margin: 0.5rem 0;
-            padding: 0;
-            font: 1.2rem $bodyFont;
+    label {
+        font: 1.3rem $bodyFont;
+        color: rgb(66, 63, 38);
+        margin-bottom: .2rem;
     }
-    input{
-        border-style: none;
-        border-radius: 10px;
-        padding: 5px;
+    input {
+        border: none;
+        padding: .2rem;
+        border-radius: 1rem;
         width: 75%;
+        margin-bottom: .8rem;
     }
-    .createButton{
-        margin: .5rem;
+    textarea {
+        width: 75%;
+        border-radius: 1rem;
+        height: 5rem;
+        border-style: none;
+    }
+    button {
         border: none;
         font: 1.3rem $bodyFont;
         text-transform: capitalize;
@@ -45,14 +49,57 @@
         text-align: center;
         transition: .3s;
         border-radius: 2rem;
-        padding: .6rem .9rem;
-        width: 14rem;
+        padding: .4rem .9rem;
+        width: 8rem;
         color: $blackColor;
         background-color: #f8bd01;
         transition: 0.250s;
-    }
+        margin: .5rem auto;
+        &:hover,
+        &:focus {
+            color:white;
+        }
+    }    
 }
 
-
+h2{
+    margin: 0;
+    font: 3rem $headingFont;
+    color: $whiteColor;
+    text-shadow: 1px 1px rgb(120, 121, 119);
+    text-transform: uppercase;
+    color: white;
+    padding: .5rem 0;
+    white-space: nowrap;
+    // text animation
+.letter {
+    animation: fly-up-twist .8s ease-in-out;
+    display: inline-block;
+    margin-top: 0.5em;
+    &:nth-child(1) {
+        animation-delay: 0s;
+    }
+    &:nth-child(2) {
+        animation-delay: .2s;
+    }
+    &:nth-child(3) {
+        animation-delay: .4s;
+    }
+    &:nth-child(4) {
+        animation-delay: .6s;
+    }
+}
+@keyframes fly-up-twist {
+    0% {
+        transform: translateX(-5rem);
+    }
+    50% {
+        transform: translateX(-2rem);
+    }
+    100% {
+        transform: translateX(0) rotate(3deg);
+    }
+}
+}
 
 
