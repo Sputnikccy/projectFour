@@ -2,10 +2,7 @@
 import './sass/App.scss';
 // utilities
 import { Link, Routes, Route } from 'react-router-dom'
-// import { useState, useEffect } from 'react';
-// import { getDatabase, ref, push, onValue } from 'firebase/database';
 // components
-import Header from './components/Header';
 import BoredForm from './components/Forms/BoredForm';
 import LandingPage from './components/LandingPage'
 import BoredComponent from './components/BoredComponent';
@@ -21,17 +18,13 @@ import DisplayAllTmEvents from './components/DisplayAllTmEvents'
 function App() {
   return (
     <div className="App">
-      <Link to="/">
-        <Header />
-      </Link>
       <Routes>
         <Route path='/' element={<LandingPage />}/>
+        <Route path='/ticketMaster' element={<TicketMaster/>} />
         <Route path='/displayAllEvents' element={<DisplayAllEvents />}>
           <Route path='/displayAllEvents/displayAllTmEvents' element={<DisplayAllTmEvents/>}/>
           <Route path='/displayAllEvents/displayAllBoredEvents' element={<DisplayAllBoredEvents />}/>
         </Route>
-        
-        <Route path='/ticketMaster' element={<TicketMaster/>} />
         <Route path='/tmform/:idd' element={<TmTestForm/>}/>
         <Route path='/tmcard/:idd' element={<TmTestCard/>}/>
         <Route path='/boredComponent' element={<BoredComponent/>}/>

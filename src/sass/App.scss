@@ -5,10 +5,12 @@
 @use "./partials/setup";
 @use "./partials/baseStyle";
 @use './partials/tmForm';
-@use './partials/tmCard';
+// @use './partials/tmCard';
 @use "./partials/ticketMaster";
 @use "./partials/boredAPI";
 @use "./partials/inviteCard";
+@use "./partials/tmTestCard";
+// @use "./partials/tmTestForm";
 @use "./partials/displayAllEvents";
 
 
@@ -18,25 +20,5 @@
 }
 body{
   background: $whiteColor;
-  // columns: $whiteColor;
-}
-
-.eventCatalogue {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem;
-}
-
-.eventCard {
-  background: #d3cfe6;
-  border: 1px solid #871a3e;
-  border-radius: 5px;
-}
-
-li {
-  list-style: none;
-}
-.testImg {
-  max-width: 90%;
-  height: auto;
+  columns: $whiteColor;
 }

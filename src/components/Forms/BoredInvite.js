@@ -63,7 +63,7 @@ const apiCheck = (key) => {
 }
 const [activityImage, setActivityImage] = useState({})
 
-/*we never "setText?"*/ 
+
 const [text,setText] = useState(`localhost:3000/boredInvite/${userId}`);
 const copyText = ()=>{
     navigator.clipboard.writeText(text)
@@ -85,16 +85,15 @@ if(!activity||!event){
                     <p>{event.eventDescription}</p>
                     <p className="host">From: <span>{event.hostName}</span></p>
                 </div>
-                
+
                 <div className="activityInfo">
                 <p className="activityTitle">{activity.activity}</p>
                     <img className="inviteImage" src={activityImage}  />
                     <p>🗺 {event.eventLocation}</p>
                     <p>🕰 {event.eventTime}</p>
-                    <button onClick={copyText}>Copy Link</button>
                 </div>
                 
-                
+                <button className="inviteButton" onClick={copyText}>Copy Link</button>
             </div>
             
 

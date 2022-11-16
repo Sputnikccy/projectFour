@@ -17,16 +17,9 @@ const TestComponent = () => {
             dataResponse: 'json',
             params: {
                 apikey: '15DjuOnWDIAkW8iE9JGNwLR6qLSvAcjU',
-                //city name
-                // city:'Toronto',
-                //sorting order of the search result. Allowable values : 'name,asc', 'name,desc', 'date,asc', 'date,desc', 'relevance,asc', 'relevance,desc', 'distance,asc', 'name,date,asc', 'name,date,desc', 'date,name,asc', 'date,name,desc', 'distance,date,asc', 'onSaleStartDate,asc', 'id,asc', 'venueName,asc', 'venueName,desc', 'random'
                 sort: 'date,asc',
-                //page number
-                // page: '10',
-                // returned array size
                 size: '30',
                 countryCode: 'CA',
-               
             }
         }).then((eventArray) => {
             console.log(eventArray.data._embedded.events)

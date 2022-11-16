@@ -5,7 +5,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 3rem auto;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     .imgContainer {
         margin-top: 2rem;
         width: clamp(375px, 75%, 750px);
@@ -26,8 +27,10 @@
         border: 10px double #f7f5f1;
         border-radius: 1rem;
         background-color: #71982f;
+
         width: clamp(375px, 75%, 750px);
         margin: 2rem auto;
+
         .activityInfo {
             display: flex;
             flex-direction: column;
@@ -47,44 +50,58 @@
                 text-transform: capitalize;
                 font:italic 1.5rem $bodyFont;
                 color: rgb(68, 70, 67);
-                // margin-bottom: .8rem;
+                margin-bottom: .8rem;
             }
             p{
                 font: 1.2rem $bodyFont;
                 color: rgb(68, 70, 67);
-                // margin-bottom: .8rem;
+                margin-bottom: .8rem;
             }
         }
 
         .eventTheme{
-            padding: 0;
-            font-size: clamp(2rem, 0.95rem + 0.25vw, 1rem);
             text-transform: capitalize;
-            font: $headingFont;
+            font: 3rem $headingFont;
             color: $whiteColor;
             margin: 1.5rem;
         }
-        
-}
-.descriptionText{
-    max-width: 80%;
-    background: #f8bd01;
-    border-radius: 1rem;
-    border:10px double  $whiteColor;
-    padding: 2%;
-    margin: 0.5rem auto;
         .host {
             font: 1.2rem $bodyFont;
+            margin-bottom: 1rem;
             color: rgb(68, 70, 67);
-            margin: 0.8rem auto 0.3rem;
             span{
                 font:1.5rem;
-                text-transform: capitalize;
-                // font-weight: bold;
+                text-transform: uppercase;
+                font-weight: bold;
             }
         }
+}
+.inviteButton{
+    border: none;
+    font: 1.3rem "Josefin Sans";
+    text-transform: capitalize;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+    border-radius: 2rem;
+    padding: 0.4rem 0.9rem;
+    width: 8.2rem;
+    color: rgb(0, 0, 0);
+    background-color: #f8bd01;
+    transition: 0.25s;
+    margin: 0.5rem auto;
+}
+
+.descriptionText{
+    max-width: 80%;
+    height: 100px;
+    overflow-wrap: break-word;
+    margin: 1rem;
         p {
             font: 1.2rem $bodyFont;
             color: rgb(68, 70, 67);
+            display: inline;
+            border-bottom: solid 1px #000;
+            padding-bottom: 0.02rem;
         }
 }
