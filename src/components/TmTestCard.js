@@ -27,7 +27,7 @@ const TmTestCard = () => {
         const userRef = ref(database, `tm/${userId}`);
 
         get(userRef).then((data) => {
-            console.log(data.val())
+            // console.log(data.val())
             setActivity(data.val())
 
             apiDada(data.val().activityId)
@@ -46,7 +46,6 @@ const TmTestCard = () => {
             dataResponse: 'json',
             params: {
                 apikey: '15DjuOnWDIAkW8iE9JGNwLR6qLSvAcjU',
-
             }
         }).then((response) => {
             console.log(response.data)

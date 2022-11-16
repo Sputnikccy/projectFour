@@ -626,6 +626,28 @@ a {
   padding-bottom: 0.02rem;
 }
 
+.allEventsSection {
+  position: absolute;
+  top: 10%;
+  bottom: 5%;
+  left: 10%;
+  right: 10%;
+  background-color: #71982f;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1rem;
+  border: 10px double #FFF;
+}
+.allEventsSection .allEventsCard {
+  background-color: #71982f;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1rem;
+  border: 10px double #FFF;
+}
+
 .App {
   text-align: center;
 }
