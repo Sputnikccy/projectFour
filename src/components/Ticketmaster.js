@@ -125,7 +125,7 @@ const Ticketmaster = () => {
 
                 </form>
 
-                <h3>recommended events for you & your friends</h3>
+                <h2>recommended events for you & your friends</h2>
             </div>
 
             <div className='tmContent'>
@@ -135,7 +135,7 @@ const Ticketmaster = () => {
                             return (
 
                                 <li className="eventCard" key={eventObject.id}>
-                                    <h4>{eventObject.name}</h4>
+                                    <h3>{eventObject.name}</h3>
 
                                     <img 
                                     className="testImg" 
