@@ -1,0 +1,106 @@
+@use "variables" as *;
+
+.boredCatalogue {
+    background-image: url('../../assets/180.jpg');
+    background-size: cover;
+    // background-color: #71982F;
+    height: 100vh;
+
+    form {
+        background-image: url('../../assets/180.jpg');
+        background-size: cover;
+        padding: 80px 0px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;   
+    }
+
+    select,
+    .activitiesBtn {
+        border: 5px solid #71982f;
+        background-color: $whiteColor;
+        border-radius: 50px;
+        margin: 0 15px;
+        font-size: 1rem;
+        padding: 10px 30px;
+        text-transform: uppercase;
+    }
+
+    .activitiesBtn {
+        &:hover{
+            border: 5px solid #324314;
+            background-color: #71982f;
+            color: white;
+        }
+    }
+
+    select {
+        text-transform: uppercase;
+    }
+
+    .boredImg {
+        // background-color: #71982F;
+        // background-color: #f8bd01;
+        background-color: #71982F;
+        height: auto;
+        width: 50%;
+        margin: 0 auto;
+        padding: 50px;
+        border: double 10px $whiteColor;
+        border-radius: 1rem;
+        text-transform: uppercase;
+        color: $whiteColor;
+        font-family: $headingFont;   
+
+        .activity {
+            font-size: 3rem;
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .participants {
+            font-family: $bodyFont;
+        }
+
+        // P {
+        //     text-align: left;
+            
+        // }
+        
+        // .activitiesType {
+        //     text-transform: uppercase;
+        // }
+
+        .eventBtn,
+        button {
+            font-family: $bodyFont;
+            background-color: #f8bd01;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            color: $blackColor;
+        }
+
+        .eventBtn {
+            padding: 15px;
+            border-radius: 1rem;
+
+            button {
+                border: none;
+            }
+        }
+        
+        img {
+            height: 300px;
+            width: 300px;
+            object-fit: cover;
+            margin: 15px;
+            border: solid 5px $whiteColor;
+            border-radius: 1rem;
+        }
+    }
+
+    
+    
+    
+    
+}
