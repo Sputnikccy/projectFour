@@ -1,7 +1,5 @@
 import { getDatabase, onValue, ref, } from 'firebase/database'
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-
 import app from '../firebase'
 
 const DisplayAllBoredEvents = () =>{
@@ -44,6 +42,7 @@ const DisplayAllBoredEvents = () =>{
                 }
             </ul>
         </div>
+        
     )
 }
 
