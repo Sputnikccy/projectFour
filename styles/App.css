@@ -1,8 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Josefin+Sans:wght@300;400;500&display=swap");
-.createEvent {
-  background: rgb(65, 170, 240);
-  padding: 100px;
-  width: 75%;
+.eventFormContainer {
+  position: absolute;
+  top: 10%;
+  bottom: 5%;
+  left: 10%;
+  right: 10%;
+  background-color: #71982f;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1rem;
+  border: 10px double rgb(255, 255, 255);
+}
+
+.formContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -10,10 +21,121 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 2rem auto;
+}
+.formContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.formContainer label {
+  font: 1.3rem "Josefin Sans";
+  color: rgb(66, 63, 38);
+  margin-bottom: 0.2rem;
+}
+.formContainer input {
+  border: none;
+  padding: 0.2rem;
+  border-radius: 1rem;
+  width: 75%;
+  margin-bottom: 0.8rem;
+}
+.formContainer textarea {
+  width: 75%;
+  border-radius: 1rem;
+  height: 5rem;
+  border-style: none;
+}
+.formContainer button {
+  border: none;
+  font: 1.3rem "Josefin Sans";
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 2rem;
+  padding: 0.4rem 0.9rem;
+  width: 8rem;
+  color: rgb(0, 0, 0);
+  background-color: #f8bd01;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  margin: 0.5rem auto;
+}
+.formContainer button:hover, .formContainer button:focus {
+  color: white;
 }
 
-.eventCardTest {
-  background: rgb(242, 61, 55);
+h2 {
+  margin: 0;
+  font: 3rem "Cabin Sketch";
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px rgb(120, 121, 119);
+  text-transform: uppercase;
+  color: white;
+  padding: 0.5rem 0;
+  white-space: nowrap;
+}
+h2 .letter {
+  -webkit-animation: fly-up-twist 0.8s ease-in-out;
+          animation: fly-up-twist 0.8s ease-in-out;
+  display: inline-block;
+  margin-top: 0.5em;
+}
+h2 .letter:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+h2 .letter:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+h2 .letter:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+h2 .letter:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+@-webkit-keyframes fly-up-twist {
+  0% {
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+  }
+  50% {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(3deg);
+            transform: translateX(0) rotate(3deg);
+  }
+}
+@keyframes fly-up-twist {
+  0% {
+    -webkit-transform: translateX(-5rem);
+            transform: translateX(-5rem);
+  }
+  50% {
+    -webkit-transform: translateX(-2rem);
+            transform: translateX(-2rem);
+  }
+  100% {
+    -webkit-transform: translateX(0) rotate(3deg);
+            transform: translateX(0) rotate(3deg);
+  }
 }
 
 html {
@@ -379,7 +501,8 @@ ul,
 li,
 a,
 input,
-h1 {
+h1,
+p {
   padding: 0;
   margin: 0;
 }
@@ -396,15 +519,17 @@ a {
 }
 
 .tmHeading {
-  background-image: url("../../assets/Picture3.jpg");
+  background-image: url("../../assets/180.jpg");
+  background-size: cover;
   padding: 50px 0px 20px 0px;
 }
 .tmHeading h1 {
   font-family: "Cabin Sketch";
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   width: 15%;
-  font-size: 1.3rem;
-  margin: 30px;
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 0.7px 0.7px 1px rgb(255, 255, 255);
 }
 .tmHeading label {
   display: none;
@@ -412,8 +537,8 @@ a {
 .tmHeading input,
 .tmHeading select,
 .tmHeading button {
-  border: 5px solid #b1eb4c;
-  background-color: #7faa34;
+  border: 5px solid #71982f;
+  background-color: rgb(255, 255, 255);
   border-radius: 50px;
   margin: 0 15px;
   font-size: 0.8rem;
@@ -443,14 +568,16 @@ a {
 }
 .tmHeading .tmButton:hover {
   border: 5px solid #324314;
-  background-color: #b1eb4c;
+  background-color: #71982f;
+  color: rgb(255, 255, 255);
 }
 
-h3 {
+h2 {
   padding-top: 20px;
   font-family: "Josefin Sans";
   font-size: 1.5rem;
   text-transform: uppercase;
+  text-shadow: 2px 2px 1px rgb(255, 255, 255);
 }
 
 .tmContent {
@@ -467,25 +594,24 @@ h3 {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin: 0px 100px;
-  padding: 50px 0px;
 }
 
 .eventCard {
-  background: rgb(255, 255, 255);
-  -webkit-box-shadow: 1rem 1rem 0rem #006eb7;
-          box-shadow: 1rem 1rem 0rem #006eb7;
+  background: #f8bd01;
+  border: 10px double rgb(255, 255, 255);
+  border-radius: 1rem;
   margin: 0 auto;
   width: 23.3333333333%;
+  -webkit-transition: -webkit-box-shadow 0.6s;
+  transition: -webkit-box-shadow 0.6s;
+  transition: box-shadow 0.6s;
+  transition: box-shadow 0.6s, -webkit-box-shadow 0.6s;
 }
 .eventCard h4 {
   font-size: 0.9rem;
 }
 .eventCard:hover {
-  border: 0.8rem solid #ce0e3c;
-  border-radius: 50px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  width: 25%;
+  width: 23.3333333333%;
   height: auto;
 }
 .eventCard img {
@@ -497,7 +623,7 @@ h3 {
 .eventCard p {
   font-family: "Josefin Sans";
   font-size: 0.7rem;
-  margin: 15px 20px;
+  margin: 15px 40px;
   text-align: left;
 }
 .eventCard p span {
@@ -507,6 +633,7 @@ h3 {
 .eventCard a {
   padding: 5px 5px;
   border: 2px solid rgb(0, 0, 0);
+  border-radius: 1rem;
   margin: 10px 5px;
 }
 .eventCard a:hover {
@@ -544,6 +671,114 @@ li {
 .testImg {
   max-width: 90%;
   height: auto;
+}
+
+.inviteCard {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.inviteCard .imgContainer {
+  margin-top: 2rem;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+.inviteCard .imgContainer img {
+  max-width: 100%;
+  border: 10px double #71982f;
+  border-radius: 1rem;
+  background: white;
+}
+
+.cardContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 10px double #f7f5f1;
+  border-radius: 1rem;
+  background-color: #71982f;
+  width: 80%;
+  margin: 2rem 4rem;
+}
+.cardContent .activityInfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.cardContent .activityInfo img {
+  max-width: 70%;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 1rem;
+  margin-bottom: 0.8rem;
+}
+.cardContent .activityInfo .activityTitle {
+  text-transform: capitalize;
+  font: italic 1.5rem "Josefin Sans";
+  color: rgb(68, 70, 67);
+  margin-bottom: 0.8rem;
+}
+.cardContent .activityInfo p {
+  font: 1.2rem "Josefin Sans";
+  color: rgb(68, 70, 67);
+  margin-bottom: 0.8rem;
+}
+.cardContent .eventTheme {
+  text-transform: capitalize;
+  font: 3rem "Cabin Sketch";
+  color: rgb(255, 255, 255);
+  margin: 1.5rem;
+}
+.cardContent .host {
+  font: 1.2rem "Josefin Sans";
+  margin-bottom: 1rem;
+  color: rgb(68, 70, 67);
+}
+.cardContent .host span {
+  font: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.description {
+  max-width: 80%;
+  height: 100px;
+  overflow-wrap: break-word;
+  margin-bottom: 1rem;
+}
+.description p {
+  font: 1.2rem "Josefin Sans";
+  color: rgb(68, 70, 67);
+  display: inline;
+  border-bottom: solid 1px #000;
+  padding-bottom: 0.02rem;
 }
 
 .App {
