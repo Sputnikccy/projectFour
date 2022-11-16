@@ -65,8 +65,7 @@ const BoredComponent = () => {
    
     
     return (
-            <div>
-                <h3>Testing</h3>
+            <div className='boredCatalogue'>
                 <form action="submit" onSubmit={getActivity}>
                     {/* sr-only not working here, need to be figured out later */}
                     <select
@@ -84,10 +83,11 @@ const BoredComponent = () => {
                     {/* sr-only not working here, need to be figured out later */}
                     
 
-                    <button >Click for activities</button>
+                    <button className="activitiesBtn">Click for activities</button>
                 </form>
 
-                <div>
+                <div className='boredImg'>
+                    <p className="activity">{activities.activity}</p>
                     {activityImage?
                     // <img src={placeHolderImage}/>
                     <img src={activityImage}  />
@@ -96,10 +96,10 @@ const BoredComponent = () => {
                     
                     
                         
-                        <h3>{activities.activity}</h3>
-                        <h4>{activities.type}</h4>
-                        <h5>{activities.participants}</h5>
-                        <Link to={`/boredForm/${activities.key}`}>
+                        {/* <p className="activity">{activities.activity}</p> */}
+                        {/* <p className="activitiesType">{activities.type}</p> */}
+                        <p className='participants'>Number of participants: {activities.participants}</p>
+                        <Link to={`/boredForm/${activities.key}`} className="eventBtn">
                             <button>Create event</button>
                         </Link>
                     
