@@ -32,11 +32,6 @@ const BoredForm = () => {
             console.log(response);
             // create variable to hold new state.
             const data = response.val();
-            // console.log(data)
-            // for (let key in data) {
-            //     /**unshift adds element to the beginning of the array of the "/bored" section.**/ 
-            //     newState.unshift({ key: key, name: data[key] })
-            // }
             for (let key in data) {
                 newState.unshift({ key: key, name: data[key] })
             }
@@ -71,7 +66,6 @@ const BoredForm = () => {
         eventTime: eventTimeInput,
         activityId: urlParamsValue.key
     }
-    // console.log(savedInputData)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -86,17 +80,23 @@ const BoredForm = () => {
         setDescriptionInput('')
         navigate(`/boredinvite/${invites[0].key}`)
         // clear inputs
-        
     }
   
     return(
-        <>
-        <div className="eventFormContainer" >
+
+    <section className="eventFormContainer wrapper" >
+            <h2>
+                <span class="letter">let's </span>&nbsp; 
+                <span class="letter"> have</span>&nbsp;
+                <span class="letter"> fun</span> 
+                <span class="letter"> ! </span>
+            </h2>
+        <div className="formContainer">
             <form 
             className='createEvent' 
             onSubmit={handleSubmit}
             action='submit'>
-                <label htmlFor='event'>Name your event</label>
+                <label htmlFor='event'>Event Name</label>
                 <input 
                 type="text"
                 onChange={handleEventNameInputChange}
@@ -131,17 +131,19 @@ const BoredForm = () => {
                 required 
                 /> */}
                 <label>Description of event</label>
-                <input 
+                <textarea 
                 type="text"
                 id='event'
                 value={descriptionInput}
                 onChange={handleDescriptionInputChange}
-                required
-                />
-                <button>Create event</button>
+                required 
+                cols="30" 
+                rows="10"></textarea>
+
+                <button className='createButton'>Create event</button>
             </form>
         </div>
-        </>
+    </section>
     )
 }
 
