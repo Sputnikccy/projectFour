@@ -1,0 +1,20 @@
+@use "variables" as *;
+
+.allEventsSection{
+    position: absolute;
+    top: 10%;
+    bottom: 5%;
+    left: 10%;
+    right: 10%;
+    background-color: #71982f;
+        align-items: center;
+        border-radius: 1rem;
+        border: 10px double $whiteColor;
+    .allEventsCard{
+        background-color: #71982f;
+        align-items: center;
+        border-radius: 1rem;
+        border: 10px double $whiteColor;
+    }
+}
+

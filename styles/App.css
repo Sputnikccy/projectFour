@@ -139,7 +139,7 @@
 }
 
 html {
-  background: url("../../Assets/Picture3.jpg") fixed top/100vw;
+  background: url("../../assets/Picture3.jpg") fixed top;
 }
 
 .landing-container {
@@ -216,22 +216,26 @@ html {
 }
 @-webkit-keyframes glow {
   from {
+
     -webkit-box-shadow: 0 0 10px -10px rgb(255, 255, 255);
             box-shadow: 0 0 10px -10px rgb(255, 255, 255);
   }
   to {
     -webkit-box-shadow: 0 0 10px 10px rgb(255, 255, 255);
             box-shadow: 0 0 10px 10px rgb(255, 255, 255);
+
   }
 }
 @keyframes glow {
   from {
+
     -webkit-box-shadow: 0 0 10px -10px rgb(255, 255, 255);
             box-shadow: 0 0 10px -10px rgb(255, 255, 255);
   }
   to {
     -webkit-box-shadow: 0 0 10px 10px rgb(255, 255, 255);
             box-shadow: 0 0 10px 10px rgb(255, 255, 255);
+
   }
 }
 
@@ -592,7 +596,7 @@ li,
 a,
 input,
 h1,
-p {
+h2, p, h3 {
   padding: 0;
   margin: 0;
 }
@@ -607,6 +611,7 @@ a {
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
 
 .tmHeading {
   background-image: url("../../Assets/180.jpg");
@@ -894,12 +899,14 @@ li {
   }
 }
 .boredCatalogue {
-  background-image: url("../../Assets/180.jpg");
+  
+  background-image: url("../../assets/180.jpg");
+
   background-size: cover;
   height: 100vh;
 }
 .boredCatalogue form {
-  background-image: url("../../Assets/180.jpg");
+  background-image: url("../../assets/180.jpg");
   background-size: cover;
   padding: 80px 0px;
   display: -webkit-box;
@@ -1084,6 +1091,7 @@ li {
   padding-bottom: 0.02rem;
 }
 
+
 .tmCard {
   position: absolute;
   display: -webkit-box;
@@ -1197,6 +1205,31 @@ li {
   font: 1.3rem "Josefin Sans";
   text-transform: capitalize;
   cursor: pointer;
+
+.allEventsSection {
+  position: absolute;
+  top: 10%;
+  bottom: 5%;
+  left: 10%;
+  right: 10%;
+  background-color: #71982f;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1rem;
+  border: 10px double #FFF;
+}
+.allEventsSection .allEventsCard {
+  background-color: #71982f;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1rem;
+  border: 10px double #FFF;
+}
+
+.App {
+
   text-align: center;
   -webkit-transition: 0.3s;
   transition: 0.3s;

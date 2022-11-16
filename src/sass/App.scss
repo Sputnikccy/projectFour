@@ -4,11 +4,14 @@
 @use "./partials/header";
 @use "./partials/setup";
 @use "./partials/baseStyle";
+@use './partials/tmForm';
+@use './partials/tmCard';
 @use "./partials/ticketMaster";
 @use "./partials/boredAPI";
 @use "./partials/inviteCard";
 @use "./partials/tmTestCard";
 @use "./partials/tmTestForm";
+@use "./partials/displayAllEvents";
 
 
 

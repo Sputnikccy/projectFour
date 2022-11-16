@@ -2,7 +2,7 @@
 
 
 html{
-    background: url('../../Assets/Picture3.jpg')  fixed top /100vw;
+    background: url('../../assets/Picture3.jpg')  fixed top;
 }
 
 .landing-container {
@@ -70,6 +70,7 @@ html{
         }
         @keyframes glow {
             from {
+
               box-shadow: 0 0 10px -10px $whiteColor;
             }
             to {

@@ -3,7 +3,9 @@ import axios from "axios";
 import { useState, useEffect } from 'react';
 import { getDatabase, ref, push, onValue, get } from 'firebase/database';
 import app from '../firebase';
+
 import flag from '../Assets/havingFun.jpg';
+
 
 
 
@@ -21,25 +23,21 @@ const TmTestCard = () => {
     const userId = urlParamsValue.idd;
     console.log(userId)
 
-    const [text, setText] = useState(`localhost:3000/tmcard/${userId}`);
+    const [text,setText] = useState(`localhost:3000/tmcard/${userId}`);
     console.log(text)
 
 
     useEffect(() => {
         const database = getDatabase(app);
-
         const userRef = ref(database, `tm/${userId}`);
-
         get(userRef).then((data) => {
-            console.log(data.val())
+            // console.log(data.val())
             setActivity(data.val())
             apiDada(data.val().activityId)
             console.log(data.val().activityId)
-
         }).catch((error) => {
             alert(error)
         })
-
     }, [])
 
     const apiDada = (id) => {
@@ -49,7 +47,6 @@ const TmTestCard = () => {
             dataResponse: 'json',
             params: {
                 apikey: '15DjuOnWDIAkW8iE9JGNwLR6qLSvAcjU',
-
             }
         }).then((response) => {
             console.log(response.data)
@@ -70,10 +67,8 @@ const TmTestCard = () => {
     return (
 
         <div className="tmCard">
-
             <div className="imgContainer">
                 <img src={flag} alt="colorful flags" />
-
             </div>
 
             <div className="cardContent">
@@ -93,7 +88,6 @@ const TmTestCard = () => {
                     —— from <span>{activity.host}</span>
                 </p>
 
-
                 <div className="activityInfo">
                     <h3 className="activityTitle">{event.name}</h3>
                     <div className="activitImgContainer">
@@ -105,6 +99,7 @@ const TmTestCard = () => {
                 <div className="buttons">
                     <button onClick={copyText}>Copy Link</button>
                     <a href={event.url}><button>Event Link</button></a>
+
 
                 </div>
             </div>

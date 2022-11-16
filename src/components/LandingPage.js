@@ -19,6 +19,10 @@ const LandingPage = () => {
                 <Link to="/boredComponent" >
                    <button>  have fun for  🆓</button>
                 </Link>
+
+                <Link to="/displayAllEvents">
+                    <button>Look at some events others have created</button>
+                </Link>
                 
             </div>
 
