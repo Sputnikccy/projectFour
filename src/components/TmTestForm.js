@@ -74,6 +74,7 @@ const TmTestForm = () => {
         host: hostInput,
         description: descriptionInput,
         activityId: urlParamsValue.idd,
+      
         email: inviteeInput
     }
 
@@ -96,12 +97,22 @@ const TmTestForm = () => {
         setEventInput('');
         setHostInput('');
 
-        navigate(`/tmcard/${invitations[0].key}`)
+        if(!eventInput||!hostInput||!descriptionInput){
+            alert('Please fill the form, thanks!')
+        } else{
+            navigate(`/tmcard/${invitations[0].key}`)
+        }
+
+       
+
+       
 
 
     }
     const email = `https://formsubmit.co/${inviteeInput}`;
     console.log(email)
+
+   
 
     return (
 

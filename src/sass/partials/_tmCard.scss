@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 .tmCard {
-    // position: absolute;
+    position: absolute;
     // top: 10%;
     // bottom:20% ;
     // left:10%;
@@ -14,7 +14,7 @@
     align-items: center;
     margin-top: 3rem;
     margin-bottom: 3rem;
-    background: url('../../assets/Picture3.jpg') fixed top;
+    // background: url('../../assets/Picture3.jpg') fixed top;
 
 
     .imgContainer {
@@ -25,8 +25,9 @@
 
         img {
             max-width: 100%;
-            border: 8px solid #71982f;
-            border-radius: 2rem;
+            border: 10px double #71982f;
+            border-radius: 1rem;
+            background: white;
 
         }
     }
@@ -71,14 +72,7 @@
         width: 80%;
         margin: 2rem 4rem;
 
-        .activityInfo {
-            img {
-                max-width: 70%;
-                border:1px solid  $whiteColor;
-                border-radius: 2rem;
-                margin-bottom: .8rem;
-            }
-        }
+        
 
         h2 {
             font: 3rem $headingFont;
@@ -88,7 +82,7 @@
 
         .host {
             font: 1.2rem $bodyFont;
-            margin-bottom: 1rem;
+            margin-bottom: 2rem;
             color: rgb(68, 70, 67);
             span{
                 font:1.5rem $headingFont;
@@ -110,6 +104,52 @@
                 color: rgb(68, 70, 67);
                 margin-bottom: .8rem;
             }
+
+            .activitImgContainer{
+                width: 100%;
+                img {
+                    max-width: 80%;
+                    // height: 150px;
+                    border:1px solid  $whiteColor;
+                    border-radius: 2rem;
+                    margin-bottom: .8rem;
+                }
+            }
+            
+        
+        }
+
+        .buttons{
+            padding-bottom: 2rem;
+            margin-top: 1rem;
+
+            button{
+                border: none;
+                font: 1.3rem $bodyFont;
+                text-transform: capitalize;
+                cursor: pointer;
+                text-align: center;
+                transition: .3s;
+                border-radius: 2rem;
+                padding: .4rem .9rem;
+                width: 8.2rem;
+                color: $blackColor;
+                background-color: #f8bd01;
+                transition: 0.250s;
+                margin: .5rem auto;
+
+                &:hover,
+                &:focus {
+                    color:white;
+                }
+
+                &:first-child{
+                    margin-right: .5rem;
+                }
+
+            
+            }
+            
         }
 
 

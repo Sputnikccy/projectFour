@@ -516,6 +516,7 @@ html {
   outline: none;
   border-radius: 1rem;
   height: 5rem;
+  margin-bottom: 2rem;
 }
 .tmForm .formContainer form button {
   border: none;
@@ -539,6 +540,7 @@ html {
 }
 
 .tmCard {
+  position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -551,7 +553,6 @@ html {
           align-items: center;
   margin-top: 3rem;
   margin-bottom: 3rem;
-  background: url("../../assets/Picture3.jpg") fixed top;
 }
 .tmCard .imgContainer {
   margin-top: 2rem;
@@ -564,8 +565,9 @@ html {
 }
 .tmCard .imgContainer img {
   max-width: 100%;
-  border: 8px solid #71982f;
-  border-radius: 2rem;
+  border: 10px double #71982f;
+  border-radius: 1rem;
+  background: white;
 }
 .tmCard .description {
   width: 80%;
@@ -597,12 +599,6 @@ html {
   width: 80%;
   margin: 2rem 4rem;
 }
-.tmCard .cardContent .activityInfo img {
-  max-width: 70%;
-  border: 1px solid #FFF;
-  border-radius: 2rem;
-  margin-bottom: 0.8rem;
-}
 .tmCard .cardContent h2 {
   font: 3rem "Cabin Sketch";
   color: #FFF;
@@ -610,7 +606,7 @@ html {
 }
 .tmCard .cardContent .host {
   font: 1.2rem "Josefin Sans";
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   color: rgb(68, 70, 67);
 }
 .tmCard .cardContent .host span {
@@ -637,6 +633,42 @@ html {
   font: 1.2rem "Josefin Sans";
   color: rgb(68, 70, 67);
   margin-bottom: 0.8rem;
+}
+.tmCard .cardContent .activityInfo .activitImgContainer {
+  width: 100%;
+}
+.tmCard .cardContent .activityInfo .activitImgContainer img {
+  max-width: 80%;
+  border: 1px solid #FFF;
+  border-radius: 2rem;
+  margin-bottom: 0.8rem;
+}
+.tmCard .cardContent .buttons {
+  padding-bottom: 2rem;
+  margin-top: 1rem;
+}
+.tmCard .cardContent .buttons button {
+  border: none;
+  font: 1.3rem "Josefin Sans";
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 2rem;
+  padding: 0.4rem 0.9rem;
+  width: 8.2rem;
+  color: #000;
+  background-color: #f8bd01;
+  -webkit-transition: 0.25s;
+  transition: 0.25s;
+  margin: 0.5rem auto;
+}
+.tmCard .cardContent .buttons button:hover, .tmCard .cardContent .buttons button:focus {
+  color: white;
+}
+.tmCard .cardContent .buttons button:first-child {
+  margin-right: 0.5rem;
 }
 
 .App {
