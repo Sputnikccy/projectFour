@@ -14,6 +14,7 @@ import TicketMaster from './components/TicketMaster'
 import TmTestForm from './components/TmTestForm';
 import TmTestCard from './components/TmTestCard';
 import BoredInvite from './components/Forms/BoredInvite';
+import DisplayAllEvents from './components/DisplayAllEvents'
 // import app from './firebase';
 // import { useNavigate } from "react-router-dom";
 
@@ -28,6 +29,7 @@ function App() {
       </Link>
       <Routes>
         <Route path='/' element={<LandingPage />}/>
+        <Route path='/displayAllEvents' element={<DisplayAllEvents />}/>
         {/* TicketMaster component will replace the below component, this was just for testing routing. */}
         {/* <Route path='/testComponent' element={<TestComponent/>}/> */}
         <Route path='/ticketMaster' element={<TicketMaster/>} />
