@@ -23,20 +23,15 @@ const TmTestCard = () => {
 
     useEffect(() => {
         const database = getDatabase(app);
-
         const userRef = ref(database, `tm/${userId}`);
-
         get(userRef).then((data) => {
             // console.log(data.val())
             setActivity(data.val())
-
             apiDada(data.val().activityId)
             console.log(data.val().activityId)
-           
         }).catch((error)=>{
             alert(error)
         })
-
     }, [])
 
     const apiDada = (id) => {

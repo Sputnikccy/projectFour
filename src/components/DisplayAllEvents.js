@@ -1,6 +1,7 @@
-import { getDatabase, push, onValue, ref, get } from 'firebase/database'
+import { getDatabase, onValue, ref, } from 'firebase/database'
 import { useState, useEffect } from 'react'
-import axios from "axios";
+import { Link } from 'react-router-dom'
+// import axios from "axios";
 import app from '../firebase'
 
 
@@ -22,26 +23,29 @@ const DisplayAllEvents = () => {
                 tmArray.unshift({key:key, name:dataTm[key]})
             }
             setTmEvents(tmArray)
-            console.log(tmArray)
-            apiDada()
         })
     },[])
 
-    const apiDada = (id) => {
-        axios({
-            url: `https://app.ticketmaster.com/discovery/v2/events/${id}`,
-            method: 'GET',
-            dataResponse: 'json',
-            params: {
-                apikey: '15DjuOnWDIAkW8iE9JGNwLR6qLSvAcjU',
-            }
-        }).then((response) => {
-            console.log(response.data)
-        //    setEvent(response.data)
-           
-        })
-    }
+    // const handleClick = (e) =>{
+    //     console.log(e.target.value)
+    //     const apiDada = (id) => {
+    //         axios({
+    //             url: `https://app.ticketmaster.com/discovery/v2/events/${id}`,
+    //             method: 'GET',
+    //             dataResponse: 'json',
+    //             params: {
+    //                 apikey: '15DjuOnWDIAkW8iE9JGNwLR6qLSvAcjU',
+    //             }
+    //         }).then((response) => {
+    //             console.log(response.data)
+    //         //    setEvent(response.data)
+               
+    //         })
+    //     }
+    // }
     
+    const tmURL =  "/tmcard/"
+    console.log(tmURL)
     
     return(
         <section className='allEventsSection'>
@@ -54,8 +58,9 @@ const DisplayAllEvents = () => {
                         <div className="allEventsCard">
                             <li key={event.key}>
                             <p>{event.name.event}</p>
-                            {/* <p>{event.name.host}</p>
-                            <p>{event.name.description}</p> */}
+                            <a href={`${tmURL}${event.key}` }>
+                                <button>Click here to learn more</button>
+                            </a>
                         </li>
                         </div>
                     )
@@ -67,3 +72,5 @@ const DisplayAllEvents = () => {
 }
 
 export default DisplayAllEvents
+{/* <Link to={`/tmcard/${event.key}`}>
+</Link> */}
