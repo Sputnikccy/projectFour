@@ -1,8 +1,5 @@
 @use "variables" as *;
 
-html {
-    background: url('../../assets/Picture3.jpg') fixed top;
-}
 
 .tmForm {
     position: absolute;
@@ -11,14 +8,9 @@ html {
     left: 10%;
     right: 10%;
     background-color: #71982f;
-    // display: flex;
-    // flex-direction: column;
     align-items: center;
-    // justify-content:space-evenly;
     border-radius: 1rem;
     border: 10px double $whiteColor;
-
-
     h2 {
         margin: 0;
         font: 3rem $headingFont;
@@ -28,116 +20,114 @@ html {
         color: white;
         padding: .5rem 0;
         white-space: nowrap;
-
         .letter {
             animation: fly-up-twist .8s ease-in-out;
             display: inline-block;
-
             margin-top: 0.5em;
-
-
             &:nth-child(1) {
                 animation-delay: 0s;
             }
-
             &:nth-child(2) {
                 animation-delay: .2s;
             }
-
             &:nth-child(3) {
                 animation-delay: .4s;
             }
-
             &:nth-child(4) {
                 animation-delay: .6s;
             }
-
-
-
-
         }
-
         @keyframes fly-up-twist {
             0% {
                 transform: translateX(-5rem);
             }
-
             50% {
                 transform: translateX(-2rem);
             }
-
             100% {
                 transform: translateX(0) rotate(3deg);
-
             }
-
         }
-
     }
-
-    .formContainer {
+    form {
         display: flex;
         flex-direction: column;
-        padding: 2rem auto;
-        
-        form {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+        justify-content: space-between;
+        align-items: center;
+        label {
+            font: 1.3rem $bodyFont;
+            color: rgb(66, 63, 38);
+            margin-bottom: .2rem;
+        }
+        input {
+            border: none;
+            padding: .2rem;
+            border-radius: 2rem;
+            width: 40%;
+            margin-bottom: .8rem;
+        }
 
-            label {
-                font: 1.3rem $bodyFont;
-                // color:$whiteColor
-                color: rgb(66, 63, 38);
-                margin-bottom: .2rem;
-            }
-
-            input {
-                border: none;
-                padding: .2rem;
-                border-radius: 2rem;
-                width: 40%;
-                margin-bottom: .8rem;
-
-            }
-
-            textarea {
-                resize: none;
-                border: none;
-                outline: none;
-                border-radius: 1rem;
-                height: 5rem;
-                margin-bottom: 2rem;
-            }
-
-
-            button {
-                border: none;
-                font: 1.3rem $bodyFont;
-                text-transform: capitalize;
-                cursor: pointer;
-                text-align: center;
-                transition: .3s;
-                border-radius: 2rem;
-                padding: .4rem .9rem;
-                width: 8rem;
-                color: $blackColor;
-                background-color: #f8bd01;
-                transition: 0.250s;
-                margin: .5rem auto;
-
-                &:hover,
-                &:focus {
-                    color:white;
-                }
-
-            }
+        .tmFormDesc {
+            resize: none;
+            border: none;
+            outline: none;
+            border-radius: 1rem;
+            height: 5rem;
+            margin-bottom: 2rem;
         }
 
 
-
+        button {
+            border: none;
+            font: 1.3rem $bodyFont;
+            text-transform: capitalize;
+            cursor: pointer;
+            text-align: center;
+            transition: .3s;
+            border-radius: 2rem;
+            padding: .4rem .9rem;
+            width: 8rem;
+            color: $blackColor;
+            background-color: #f8bd01;
+            transition: 0.250s;
+            margin: .5rem auto;
+            &:hover,
+            &:focus {
+                color: white;
+            }
+        }
     }
+}
+@media (max-width: 768px) {
+    .tmForm {
+        height: 600px;
 
+        form {
+            input {
+                    width: 80%;
+                }
+        }
+    }
+}
+@media (max-width: 320px) {
+    .tmForm {
+        height: 400px;
 
+        h2 {
+            font-size: 1.3rem;
+        }
+        form {
+            label {
+                font-size: 0.7rem;
+            }
+            .tmFormDesc {
+                margin-bottom: 10px;
+            }
+
+            button {
+                font-size: 0.7rem;
+                width: 80%;
+            }
+        }
+    }
 }

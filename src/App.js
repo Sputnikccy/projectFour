@@ -34,7 +34,6 @@ function App() {
           <Route path='/displayAllEvents/displayAllTmEvents' element={<DisplayAllTmEvents/>}/>
           <Route path='/displayAllEvents/displayAllBoredEvents' element={<DisplayAllBoredEvents />}/>
         </Route>
-        <Route path='/ticketMaster' element={<TicketMaster/>} />
         <Route path='/tmform/:idd' element={<TmTestForm/>}/>
         <Route path='/tmcard/:idd' element={<TmTestCard/>}/>
         <Route path='/boredComponent' element={<BoredComponent/>}/>

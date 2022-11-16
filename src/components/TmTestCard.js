@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { getDatabase, ref, push, onValue, get } from 'firebase/database';
 import app from '../firebase';
 
-import flag from '../Assets/havingFun.jpg';
+import flag from '../assets/havingFun.jpg';
 
 
 

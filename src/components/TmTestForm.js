@@ -116,90 +116,46 @@ const TmTestForm = () => {
 
     return (
 
-       
-        <div className="tmForm" >
-            <h2>Let's have fun!</h2>
-        
-            <form action='submit' onSubmit={handleOnSubmit}>
+        <div className="tmForm wrapper" >
+        <h2 >
+            <span class="letter">let's </span>&nbsp; 
+            <span class="letter"> have</span>&nbsp;
+            <span class="letter"> fun</span> 
+            <span class="letter"> ! </span>
+            
+        </h2>
+        <div className='formContainer'>
+            <form action={email} method="POST" onSubmit={handleOnSubmit} >
                 <label htmlFor="event">Event Name</label>
                 <input type="text"
                     id='event'
                     onChange={handleEventInputChange}
                     value={eventInput}
+                    name="email"
                 />
-
                 <label htmlFor="host">Host Name</label>
                 <input type="text"
                     id='host'
                     onChange={handleHostInputChange}
                     value={hostInput}
+                    name="email"
                 />
-
                 <label htmlFor="event">Description</label>
-                <input type="text"
+                <textarea type="text"
                     id='event'
-                    className='tmFormDesc'
                     onChange={handleDescriptionInputChange}
                     value={descriptionInput}
-                />
+                    row='30'
+                    cols='30'
+                    name="email"
+                > </textarea>
 
-                <button>submit</button>
+                <button >submit</button>
             </form>
-
-
-        <div className="tmForm wrapper" >
-
-            <h2 >
-                <span class="letter">let's </span>&nbsp; 
-                <span class="letter"> have</span>&nbsp;
-                <span class="letter"> fun</span> 
-                <span class="letter"> ! </span>
-                
-            </h2>
-
-            <div className='formContainer'>
-
-
-                <form action={email} method="POST" onSubmit={handleOnSubmit} >
-                    <label htmlFor="event">Event Name</label>
-                    <input type="text"
-                        id='event'
-                        onChange={handleEventInputChange}
-                        value={eventInput}
-                        name="email"
-                    />
-
-                    <label htmlFor="host">Host Name</label>
-                    <input type="text"
-                        id='host'
-                        onChange={handleHostInputChange}
-                        value={hostInput}
-                        name="email"
-                    />
-
-                    {/* <label htmlFor="invitee">Invitee's Email</label>
-                    <input type="text"
-                        id='invitee'
-                        onChange={handleHostInviteeChange}
-                        value={inviteeInput}
-                    /> */}
-
-                    <label htmlFor="event">Description</label>
-                    <textarea type="text"
-                        id='event'
-                        onChange={handleDescriptionInputChange}
-                        value={descriptionInput}
-                        row='30'
-                        cols='30'
-                        name="email"
-                    > </textarea>
-
-                    <button >submit</button>
-                </form>
-            </div>
-
+        </div>
         </div >
     )
 }
 
 export default TmTestForm
+
