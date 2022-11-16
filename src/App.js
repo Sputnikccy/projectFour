@@ -5,6 +5,7 @@ import { Link, Routes, Route } from 'react-router-dom'
 // import { useState, useEffect } from 'react';
 // import { getDatabase, ref, push, onValue } from 'firebase/database';
 // components
+
 import Header from './components/Header';
 import BoredForm from './components/Forms/BoredForm';
 import LandingPage from './components/LandingPage'
@@ -21,12 +22,9 @@ import DisplayAllTmEvents from './components/DisplayAllTmEvents'
 function App() {
   return (
     <div className="App">
-      <Link to="/">
-        <Header />
-      </Link>
+     
       <Routes>
         <Route path='/' element={<LandingPage />}/>
-
         {/* TicketMaster component will replace the below component, this was just for testing routing. */}
         {/* <Route path='/testComponent' element={<TestComponent/>}/> */}
         <Route path='/ticketMaster' element={<TicketMaster/>} />
