@@ -1,0 +1,150 @@
+@use "variables" as *;
+
+.tmCard {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+
+    .imgContainer {
+        margin-top: 2rem;
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+
+        img {
+            max-width: 100%;
+            border: 10px double #71982f;
+            border-radius: 1rem;
+            background: white;
+
+        }
+    }
+
+    .description {
+        width: 80%;
+        height: 100px;
+        overflow-wrap: break-word;
+        margin-bottom: 1rem;
+
+        p {
+            font: 1.2rem $bodyFont;
+            color: rgb(68, 70, 67);
+            display: inline;
+            border-bottom: solid 1px #000;
+            padding-bottom: 0.02rem;
+
+
+        }
+    }
+
+    .cardContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        // height: 100vh;
+
+        border: 15px double #f7f5f1;
+        border-radius: 1rem;
+
+
+
+        // background: radial-gradient(circle at 50% 50%, #fdfcfa 0, #ffffff 50%, transparent 0), radial-gradient(circle at 50% 50%,#fcfcfb 0, #fcfcfc 50%, transparent 0);
+        // background-repeat: repeat-y;
+        // // background-color: white;
+        // background-size: 12px 12px;
+        // background-position: -12px calc(100% - 5px), calc(100% + 12px) 5px;
+
+
+        background-color: #71982f;
+
+        width: 80%;
+        margin: 2rem 4rem;
+
+        
+
+        h2 {
+            font: 3rem $headingFont;
+            color: $whiteColor;
+            margin: 1.5rem;
+        }
+
+        .host {
+            font: 1.2rem $bodyFont;
+            margin-bottom: 2rem;
+            color: rgb(68, 70, 67);
+            span{
+                font:1.5rem $headingFont;
+            }
+        }
+
+        .activityInfo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h3{
+                font:italic 1.5rem $headingFont;
+                color: rgb(68, 70, 67);
+                margin-bottom: .8rem;
+            }
+
+            p{
+                font: 1.2rem $bodyFont;
+                color: rgb(68, 70, 67);
+                margin-bottom: .8rem;
+            }
+
+            .activitImgContainer{
+                width: 100%;
+                img {
+                    max-width: 80%;
+                    // height: 150px;
+                    border:1px solid  $whiteColor;
+                    border-radius: 2rem;
+                    margin-bottom: .8rem;
+                }
+            }
+            
+        
+        }
+
+        .buttons{
+            padding-bottom: 2rem;
+            margin-top: 1rem;
+
+            button{
+                border: none;
+                font: 1.3rem $bodyFont;
+                text-transform: capitalize;
+                cursor: pointer;
+                text-align: center;
+                transition: .3s;
+                border-radius: 2rem;
+                padding: .4rem .9rem;
+                width: 8.2rem;
+                color: $blackColor;
+                background-color: #f8bd01;
+                transition: 0.250s;
+                margin: .5rem auto;
+
+                &:hover,
+                &:focus {
+                    color:white;
+                }
+
+                &:first-child{
+                    margin-right: .5rem;
+                }
+
+            
+            }
+            
+        }
+
+
+    }
+
+
+}
