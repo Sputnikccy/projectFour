@@ -1,13 +1,20 @@
 @use "variables" as *;
 
 .boredCatalogue {
-    background-image: url('../../assets/180.jpg');
-    background-size: cover;
-    // background-color: #71982F;
-    height: 100vh;
+    // background-image: url('../../assets/180.jpg');
+    // background-size: cover;
+    // // background-color: #71982F;
+    // height: 100vh;
+    position: absolute;
+    text-align: center;
+    position: absolute;
+    top: 5%;
+    bottom: 20%;
+    left: 10%;
+    right: 10%;
 
     form {
-        background-image: url('../../assets/180.jpg');
+        // background-image: url('../../assets/180.jpg');
         background-size: cover;
         padding: 80px 0px;
         display: flex;
@@ -43,14 +50,15 @@
         // background-color: #f8bd01;
         background-color: #71982F;
         height: auto;
-        width: 50%;
+        // width: 50%;
         margin: 0 auto;
         padding: 50px;
         border: double 10px $whiteColor;
         border-radius: 1rem;
         text-transform: uppercase;
         color: $whiteColor;
-        font-family: $headingFont;   
+        font-family: $headingFont; 
+        width: clamp(500px,75%,600px);  
 
         .activity {
             font-size: 3rem;
@@ -100,7 +108,70 @@
     }
 
     
+    // Media Queries
+    @media (max-width: 1300px) {
+
+        .boredImg {
+            width: 80%;
+            margin-top: 3.5rem;
+            .activity {
+                font-size: 2rem;
+            }
+        }
+    }
     
+    @media (max-width: 810px) {
+
+        
+
+        .boredImg {
+            width: 80%;
+            margin-top: 3rem;
+            .activity {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    @media (max-width: 375px) {
+
+        .boredCatalogue,
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            select,
+            .activitiesBtn {
+                width: 70%;
+                font-size: 0.8rem;
+                margin: 10px auto;
+            }
+            select {
+                text-align: center;
+            }
+        }
+
+        select,
+        .activitiesBtn {
+            margin: 10px;
+        }
+
+        .boredImg {
+            width: 100%;
+            .activity {
+                font-size: 1.1rem;
+                
+            }
+            
+            img {
+                height: 200px;
+                width: 100%;
+                object-fit: cover;
+                margin: 0 auto;
+                margin-top: 10px;
+            }
+        }
+    }
     
     
 }

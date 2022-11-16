@@ -62,8 +62,6 @@
     }    
 }
 
-
-// Sorry COLM, had to add a class name to your h2 since it was targetting the whole app instead of by itself and changing the color on my H2 (-Pat)
 .boredFormH2{
     font-size: clamp(2rem, 0.95rem + 0.25vw, 1rem);
     margin: 0;
@@ -105,5 +103,11 @@
 }
 }
 
+// Media Queries
 
+@media (max-width: 1300px) {
 
+    .eventFormContainer {
+        width: 80%;
+    }
+}

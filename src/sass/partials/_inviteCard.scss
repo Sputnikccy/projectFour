@@ -5,6 +5,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    .imgContainer {
+        margin-top: 2rem;
+        width: 80%;
     margin: 3rem auto;
     .imgContainer {
         margin-top: 2rem;
@@ -26,8 +31,10 @@
         border: 10px double #f7f5f1;
         border-radius: 1rem;
         background-color: #71982f;
+
         width: clamp(375px, 75%, 750px);
         margin: 2rem auto;
+
         .activityInfo {
             display: flex;
             flex-direction: column;
@@ -47,44 +54,44 @@
                 text-transform: capitalize;
                 font:italic 1.5rem $bodyFont;
                 color: rgb(68, 70, 67);
-                // margin-bottom: .8rem;
+                margin-bottom: .8rem;
             }
             p{
                 font: 1.2rem $bodyFont;
                 color: rgb(68, 70, 67);
-                // margin-bottom: .8rem;
+                margin-bottom: .8rem;
             }
         }
 
         .eventTheme{
-            padding: 0;
-            font-size: clamp(2rem, 0.95rem + 0.25vw, 1rem);
             text-transform: capitalize;
-            font: $headingFont;
+            font: 3rem $headingFont;
             color: $whiteColor;
             margin: 1.5rem;
         }
-        
+        .host {
+            font: 1.2rem $bodyFont;
+            margin-bottom: 1rem;
+            color: rgb(68, 70, 67);
+            span{
+                font:1.5rem;
+                text-transform: uppercase;
+                font-weight: bold;
+            }
+        }
 }
 .descriptionText{
     max-width: 80%;
-    background: #f8bd01;
-    border-radius: 1rem;
-    border:10px double  $whiteColor;
-    padding: 2%;
-    margin: 0.5rem auto;
-        .host {
-            font: 1.2rem $bodyFont;
-            color: rgb(68, 70, 67);
-            margin: 0.8rem auto 0.3rem;
-            span{
-                font:1.5rem;
-                text-transform: capitalize;
-                // font-weight: bold;
-            }
-        }
+    height: 100px;
+    overflow-wrap: break-word;
+        margin-bottom: 1rem;
+
         p {
             font: 1.2rem $bodyFont;
             color: rgb(68, 70, 67);
+            display: inline;
+            border-bottom: solid 1px #000;
+            padding-bottom: 0.02rem;
+
         }
 }

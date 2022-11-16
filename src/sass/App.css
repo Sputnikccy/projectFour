@@ -1,21 +1,130 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Josefin+Sans:wght@300;400;500&display=swap");
+
+.eventFormContainer {
+  position: absolute;
+  top: 10%;
+  bottom: 5%;
+  left: 10%;
+  right: 10%;
+  background-color: #71982f;
+  align-items: center;
+  border-radius: 1rem;
+  border: 10px double #FFF;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem auto;
+}
+.formContainer form {
+
 .createEvent {
-<<<<<<< HEAD
-  background: rgb(65, 170, 240);
-  padding: 100px;
-  width: 75%;
-=======
   background: #41AAF0;
   padding: 100px;
   width: 75%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.formContainer label {
+  font: 1.3rem "Josefin Sans";
+  color: rgb(66, 63, 38);
+  margin-bottom: 0.2rem;
+}
+.formContainer input {
+  border: none;
+  padding: 0.2rem;
+  border-radius: 1rem;
+  width: 75%;
+  margin-bottom: 0.8rem;
+}
+.formContainer textarea {
+  width: 75%;
+  border-radius: 1rem;
+  height: 5rem;
+  border-style: none;
+}
+.formContainer button {
+  border: none;
+  font: 1.3rem "Josefin Sans";
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 2rem;
+  padding: 0.4rem 0.9rem;
+  width: 8rem;
+  color: #000;
+  background-color: #f8bd01;
+  transition: 0.25s;
+  margin: 0.5rem auto;
+}
+.formContainer button:hover, .formContainer button:focus {
+  color: white;
 }
 
-.eventCardTest {
-  background: #F23D37;
+h2 {
+  margin: 0;
+  font: 3rem "Cabin Sketch";
+  color: #FFF;
+  text-shadow: 1px 1px rgb(120, 121, 119);
+  text-transform: uppercase;
+  color: white;
+  padding: 0.5rem 0;
+  white-space: nowrap;
+}
+h2 .letter {
+  -webkit-animation: fly-up-twist 0.8s ease-in-out;
+          animation: fly-up-twist 0.8s ease-in-out;
+  display: inline-block;
+  margin-top: 0.5em;
+}
+h2 .letter:nth-child(1) {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+h2 .letter:nth-child(2) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+h2 .letter:nth-child(3) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+h2 .letter:nth-child(4) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+@-webkit-keyframes fly-up-twist {
+  0% {
+    transform: translateX(-5rem);
+  }
+  50% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    transform: translateX(0) rotate(3deg);
+  }
+}
+@keyframes fly-up-twist {
+  0% {
+    transform: translateX(-5rem);
+  }
+  50% {
+    transform: translateX(-2rem);
+  }
+  100% {
+    transform: translateX(0) rotate(3deg);
+  }
 }
 
+@media (max-width: 1300px) {
+  .eventFormContainer {
+    width: 80%;
+  }
+}
 html {
   background: url("../../assets/Picture3.jpg") fixed top/100vw;
 }
@@ -30,17 +139,14 @@ html {
   background-color: #71982f;
   border: 10px double #FFF;
   border-radius: 1rem;
->>>>>>> main
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-<<<<<<< HEAD
-
 .eventCardTest {
   background: rgb(242, 61, 55);
-=======
 .landing-container h1 {
   font: 3rem "Cabin Sketch";
   color: #FFF;
@@ -377,12 +483,15 @@ a {
 }
 
 .boredCatalogue {
-  background-image: url("../../assets/180.jpg");
-  background-size: cover;
-  height: 100vh;
+  position: absolute;
+  text-align: center;
+  position: absolute;
+  top: 5%;
+  bottom: 20%;
+  left: 10%;
+  right: 10%;
 }
 .boredCatalogue form {
-  background-image: url("../../assets/180.jpg");
   background-size: cover;
   padding: 80px 0px;
   display: flex;
@@ -410,7 +519,6 @@ a {
 .boredCatalogue .boredImg {
   background-color: #71982F;
   height: auto;
-  width: 50%;
   margin: 0 auto;
   padding: 50px;
   border: double 10px #FFF;
@@ -418,6 +526,7 @@ a {
   text-transform: uppercase;
   color: #FFF;
   font-family: "Cabin Sketch";
+  width: clamp(500px, 75%, 600px);
 }
 .boredCatalogue .boredImg .activity {
   font-size: 3rem;
@@ -450,7 +559,147 @@ a {
   margin: 15px;
   border: solid 5px #FFF;
   border-radius: 1rem;
->>>>>>> main
+
+}
+@media (max-width: 1300px) {
+  .boredCatalogue .boredImg {
+    width: 80%;
+    margin-top: 3.5rem;
+  }
+  .boredCatalogue .boredImg .activity {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 810px) {
+  .boredCatalogue .boredImg {
+    width: 80%;
+    margin-top: 3rem;
+  }
+  .boredCatalogue .boredImg .activity {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 375px) {
+  .boredCatalogue .boredCatalogue,
+.boredCatalogue form {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .boredCatalogue .boredCatalogue select,
+.boredCatalogue .boredCatalogue .activitiesBtn,
+.boredCatalogue form select,
+.boredCatalogue form .activitiesBtn {
+    width: 70%;
+    font-size: 0.8rem;
+    margin: 10px auto;
+  }
+  .boredCatalogue .boredCatalogue select,
+.boredCatalogue form select {
+    text-align: center;
+  }
+  .boredCatalogue select,
+.boredCatalogue .activitiesBtn {
+    margin: 10px;
+  }
+  .boredCatalogue .boredImg {
+    width: 100%;
+  }
+  .boredCatalogue .boredImg .activity {
+    font-size: 1.1rem;
+  }
+  .boredCatalogue .boredImg img {
+    height: 200px;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+}
+
+.inviteCard {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.inviteCard .imgContainer {
+  margin-top: 2rem;
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+.inviteCard .imgContainer img {
+  max-width: 100%;
+  border: 10px double #71982f;
+  border-radius: 1rem;
+  background: white;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 10px double #f7f5f1;
+  border-radius: 1rem;
+  background-color: #71982f;
+  width: 80%;
+  margin: 2rem 4rem;
+}
+.cardContent .activityInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.cardContent .activityInfo img {
+  max-width: 70%;
+  border: 1px solid #FFF;
+  border-radius: 1rem;
+  margin-bottom: 0.8rem;
+}
+.cardContent .activityInfo .activityTitle {
+  text-transform: capitalize;
+  font: italic 1.5rem "Josefin Sans";
+  color: rgb(68, 70, 67);
+  margin-bottom: 0.8rem;
+}
+.cardContent .activityInfo p {
+  font: 1.2rem "Josefin Sans";
+  color: rgb(68, 70, 67);
+  margin-bottom: 0.8rem;
+}
+.cardContent .eventTheme {
+  text-transform: capitalize;
+  font: 3rem "Cabin Sketch";
+  color: #FFF;
+  margin: 1.5rem;
+}
+.cardContent .host {
+  font: 1.2rem "Josefin Sans";
+  margin-bottom: 1rem;
+  color: rgb(68, 70, 67);
+}
+.cardContent .host span {
+  font: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.description {
+  max-width: 80%;
+  height: 100px;
+  overflow-wrap: break-word;
+  margin-bottom: 1rem;
+}
+.description p {
+  font: 1.2rem "Josefin Sans";
+  color: rgb(68, 70, 67);
+  display: inline;
+  border-bottom: solid 1px #000;
+  padding-bottom: 0.02rem;
 }
 
 html {
