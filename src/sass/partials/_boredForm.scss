@@ -62,9 +62,10 @@
     }    
 }
 
-h2{
+.boredFormH2{
+    font-size: clamp(2rem, 0.95rem + 0.25vw, 1rem);
     margin: 0;
-    font: 3rem $headingFont;
+    font-family: $headingFont;
     color: $whiteColor;
     text-shadow: 1px 1px rgb(120, 121, 119);
     text-transform: uppercase;

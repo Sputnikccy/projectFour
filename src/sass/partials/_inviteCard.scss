@@ -10,6 +10,10 @@
     .imgContainer {
         margin-top: 2rem;
         width: 80%;
+    margin: 3rem auto;
+    .imgContainer {
+        margin-top: 2rem;
+        width: clamp(375px, 75%, 750px);
         display: flex;
         justify-content: space-around;
         img {
@@ -27,17 +31,24 @@
         border: 10px double #f7f5f1;
         border-radius: 1rem;
         background-color: #71982f;
-        width: 80%;
-        margin: 2rem 4rem;
+
+        width: clamp(375px, 75%, 750px);
+        margin: 2rem auto;
+
         .activityInfo {
             display: flex;
             flex-direction: column;
             align-items: center;
+            background: #f8bd01;
+            border-radius: 1rem;
+            border:10px double  $whiteColor;
+            padding: 2%;
+            margin: 0.5rem ;
             img {
-                max-width: 70%;
-                border:1px solid  $whiteColor;
+                width: clamp(100px,100%,600px);
+                border:5px double  $whiteColor;
                 border-radius: 1rem;
-                margin-bottom: .8rem;
+                // margin-bottom: .8rem;
             }
             .activityTitle{
                 text-transform: capitalize;
@@ -69,7 +80,7 @@
             }
         }
 }
-.description{
+.descriptionText{
     max-width: 80%;
     height: 100px;
     overflow-wrap: break-word;
@@ -81,5 +92,6 @@
             display: inline;
             border-bottom: solid 1px #000;
             padding-bottom: 0.02rem;
+
         }
 }

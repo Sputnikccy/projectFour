@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Josefin+Sans:wght@300;400;500&display=swap");
+
 .eventFormContainer {
   position: absolute;
   top: 10%;
@@ -17,6 +18,11 @@
   padding: 2rem auto;
 }
 .formContainer form {
+
+.createEvent {
+  background: #41AAF0;
+  padding: 100px;
+  width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -133,11 +139,14 @@ html {
   background-color: #71982f;
   border: 10px double #FFF;
   border-radius: 1rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+.eventCardTest {
+  background: rgb(242, 61, 55);
 .landing-container h1 {
   font: 3rem "Cabin Sketch";
   color: #FFF;
@@ -550,6 +559,7 @@ a {
   margin: 15px;
   border: solid 5px #FFF;
   border-radius: 1rem;
+
 }
 @media (max-width: 1300px) {
   .boredCatalogue .boredImg {
@@ -692,24 +702,488 @@ a {
   padding-bottom: 0.02rem;
 }
 
-.App {
+html {
+  background: url("../../assets/Picture3.jpg") fixed top/100vw;
+}
+
+.landing-container {
   text-align: center;
+  position: absolute;
+  top: 20%;
+  bottom: 20%;
+  left: 10%;
+  right: 10%;
+  background-color: #71982f;
+  border: 10px double rgb(255, 255, 255);
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.landing-container h1 {
+  font: 3rem "Cabin Sketch";
+  color: rgb(255, 255, 255);
+  margin-bottom: 1rem;
+  margin-top: 1.5rem;
+  text-shadow: 1px 1px rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+.landing-container .subtitle {
+  padding: 0 1.5rem;
+  margin-bottom: 1rem;
+}
+.landing-container .subtitle p {
+  color: rgb(0, 0, 0);
+  margin: 0;
+  padding: 0;
+  font: italic 1.2rem "Josefin Sans";
+}
+.landing-container .linkContainer {
+  display: flex;
+  flex-direction: column;
+  font: 1.2rem "Josefin Sans";
+  margin-bottom: 1.5rem;
+}
+.landing-container .linkContainer button {
+  margin: 0.5rem;
+  border: none;
+  font: 1.3rem "Josefin Sans";
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: center;
+  transition: 0.3s;
+  border-radius: 2rem;
+  padding: 0.6rem 0.9rem;
+  width: 14rem;
+  color: rgb(0, 0, 0);
+  background-color: #f8bd01;
+  transition: 0.25s;
+  -webkit-animation: glow 2s infinite;
+          animation: glow 2s infinite;
+}
+@-webkit-keyframes glow {
+  from {
+    box-shadow: 0 0 10px -10px #5e498e;
+  }
+  to {
+    box-shadow: 0 0 10px 10px #5e498e;
+  }
+}
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px -10px #5e498e;
+  }
+  to {
+    box-shadow: 0 0 10px 10px #5e498e;
+  }
+}
+
+html {
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: #FFF;
+  margin: 0;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+figcaption,
+figure,
+main {
+  display: block;
+}
+
+figure {
+  margin: 1em 40px;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+
+b,
+strong {
+  font-weight: inherit;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+audio,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html [type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal;
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px;
+}
+
+[type=search]::-webkit-search-cancel-button,
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit;
+}
+
+details,
+menu {
+  display: block;
+}
+
+summary {
+  display: list-item;
+}
+
+canvas {
+  display: inline-block;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+html {
+  font-size: 125%;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  max-width: 1260px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+ul,
+li,
+a,
+input,
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.tmHeading {
+  background-image: url("../../assets/180.jpg");
+  background-size: cover;
+  padding: 50px 0px 20px 0px;
+}
+.tmHeading h1 {
+  font-family: "Cabin Sketch";
+  color: rgb(0, 0, 0);
+  width: 15%;
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 0.7px 0.7px 1px rgb(255, 255, 255);
+}
+.tmHeading label {
+  display: none;
+}
+.tmHeading input,
+.tmHeading select,
+.tmHeading button {
+  border: 5px solid #71982f;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  margin: 0 15px;
+  font-size: 0.8rem;
+}
+.tmHeading input,
+.tmHeading .sortTM,
+.tmHeading .categoryTM {
+  padding: 5px 30px;
+}
+.tmHeading input::-moz-placeholder {
+  color: rgb(0, 0, 0);
+}
+.tmHeading input:-ms-input-placeholder {
+  color: rgb(0, 0, 0);
+}
+.tmHeading input::placeholder {
+  color: rgb(0, 0, 0);
+}
+.tmHeading .tmButton {
+  padding: 5px 50px;
+}
+.tmHeading .tmButton:hover {
+  border: 5px solid #324314;
+  background-color: #71982f;
+  color: rgb(255, 255, 255);
+}
+
+h2 {
+  padding-top: 20px;
+  font-family: "Josefin Sans";
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 1px rgb(255, 255, 255);
+}
+
+.tmContent {
+  background-color: #71982f;
+}
+.tmContent li {
+  margin: 50px;
 }
 
 .eventCatalogue {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0px 100px;
 }
 
 .eventCard {
-  background: #d3cfe6;
-  border: 1px solid #871a3e;
-  border-radius: 5px;
+  background: #f8bd01;
+  border: 10px double rgb(255, 255, 255);
+  border-radius: 1rem;
+  margin: 0 auto;
+  width: 23.3333333333%;
+  transition: box-shadow 0.6s;
+}
+.eventCard h4 {
+  font-size: 0.9rem;
+}
+.eventCard:hover {
+  width: 23.3333333333%;
+  height: auto;
+}
+.eventCard img {
+  max-width: 90%;
+  height: 150px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.eventCard p {
+  font-family: "Josefin Sans";
+  font-size: 0.7rem;
+  margin: 15px 40px;
+  text-align: left;
+}
+.eventCard p span {
+  text-transform: uppercase;
+  border-bottom: 4px solid rgb(65, 170, 240);
+}
+.eventCard a {
+  padding: 5px 5px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 1rem;
+  margin: 10px 5px;
+}
+.eventCard a:hover {
+  background-color: rgb(183, 183, 183);
+}
+.eventCard a,
+.eventCard .eventButton {
+  font-family: "Josefin Sans";
+  background-color: white;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+.eventCard .eventButton {
+  border: none;
+  padding: 0px;
+}
+.eventCard .eventButton:hover {
+  background-color: rgb(183, 183, 183);
+}
+
+.cardFlex {
+  display: flex;
+  justify-content: center;
 }
 
 li {
@@ -719,4 +1193,14 @@ li {
 .testImg {
   max-width: 90%;
   height: auto;
+}
+
+.App {
+  text-align: center;
+}
+
+body {
+  background: rgb(255, 255, 255);
+  -moz-columns: rgb(255, 255, 255);
+       columns: rgb(255, 255, 255);
 }/*# sourceMappingURL=App.css.map */

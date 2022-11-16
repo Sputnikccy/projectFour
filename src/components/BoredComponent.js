@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import axios from "axios"
 import { useState, useEffect } from 'react'
-// import renderImage from '../Assets/lion.jpg'
+
 
 const BoredComponent = () => {
 
@@ -26,6 +26,7 @@ const BoredComponent = () => {
     }
 
     const getPicture = (info) => {
+        console.log(info)
         axios({
             url: 'https://api.unsplash.com/search/photos',
             method: 'GET',
