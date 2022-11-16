@@ -44,32 +44,33 @@ const apiCheck = (key) => {
     })
         .then((response) => {
             setActivity(response.data);
+            axios({
+                url: 'https://api.unsplash.com/search/photos',
+                method: 'GET',
+                dataResponse: 'json',
+                params: {
+                    client_id: 'xMApnHMvGsHXF8WNkU53mf3KirR2oQ8ZS6YYr-M-NAU',
+                    query: `${response.data.activity}`,
+                    per_page: 1
+                }
+            }).then((response) =>{
+                const apiImage = response.data.results[0].urls.thumb;
+                setActivityImage(apiImage)
+                console.log(apiImage)
+            })
         })
-        axios({
-            url: 'https://api.unsplash.com/search/photos',
-            method: 'GET',
-            dataResponse: 'json',
-            params: {
-                client_id: 'xMApnHMvGsHXF8WNkU53mf3KirR2oQ8ZS6YYr-M-NAU',
-                query: `${activity.activity}`,
-                per_page: 1
-            }
-        }).then((response) =>{
-            const apiImage = response.data.results[0].urls.thumb;
-            setActivityImage(apiImage)
-            console.log(apiImage)
-        })
+       
 }
 const [activityImage, setActivityImage] = useState({})
 
-
-
+const [text,setText] = useState(`localhost:3000/boredInvite/${userId}`);
+const copyText = ()=>{
+    navigator.clipboard.writeText(text)
+}
 
 if(!activity||!event){
     return null
 }
-
-    
 
     return(
 
@@ -88,6 +89,7 @@ if(!activity||!event){
                     <img className="inviteImage" src={activityImage}  />
                     <p>🗺 {event.eventLocation}</p>
                     <p>🕰 {event.eventTime}</p>
+                    <button onClick={copyText}>Copy Link</button>
                 </div>
                 
                 

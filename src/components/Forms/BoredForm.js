@@ -83,13 +83,19 @@ const BoredForm = () => {
     }
   
     return(
-        <>
-        <div className="eventFormContainer" >
+
+    <section className="eventFormContainer wrapper" >
+            <h2>
+                <span class="letter">let's </span>&nbsp; 
+                <span class="letter"> have</span>&nbsp;
+                <span class="letter"> fun</span> 
+                <span class="letter"> ! </span>
+            </h2>
+        <div className="formContainer">
             <form 
             className='createEvent' 
             onSubmit={handleSubmit}
             action='submit'>
-                <h2>Let's have fun!</h2>
                 <label htmlFor='event'>Event Name</label>
                 <input 
                 type="text"
@@ -125,17 +131,19 @@ const BoredForm = () => {
                 required 
                 /> */}
                 <label>Description of event</label>
-                <input 
+                <textarea 
                 type="text"
                 id='event'
                 value={descriptionInput}
                 onChange={handleDescriptionInputChange}
-                required
-                />
+                required 
+                cols="30" 
+                rows="10"></textarea>
+
                 <button className='createButton'>Create event</button>
             </form>
         </div>
-        </>
+    </section>
     )
 }
 
