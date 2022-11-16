@@ -1,10 +1,6 @@
 @use "variables" as *;
 
 
-html {
-    background: url('../../assets/Picture3.jpg') fixed top /100vw;
-}
-
 .tmForm {
     position: absolute;
     top: 10%;
@@ -60,6 +56,7 @@ html {
         align-items: center;
         label {
             font: 1.3rem $bodyFont;
+
             color: rgb(66, 63, 38);
             margin-bottom: .2rem;
         }
@@ -69,6 +66,7 @@ html {
             border-radius: 2rem;
             width: 40%;
             margin-bottom: .8rem;
+
         }
 
         .tmFormDesc {
@@ -95,12 +93,15 @@ html {
             background-color: #f8bd01;
             transition: 0.250s;
             margin: .5rem auto;
+
             &:hover,
             &:focus {
                 color: white;
             }
+
         }
     }
+
 }
 @media (max-width: 768px) {
     .tmForm {

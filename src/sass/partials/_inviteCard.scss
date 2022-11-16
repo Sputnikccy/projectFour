@@ -9,7 +9,7 @@
     margin-bottom: 3rem;
     .imgContainer {
         margin-top: 2rem;
-        width: 80%;
+        width: clamp(375px, 75%, 750px);
         display: flex;
         justify-content: space-around;
         img {
@@ -27,17 +27,24 @@
         border: 10px double #f7f5f1;
         border-radius: 1rem;
         background-color: #71982f;
-        width: 80%;
-        margin: 2rem 4rem;
+
+        width: clamp(375px, 75%, 750px);
+        margin: 2rem auto;
+
         .activityInfo {
             display: flex;
             flex-direction: column;
             align-items: center;
+            background: #f8bd01;
+            border-radius: 1rem;
+            border:10px double  $whiteColor;
+            padding: 2%;
+            margin: 0.5rem ;
             img {
-                max-width: 70%;
-                border:1px solid  $whiteColor;
+                width: clamp(100px,100%,600px);
+                border:5px double  $whiteColor;
                 border-radius: 1rem;
-                margin-bottom: .8rem;
+                // margin-bottom: .8rem;
             }
             .activityTitle{
                 text-transform: capitalize;
@@ -69,12 +76,27 @@
             }
         }
 }
-.description{
+.inviteButton{
+    border: none;
+    font: 1.3rem "Josefin Sans";
+    text-transform: capitalize;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+    border-radius: 2rem;
+    padding: 0.4rem 0.9rem;
+    width: 8.2rem;
+    color: rgb(0, 0, 0);
+    background-color: #f8bd01;
+    transition: 0.25s;
+    margin: 0.5rem auto;
+}
+
+.descriptionText{
     max-width: 80%;
     height: 100px;
     overflow-wrap: break-word;
-        margin-bottom: 1rem;
-
+    margin: 1rem;
         p {
             font: 1.2rem $bodyFont;
             color: rgb(68, 70, 67);

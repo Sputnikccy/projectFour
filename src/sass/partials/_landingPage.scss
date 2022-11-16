@@ -2,7 +2,7 @@
 
 
 html{
-    background: url('../../assets/Picture3.jpg')  fixed top;
+    background: url('../../assets/Picture3.jpg')  fixed top/100vw;
 }
 
 .landing-container {
@@ -70,13 +70,86 @@ html{
         }
         @keyframes glow {
             from {
-              box-shadow: 0 0 10px -10px white;
+
+              box-shadow: 0 0 10px -10px $whiteColor;
             }
             to {
-              box-shadow: 0 0 10px 10px white;
+              box-shadow: 0 0 10px 10px $whiteColor;
             }
           }
         
     }
 
+}
+
+@media (max-width: 768px) {
+    .landing-container {
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .subtitle p {
+            font-size: 1rem;
+        }
+
+        .linkContainer {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+
+            button {
+                width: 10rem;
+                font-size: 0.8rem;
+            }
+
+            @keyframes glow {
+                from {
+                    box-shadow: 0 0 6.5px 6.5px $whiteColor;
+                }
+
+                to {
+                    box-shadow: 0 0 6.5px 6.5px $whiteColor;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .landing-container{
+        h1 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            margin-top: 1.5rem;
+            }
+
+        .subtitle p{
+            font-size: 0.5rem;
+        }
+
+        .linkContainer {
+            display: flex;
+            flex-direction: column;
+            font: 1.2rem $bodyFont;
+            margin-bottom: 1.5rem;
+
+            button {
+                font: 0.4rem $bodyFont;
+                padding: .2rem .5rem;
+                width: 7rem;
+            }
+
+            @keyframes glow {
+                from {
+                    box-shadow: 0 0 5px -5px $whiteColor;
+                }
+
+                to {
+                    box-shadow: 0 0 5px 5px $whiteColor;
+                }
+            }
+        }
+    }
 }

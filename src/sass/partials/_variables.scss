@@ -1,15 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Josefin+Sans:wght@300;400;500&display=swap");
 
-@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&family=Josefin+Sans:wght@300;400;500&display=swap');
-
-$blueColor: #41AAF0;
-$redColor:  #F23D37;
-$yellowColor: #d0ca2e;
-$whiteColor: #FFF;
-$blackColor: #000;
+$blueColor: rgb(65, 170, 240);
+$redColor:  rgb(242, 61, 55);
+$yellowColor: rgb(208, 202, 46);
+$whiteColor: rgb(255, 255, 255);
+$blackColor: rgb(0, 0, 0);
 
 $headingFont: "Cabin Sketch";
 $bodyFont: "Josefin Sans";
-$buttonFont: "Judson"
+$buttonFont: "Judson";
 
 //font-size:
     //1.2rem
