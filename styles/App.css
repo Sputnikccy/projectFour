@@ -673,6 +673,89 @@ li {
   height: auto;
 }
 
+.boredCatalogue {
+  background-image: url("../../assets/180.jpg");
+  background-size: cover;
+  height: 100vh;
+}
+.boredCatalogue form {
+  background-image: url("../../assets/180.jpg");
+  background-size: cover;
+  padding: 80px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.boredCatalogue select,
+.boredCatalogue .activitiesBtn {
+  border: 5px solid #71982f;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50px;
+  margin: 0 15px;
+  font-size: 1rem;
+  padding: 10px 30px;
+  text-transform: uppercase;
+}
+.boredCatalogue .activitiesBtn:hover {
+  border: 5px solid #324314;
+  background-color: #71982f;
+  color: white;
+}
+.boredCatalogue select {
+  text-transform: uppercase;
+}
+.boredCatalogue .boredImg {
+  background-color: #71982F;
+  height: auto;
+  width: 50%;
+  margin: 0 auto;
+  padding: 50px;
+  border: double 10px rgb(255, 255, 255);
+  border-radius: 1rem;
+  text-transform: uppercase;
+  color: rgb(255, 255, 255);
+  font-family: "Cabin Sketch";
+}
+.boredCatalogue .boredImg .activity {
+  font-size: 3rem;
+  width: 80%;
+  margin: 0 auto;
+}
+.boredCatalogue .boredImg .participants {
+  font-family: "Josefin Sans";
+}
+.boredCatalogue .boredImg .eventBtn,
+.boredCatalogue .boredImg button {
+  font-family: "Josefin Sans";
+  background-color: #f8bd01;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  color: rgb(0, 0, 0);
+}
+.boredCatalogue .boredImg .eventBtn {
+  padding: 15px;
+  border-radius: 1rem;
+}
+.boredCatalogue .boredImg .eventBtn button {
+  border: none;
+}
+.boredCatalogue .boredImg img {
+  height: 300px;
+  width: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 15px;
+  border: solid 5px rgb(255, 255, 255);
+  border-radius: 1rem;
+}
+
 .inviteCard {
   position: absolute;
   display: -webkit-box;
