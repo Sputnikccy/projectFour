@@ -5,6 +5,18 @@ html {
     background: url('../../assets/Picture3.jpg') fixed top /100vw;
 }
 
+.logo {
+    font-family: $headingFont;
+    color: $blackColor;
+    width: 15%;
+    font-size: 1.4rem;
+    color: $whiteColor;
+    text-shadow: 0.7px 0.7px 1px $whiteColor;
+    margin: 10px 25px;
+    color: #cf0e3d;
+
+}
+
 .tmForm {
     position: absolute;
     top: 10%;
@@ -68,7 +80,7 @@ html {
             padding: .2rem;
             border-radius: 2rem;
             width: 40%;
-            margin-bottom: .8rem;
+            margin-bottom: 1.2rem;
         }
 
         .tmFormDesc {
@@ -94,7 +106,8 @@ html {
             color: $blackColor;
             background-color: #f8bd01;
             transition: 0.250s;
-            margin: .5rem auto;
+            margin-top: 5rem;
+            // margin: 1rem auto;
             &:hover,
             &:focus {
                 color: white;

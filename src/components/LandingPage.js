@@ -21,7 +21,7 @@ const LandingPage = () => {
                 </Link>
 
                 <Link to="/displayAllEvents">
-                    <button>Look at some events others have created</button>
+                    <button>discover events</button>
                 </Link>
                 
             </div>

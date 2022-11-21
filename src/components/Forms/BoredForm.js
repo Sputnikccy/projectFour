@@ -9,7 +9,7 @@ import app from '../../firebase';
 const BoredForm = () => {
 
     const urlParamsValue = useParams();
-    // console.log(urlParamsValue.key);
+    
 
     // these states track user input within the form.
     const [eventNameInput, setEventNameInput] = useState("")
@@ -21,7 +21,7 @@ const BoredForm = () => {
 
       // This state tracks data from firebase DB
       const [invites, setInvites] = useState([]);
-    //   console.log(invites[0].key)
+   
 
     useEffect(() =>{
         const database = getDatabase(app)
@@ -29,7 +29,7 @@ const BoredForm = () => {
         // new state was in the onValue call.
         const newState = []
         onValue(dbRef, (response) => {
-            console.log(response);
+
             // create variable to hold new state.
             const data = response.val();
             for (let key in data) {

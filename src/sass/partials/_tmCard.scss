@@ -1,5 +1,6 @@
 @use "variables" as *;
 
+
 .tmCard {
     position: absolute;
     display: flex;
@@ -8,6 +9,18 @@
     margin-top: 3rem;
     margin-bottom: 3rem;
 
+    // .logo {
+    //     font-family: $headingFont;
+    //     color: $blackColor;
+    //     font-size: 1.4rem;
+       
+    //     text-shadow: 0.7px 0.7px 1px $whiteColor;
+    //     // color: #cf0e3d;
+    //     color:yellow;
+    //     position: absolute;
+    //     left: 10%;
+    // }
+    
     .imgContainer {
         margin-top: 2rem;
         width: 80%;
@@ -63,7 +76,7 @@
         width: 80%;
         margin: 2rem 4rem;
 
-        
+
 
         h2 {
             font: 3rem $headingFont;
@@ -75,46 +88,49 @@
             font: 1.2rem $bodyFont;
             margin-bottom: 2rem;
             color: rgb(68, 70, 67);
-            span{
-                font:1.5rem $headingFont;
+
+            span {
+                font: 1.5rem $headingFont;
             }
         }
 
-        .activityInfo{
+        .activityInfo {
             display: flex;
             flex-direction: column;
             align-items: center;
-            h3{
-                font:italic 1.5rem $headingFont;
+
+            h3 {
+                font: italic 1.5rem $headingFont;
                 color: rgb(68, 70, 67);
                 margin-bottom: .8rem;
             }
 
-            p{
+            p {
                 font: 1.2rem $bodyFont;
                 color: rgb(68, 70, 67);
                 margin-bottom: .8rem;
             }
 
-            .activitImgContainer{
+            .activitImgContainer {
                 width: 100%;
+
                 img {
                     max-width: 80%;
                     // height: 150px;
-                    border:1px solid  $whiteColor;
+                    border: 1px solid $whiteColor;
                     border-radius: 2rem;
                     margin-bottom: .8rem;
                 }
             }
-            
-        
+
+
         }
 
-        .buttons{
+        .buttons {
             padding-bottom: 2rem;
             margin-top: 1rem;
 
-            button{
+            button {
                 border: none;
                 font: 1.3rem $bodyFont;
                 text-transform: capitalize;
@@ -131,16 +147,16 @@
 
                 &:hover,
                 &:focus {
-                    color:white;
+                    color: white;
                 }
 
-                &:first-child{
+                &:first-child {
                     margin-right: .5rem;
                 }
 
-            
+
             }
-            
+
         }
 
 

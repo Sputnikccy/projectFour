@@ -1,8 +1,5 @@
-
 import { getDatabase, ref, push, onValue, get } from 'firebase/database';
 import { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
-import TmTestCard from "./TmTestCard";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import app from '../firebase';
@@ -12,14 +9,11 @@ import app from '../firebase';
 const TmTestForm = () => {
 
     const urlParamsValue = useParams();
-    console.log(urlParamsValue.idd);
-
-
+   
     // this state will track user inputs from the form
     const [eventInput, setEventInput] = useState('');
     const [hostInput, setHostInput] = useState('');
     const [descriptionInput, setDescriptionInput] = useState('');
-    const [inviteeInput, setInviteeInput] = useState('');
     let navigate = useNavigate();
 
     // this state will track data from db
@@ -35,15 +29,9 @@ const TmTestForm = () => {
         onValue(dbRef, (response) => {
             const data = response.val();
 
-            console.log(data)
-
-
             for (let key in data) {
                 newState.unshift({ key: key, name: data[key] })
             }
-
-            console.log(newState)
-
 
             //update state with the new array
             setInvitations(newState)
@@ -64,9 +52,7 @@ const TmTestForm = () => {
         setDescriptionInput(e.target.value)
     }
 
-    const handleHostInviteeChange = (e) => {
-        setInviteeInput(e.target.value)
-    }
+   
 
     //gather user's inputs and activity id
     const savedInputData = {
@@ -74,11 +60,7 @@ const TmTestForm = () => {
         host: hostInput,
         description: descriptionInput,
         activityId: urlParamsValue.idd,
-      
-        email: inviteeInput
     }
-
-    console.log(savedInputData)
 
 
     //control what happens after clicking "submit"
@@ -102,21 +84,14 @@ const TmTestForm = () => {
         } else{
             navigate(`/tmcard/${invitations[0].key}`)
         }
-
-       
-
-       
-
-
     }
-    const email = `https://formsubmit.co/${inviteeInput}`;
-    console.log(email)
-
+   
    
 
     return (
-
+     
         <div className="tmForm wrapper" >
+         
         <h2 >
             <span class="letter">let's </span>&nbsp; 
             <span class="letter"> have</span>&nbsp;
@@ -125,20 +100,20 @@ const TmTestForm = () => {
             
         </h2>
         <div className='formContainer'>
-            <form action={email} method="POST" onSubmit={handleOnSubmit} >
+            <form  onSubmit={handleOnSubmit} >
                 <label htmlFor="event">Event Name</label>
                 <input type="text"
                     id='event'
                     onChange={handleEventInputChange}
                     value={eventInput}
-                    name="email"
+                    
                 />
                 <label htmlFor="host">Host Name</label>
                 <input type="text"
                     id='host'
                     onChange={handleHostInputChange}
                     value={hostInput}
-                    name="email"
+                    
                 />
                 <label htmlFor="event">Description</label>
                 <textarea type="text"
@@ -147,7 +122,7 @@ const TmTestForm = () => {
                     value={descriptionInput}
                     row='30'
                     cols='30'
-                    name="email"
+                   
                 > </textarea>
 
                 <button >submit</button>

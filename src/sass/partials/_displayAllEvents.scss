@@ -1,20 +1,62 @@
 @use "variables" as *;
 
 .allEventsSection{
+    overflow-y: scroll;
+    padding: 0.5rem;
     position: absolute;
     top: 10%;
     bottom: 5%;
     left: 10%;
     right: 10%;
     background-color: #71982f;
-        align-items: center;
-        border-radius: 1rem;
-        border: 10px double $whiteColor;
+    align-items: center;
+    border-radius: 1rem;
+    border: 10px double $whiteColor;
+    .allEventsHeading{
+        font-family: $headingFont;
+        color: white;
+    }
     .allEventsCard{
-        background-color: #71982f;
+        padding: 0.2rem;
+        display: flex;
+        justify-content: center;
+        font-family: $bodyFont;
+        text-transform: capitalize;
+        margin: 0.2rem auto;
+        background-color: #f8bd01;
+        width: 66%;
         align-items: center;
         border-radius: 1rem;
         border: 10px double $whiteColor;
+        .inviteLink{
+            cursor: pointer;
+            text-decoration: none;
+            color: $blackColor;
+            border-bottom: 1px solid;
+            &:visited {
+                color: rgb(68, 70, 67);
+            }
+        }
     }
 }
-
+.allEventsButtons{
+    button {
+        background-color: #f8bd01;
+        margin: .5rem;
+        border-radius: 2rem;
+        padding: .6rem .9rem;
+        border: none;
+        font-family: $bodyFont;
+        cursor:pointer;
+        animation: scale 1.7s infinite;
+    }
+    @keyframes scale {
+        from {
+           transform: scale(1.0);
+         
+        }
+        to {
+            transform: scale(1.15);
+        }
+      }
+}

@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route path='/' element={<LandingPage />}/>
         <Route path='/ticketMaster' element={<TicketMaster/>} />
-        <Route path='/displayAllEvents' element={<DisplayAllEvents />}>
+        <Route path='/displayAllEvents' element={<DisplayAllEvents /> }>
           <Route path='/displayAllEvents/displayAllTmEvents' element={<DisplayAllTmEvents/>}/>
           <Route path='/displayAllEvents/displayAllBoredEvents' element={<DisplayAllBoredEvents />}/>
         </Route>

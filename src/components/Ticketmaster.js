@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import LandingPage from './LandingPage';
 
 const TicketMaster = () => {
     const [events, setEvents] = useState([]);
@@ -21,7 +20,6 @@ const TicketMaster = () => {
                 countryCode: 'CA',
             }
         }).then((eventArray) => {
-            console.log(eventArray.data._embedded.events)
             setEvents(eventArray.data._embedded.events)
         })
     }, [])
@@ -36,24 +34,18 @@ const TicketMaster = () => {
                 apikey: 'lmR81Nl9SRgC4fNvck5rb6rx61K4hy3b',
                 secretkey: 'hZM0EAuYZBwv25Gt',
                 size: '30',
-                // countryCode: 'CA',
+               
                 classificationName: `${categoryChoice}`,
                 sort: `${sortChoice}`,
                 city: `${cityChoice}`,
-                // keyword:'',
-                // categories: concert, club, sports, art, family, 
-                // subcategories: rock, pop, comedy, religion, hip hop, rap, alternative, 
+            
             }
         }).then((eventArray) => {
             setEvents(eventArray.data._embedded.events)
-            console.log(eventArray)
         }).catch((error) => {
             alert('Please change your selection and try again!')
-            console.log('Error')
         })
 
-
-        console.log('submitted!');
     }
 
     const handleOnChange = (e) => {
@@ -68,10 +60,6 @@ const TicketMaster = () => {
         setCityChoice(e.target.value)
     }
 
-    // const handleOnClick = (e) => {
-    //     setEventInfo(document.getQuerySelector("p"));
-    // }
-
     return (
         <>
             <div className='tmHeading'>
@@ -80,20 +68,20 @@ const TicketMaster = () => {
                 </Link>
                 <form onSubmit={handleSubmit}>
                     <label htmlFor="city">city</label>
-                    <input 
-                    type="text"
-                    id="city"
-                    placeholder="CITY"
-                    value={cityChoice}
-                    onChange={handleThirdOnChange}
+                    <input
+                        type="text"
+                        id="city"
+                        placeholder="CITY"
+                        value={cityChoice}
+                        onChange={handleThirdOnChange}
                     />
                     <label htmlFor="category">category</label>
-                    <select 
-                    name="category" 
-                    id="category"
-                    className='categoryTM'
-                    value={categoryChoice}
-                    onChange={handleOnChange}
+                    <select
+                        name="category"
+                        id="category"
+                        className='categoryTM'
+                        value={categoryChoice}
+                        onChange={handleOnChange}
                     >
                         <option value="none">CATEGORY</option>
                         <option value="concert">CONCERT</option>
@@ -102,12 +90,12 @@ const TicketMaster = () => {
                         <option value="family">FAMILY</option>
                     </select>
                     <label htmlFor="sort">SORT</label>
-                    <select 
-                    name="sort" 
-                    id="sort"
-                    className='sortTM'
-                    value={sortChoice}
-                    onChange={handleOthOnChange}
+                    <select
+                        name="sort"
+                        id="sort"
+                        className='sortTM'
+                        value={sortChoice}
+                        onChange={handleOthOnChange}
                     >
                         <option value="none">SORT</option>
                         <option value="date,asc">COMING SOON</option>
@@ -115,11 +103,11 @@ const TicketMaster = () => {
                         <option value="name,asc">ALPHABETICAL A-Z</option>
                         <option value="name,desc">ALPHABETICAL Z-A</option>
                     </select>
-                    <button 
-                    type="submit"
-                    className='tmButton'>
+                    <button
+                        type="submit"
+                        className='tmButton'>
                         FILTER
-                    </button> 
+                    </button>
                 </form>
                 <h2>recommended events for you & your friends</h2>
             </div>
@@ -130,15 +118,15 @@ const TicketMaster = () => {
                             return (
                                 <li className="eventCard" key={eventObject.id}>
                                     <h3>{eventObject.name}</h3>
-                                    <img 
-                                    className="testImg" 
-                                    src={eventObject.images[4].url} 
-                                    alt={eventObject.name} />
+                                    <img
+                                        className="testImg"
+                                        src={eventObject.images[4].url}
+                                        alt={eventObject.name} />
                                     <p> <span>when:</span> {eventObject.dates.start.localDate} at {eventObject.dates.start.localTime}</p>
                                     <p><span>where:</span> {eventObject._embedded.venues[0].name}</p>
-                                <div className='cardFlex'>
-                                    <a 
-                                    href={eventObject.url} target="_blank">buy tickets</a>
+                                    <div className='cardFlex'>
+                                        <a
+                                            href={eventObject.url} target="_blank">buy tickets</a>
                                         <Link to={`/tmform/${eventObject.id}`}>
                                             <button className='eventButton'>
                                                 Create event

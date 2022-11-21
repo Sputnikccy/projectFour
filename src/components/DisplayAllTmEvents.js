@@ -20,21 +20,21 @@ const DisplayAllTmEvents = () => {
     },[])
 
     const tmURL =  "/tmcard/"
-    // console.log(tmURL)
+ 
 
     return(
         <div className='eventListContainer'>
-            <h3>Idea's we helped locate</h3>
+          
             <ul>
                 {
                   tmEvents.map((event) =>{
-                    // console.log(event)
+                 
                     return(
                         <div className="allEventsCard">
                             <li key={event.key}>
                             <p>{event.name.event}</p>
-                            <a href={`${tmURL}${event.key}` }>
-                                <button>Click here to learn more</button>
+                            <a className='inviteLink' href={`${tmURL}${event.key}` }>
+                               Learn more
                             </a>
                         </li>
                         </div>

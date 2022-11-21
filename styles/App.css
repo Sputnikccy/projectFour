@@ -614,9 +614,19 @@ a {
   transition: 0.3s;
 }
 
-
 html {
   background: url("../../assets/Picture3.jpg") fixed top/100vw;
+}
+
+.logo {
+  font-family: "Cabin Sketch";
+  color: rgb(0, 0, 0);
+  width: 15%;
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 0.7px 0.7px 1px rgb(255, 255, 255);
+  margin: 10px 25px;
+  color: #cf0e3d;
 }
 
 .tmForm {
@@ -703,7 +713,7 @@ html {
   padding: 0.2rem;
   border-radius: 2rem;
   width: 40%;
-  margin-bottom: 0.8rem;
+  margin-bottom: 1.2rem;
 }
 .tmForm form .tmFormDesc {
   resize: none;
@@ -728,7 +738,7 @@ html {
   background-color: #f8bd01;
   -webkit-transition: 0.25s;
   transition: 0.25s;
-  margin: 0.5rem auto;
+  margin-top: 5rem;
 }
 .tmForm form button:hover, .tmForm form button:focus {
   color: white;
@@ -1267,6 +1277,7 @@ li {
   font: italic 1.5rem "Josefin Sans";
   color: rgb(68, 70, 67);
   margin-bottom: 0.8rem;
+  padding-top: 0.8rem;
 }
 .cardContent .activityInfo p {
   font: 1.2rem "Josefin Sans";
@@ -1282,11 +1293,12 @@ li {
 .cardContent .host {
   font: 1.2rem "Josefin Sans";
   margin-bottom: 1rem;
+  margin-top: 0.8rem;
   color: rgb(68, 70, 67);
 }
 .cardContent .host span {
   font: 1.5rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: bold;
 }
 
@@ -1305,7 +1317,7 @@ li {
   background-color: #f8bd01;
   -webkit-transition: 0.25s;
   transition: 0.25s;
-  margin: 0.5rem auto;
+  margin: 1.5rem auto;
 }
 
 .descriptionText {
@@ -1313,13 +1325,25 @@ li {
   height: 100px;
   overflow-wrap: break-word;
   margin: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .descriptionText p {
   font: 1.2rem "Josefin Sans";
   color: rgb(68, 70, 67);
   display: inline;
-  border-bottom: solid 1px #000;
   padding-bottom: 0.02rem;
+}
+.descriptionText p:first-child {
+  text-decoration: underline;
 }
 
 .tmCard {
@@ -1556,6 +1580,8 @@ li {
   }
 }
 .allEventsSection {
+  overflow-y: scroll;
+  padding: 0.5rem;
   position: absolute;
   top: 10%;
   bottom: 5%;
@@ -1568,13 +1594,69 @@ li {
   border-radius: 1rem;
   border: 10px double rgb(255, 255, 255);
 }
+.allEventsSection .allEventsHeading {
+  font-family: "Cabin Sketch";
+  color: white;
+}
 .allEventsSection .allEventsCard {
-  background-color: #71982f;
+  padding: 0.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Josefin Sans";
+  text-transform: capitalize;
+  margin: 0.2rem auto;
+  background-color: #f8bd01;
+  width: 66%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   border-radius: 1rem;
   border: 10px double rgb(255, 255, 255);
+}
+.allEventsSection .allEventsCard .inviteLink {
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  border-bottom: 1px solid;
+}
+.allEventsSection .allEventsCard .inviteLink:visited {
+  color: rgb(68, 70, 67);
+}
+
+.allEventsButtons button {
+  background-color: #f8bd01;
+  margin: 0.5rem;
+  border-radius: 2rem;
+  padding: 0.6rem 0.9rem;
+  border: none;
+  font-family: "Josefin Sans";
+  cursor: pointer;
+  -webkit-animation: scale 1.7s infinite;
+          animation: scale 1.7s infinite;
+}
+@-webkit-keyframes scale {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+}
+@keyframes scale {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+  }
 }
 
 .App {

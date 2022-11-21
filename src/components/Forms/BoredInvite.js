@@ -56,7 +56,6 @@ const apiCheck = (key) => {
             }).then((response) =>{
                 const apiImage = response.data.results[0].urls.thumb;
                 setActivityImage(apiImage)
-                console.log(apiImage)
             })
         })
        

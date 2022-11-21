@@ -13,8 +13,7 @@ html{
     left:10%;
     right: 10%;
     background-color:#71982f;
-    // background-color:rgb(255, 255, 255, 0.9);
-    // background-color: hsla(45,29%,76%,.9);
+   
     border:10px double $whiteColor;
     border-radius: 1rem;
     display: flex;
@@ -23,6 +22,7 @@ html{
     justify-content: center;
 
     h1{
+    
         font: 3rem $headingFont;
         color:$whiteColor;
         margin-bottom: 1rem;
@@ -62,11 +62,7 @@ html{
             background-color: #f8bd01;
             transition: 0.250s;
             animation: glow 2s infinite;
-            // &:hover,&:focus{
-            //     color: red;
-            //     // box-shadow: -5px -5px 5px 5px #5e498e;
-                
-            // }
+            
         }
         @keyframes glow {
             from {
@@ -80,6 +76,10 @@ html{
         
     }
 
+}
+
+@media (max-width:1200px){
+    
 }
 
 @media (max-width: 768px) {
