@@ -43,7 +43,7 @@ const TicketMaster = () => {
         }).then((eventArray) => {
             setEvents(eventArray.data._embedded.events)
         }).catch((error) => {
-            alert('Please change your selection and try again!')
+            alert('Please change your selection and try again')
         })
 
     }
@@ -109,7 +109,7 @@ const TicketMaster = () => {
                         FILTER
                     </button>
                 </form>
-                <h2>recommended events for you & your friends</h2>
+                <h2>Recommended events for you & your friends</h2>
             </div>
             <div className='tmContent'>
                 <ul className="eventCatalogue">
