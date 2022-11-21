@@ -129,7 +129,7 @@ const TicketMaster = () => {
                                             href={eventObject.url} target="_blank">buy tickets</a>
                                         <Link to={`/tmform/${eventObject.id}`}>
                                             <button className='eventButton'>
-                                                Create event
+                                                Create Event
                                             </button>
                                         </Link>
                                     </div>
