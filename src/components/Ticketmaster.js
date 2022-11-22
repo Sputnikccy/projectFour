@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import LandingPage from './LandingPage';
+
 
 const TicketMaster = () => {
     const [events, setEvents] = useState([]);
@@ -136,7 +136,7 @@ const TicketMaster = () => {
                                     <p><span>where:</span> {eventObject._embedded.venues[0].name}</p>
                                 <div className='cardFlex'>
                                     <a 
-                                    href={eventObject.url} target="_blank">buy tickets</a>
+                                    href={eventObject.url} target="_blank" rel="noreferrer">buy tickets</a>
                                         <Link to={`/tmform/${eventObject.id}`}>
                                             <button className='eventButton'>
                                                 Create event
