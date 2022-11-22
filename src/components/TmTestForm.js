@@ -1,5 +1,5 @@
 
-import { getDatabase, ref, push, onValue, get } from 'firebase/database';
+import { getDatabase, ref, push, onValue} from 'firebase/database';
 import { useState, useEffect } from 'react';
 
 import { useNavigate } from "react-router-dom";
@@ -18,7 +18,7 @@ const TmTestForm = () => {
     const [eventInput, setEventInput] = useState('');
     const [hostInput, setHostInput] = useState('');
     const [descriptionInput, setDescriptionInput] = useState('');
-    const [inviteeInput, setInviteeInput] = useState('');
+    
     let navigate = useNavigate();
 
     // this state will track data from db
