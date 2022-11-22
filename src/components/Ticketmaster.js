@@ -21,7 +21,7 @@ const TicketMaster = () => {
                 countryCode: 'CA',
             }
         }).then((eventArray) => {
-            console.log(eventArray.data._embedded.events)
+          
             setEvents(eventArray.data._embedded.events)
         })
     }, [])
@@ -36,24 +36,22 @@ const TicketMaster = () => {
                 apikey: 'lmR81Nl9SRgC4fNvck5rb6rx61K4hy3b',
                 secretkey: 'hZM0EAuYZBwv25Gt',
                 size: '30',
-                // countryCode: 'CA',
+               
                 classificationName: `${categoryChoice}`,
                 sort: `${sortChoice}`,
                 city: `${cityChoice}`,
-                // keyword:'',
-                // categories: concert, club, sports, art, family, 
-                // subcategories: rock, pop, comedy, religion, hip hop, rap, alternative, 
+               
             }
         }).then((eventArray) => {
             setEvents(eventArray.data._embedded.events)
-            console.log(eventArray)
+           
         }).catch((error) => {
             alert('Please change your selection and try again!')
-            console.log('Error')
+           
         })
 
 
-        console.log('submitted!');
+       
     }
 
     const handleOnChange = (e) => {

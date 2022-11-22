@@ -95,17 +95,11 @@ const BoredComponent = () => {
 
             <div className='boredImg'>
                 <p className="activity">{activities.activity}</p>
-                {/* {activityImage?
                 
-                    <img src={activityImage}  />
-                    :
-                    "no picture"} */}
-
-                {/* <img src={activityImage} /> */}
 
                 {isClicked
-                    ? <img src={activityImage} />
-                    : <img src={placeHolderImage}/>}
+                    ? <img src={activityImage}  alt={activities.activity}/>
+                    : <img src={placeHolderImage} alt={activities.activity}/>}
 
 
 

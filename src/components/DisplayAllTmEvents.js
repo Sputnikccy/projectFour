@@ -1,4 +1,4 @@
-import { getDatabase, onValue, ref, } from 'firebase/database'
+import { getDatabase, onValue, ref} from 'firebase/database'
 import { useState, useEffect } from 'react'
 import app from '../firebase'
 
@@ -20,7 +20,7 @@ const DisplayAllTmEvents = () => {
     },[])
 
     const tmURL =  "/tmcard/"
-    // console.log(tmURL)
+   
 
     return(
         <div className='eventListContainer'>
@@ -28,7 +28,7 @@ const DisplayAllTmEvents = () => {
             <ul>
                 {
                   tmEvents.map((event) =>{
-                    // console.log(event)
+                 
                     return(
                         <div className="allEventsCard">
                             <li key={event.key}>

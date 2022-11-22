@@ -63,8 +63,8 @@ const apiCheck = (key) => {
 }
 const [activityImage, setActivityImage] = useState({})
 
-
-const [text,setText] = useState(`localhost:3000/boredInvite/${userId}`);
+[text,setText] = useState(`localhost:3000/boredInvite/${userId}`)
+let text = `localhost:3000/boredInvite/${userId}`
 const copyText = ()=>{
     navigator.clipboard.writeText(text)
 }
@@ -88,7 +88,7 @@ if(!activity||!event){
 
                 <div className="activityInfo">
                 <p className="activityTitle">{activity.activity}</p>
-                    <img className="inviteImage" src={activityImage}  />
+                    <img className="inviteImage" src={activityImage} alt= {activity.activity}/>
                     <p>🗺 {event.eventLocation}</p>
                     <p>🕰 {event.eventTime}</p>
                 </div>

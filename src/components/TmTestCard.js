@@ -23,8 +23,8 @@ const TmTestCard = () => {
     const userId = urlParamsValue.idd;
     console.log(userId)
 
-    const [text,setText] = useState(`localhost:3000/tmcard/${userId}`);
-    console.log(text)
+    
+   let text = `localhost:3000/tmcard/${userId}`
 
 
     useEffect(() => {
