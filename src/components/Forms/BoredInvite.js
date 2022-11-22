@@ -63,7 +63,7 @@ const apiCheck = (key) => {
 }
 const [activityImage, setActivityImage] = useState({})
 
-[text,setText] = useState(`localhost:3000/boredInvite/${userId}`)
+
 let text = `localhost:3000/boredInvite/${userId}`
 const copyText = ()=>{
     navigator.clipboard.writeText(text)
