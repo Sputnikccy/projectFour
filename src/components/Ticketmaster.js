@@ -126,7 +126,7 @@ const TicketMaster = () => {
                                     <p><span>where:</span> {eventObject._embedded.venues[0].name}</p>
                                     <div className='cardFlex'>
                                         <a
-                                            href={eventObject.url} target="_blank">buy tickets</a>
+                                            href={eventObject.url} target="_blank" rel="noreferrer">buy tickets</a>
                                         <Link to={`/tmform/${eventObject.id}`}>
                                             <button className='eventButton'>
                                                 Create Event

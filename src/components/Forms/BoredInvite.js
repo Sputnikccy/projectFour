@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useState, useEffect } from "react"
 import axios from "axios";
-import { Link } from 'react-router-dom'
 import {getDatabase, ref, get} from 'firebase/database'
 import bannerPicture from "../../assets/havingFun.jpg"
 // Config details
@@ -14,7 +13,6 @@ const BoredInvite =() =>{
 
     //track data from API call
     const [event, setEvent] = useState();
-
 
 
    //get params AKA firebase node key
@@ -34,7 +32,7 @@ const BoredInvite =() =>{
     }).catch((error)=>{
         alert('Error.')
     })
-}, [])
+}, [userId])
 
 const apiCheck = (key) => {
     axios({
@@ -63,7 +61,8 @@ const apiCheck = (key) => {
 const [activityImage, setActivityImage] = useState({})
 
 
-const [text,setText] = useState(`localhost:3000/boredInvite/${userId}`);
+let text  = `localhost:3000/boredInvite/${userId}`
+
 const copyText = ()=>{
     navigator.clipboard.writeText(text)
 }
@@ -87,7 +86,7 @@ if(!activity||!event){
 
                 <div className="activityInfo">
                 <p className="activityTitle">{activity.activity}</p>
-                    <img className="inviteImage" src={activityImage}  />
+                    <img className="inviteImage" src={activityImage} alt={activity.activity}  />
                     <p>🗺 {event.eventLocation}</p>
                     <p>🕰 {event.eventTime}</p>
                 </div>

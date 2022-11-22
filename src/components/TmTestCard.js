@@ -1,9 +1,8 @@
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import { useState, useEffect } from 'react';
-import { getDatabase, ref, push, onValue, get } from 'firebase/database';
+import { getDatabase, ref, get } from 'firebase/database';
 import app from '../firebase';
-import {Link} from 'react-router-dom'
 import flag from '../assets/havingFun.jpg';
 
 
@@ -22,8 +21,8 @@ const TmTestCard = () => {
     const userId = urlParamsValue.idd;
    
 
-    const [text, setText] = useState(`localhost:3000/tmcard/${userId}`);
-   
+   //local address
+    let text = `localhost:3000/tmcard/${userId}`
 
 
     useEffect(() => {
@@ -37,7 +36,7 @@ const TmTestCard = () => {
         }).catch((error) => {
             alert(error)
         })
-    }, [])
+    }, [userId])
 
     const apiDada = (id) => {
         axios({

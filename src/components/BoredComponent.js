@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import axios from "axios"
-import { useState, useEffect } from 'react'
+import {useState} from 'react'
 import placeholderPic from '../assets/lion.jpg'
 
 
@@ -94,17 +94,11 @@ const BoredComponent = () => {
 
             <div className='boredImg'>
                 <p className="activity">{activities.activity}</p>
-                {/* {activityImage?
-                
-                    <img src={activityImage}  />
-                    :
-                    "no picture"} */}
-
-                {/* <img src={activityImage} /> */}
+               
 
                 {isClicked
-                    ? <img src={activityImage} />
-                    : <img src={placeHolderImage}/>}
+                    ? <img src={activityImage}  alt={activities.activity}/>
+                    : <img src={placeHolderImage} alt={activities.activity}/>}
 
 
 

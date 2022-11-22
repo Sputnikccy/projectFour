@@ -1,7 +1,7 @@
 // import sass styling
 import './sass/App.scss';
 // utilities
-import { Link, Routes, Route } from 'react-router-dom'
+import {Routes, Route } from 'react-router-dom'
 // components
 import BoredForm from './components/Forms/BoredForm';
 import LandingPage from './components/LandingPage'
