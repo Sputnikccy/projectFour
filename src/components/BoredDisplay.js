@@ -1,5 +1,3 @@
-import axios from "axios"
-import { useState, useEffect } from 'react'
 
 const BoredDisplay = (props) => {
 
@@ -7,7 +5,7 @@ const BoredDisplay = (props) => {
          
         <div>
 
-        {/* <h3>{props.activities.error}</h3>    */}
+      
         <h3>{props.activities.activity}</h3>
         <h4>{props.activities.type}</h4>
         <h5>{props.activities.participants}</h5>

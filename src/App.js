@@ -18,6 +18,7 @@ import DisplayAllTmEvents from './components/DisplayAllTmEvents'
 function App() {
   return (
     <div className="App">
+      
       <Routes>
         <Route path='/' element={<LandingPage />}/>
         <Route path='/ticketMaster' element={<TicketMaster/>} />
