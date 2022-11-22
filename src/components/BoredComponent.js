@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import axios from "axios"
 import {useState} from 'react'
 //import placeholder pic
-import placeholderPic from '../assets/lion.jpg'
+import placeholderPic from '../Assets/lion.jpg'
 
 
 const BoredComponent = () => {
